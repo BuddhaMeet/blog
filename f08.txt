@@ -1,0 +1,43 @@
+<a href="f08.html?ref=mlt">
+                     <div class="overview">
+      <hgroup>
+        <h4><font><font>激動的情緒 : </font></font></h4>
+        <h2><font><font>遭受到打擊時，情緒激動在所難免。</font></font></h2>
+      </hgroup>
+      <figure>
+        <img src="https://dl.dropbox.com/s/sp2642akdqc70kx/f08.jpg" alt="" width="306" height="195">
+        <figcaption class="trait-bar tb-3">
+                    <span class="soul"><font><font>靈</font></font></span>
+                    <span class="body"><font><font>身</font></font></span>
+                    <span class="mind"><font><font>心</font></font></span>
+                  </figcaption>
+      </figure>
+      <dl>
+        <dt class="location"><font><font>位置</font></font></dt>
+        <dd class="location"><font><font>台灣</font></font></dd>
+        <dt class="duration"><font><font>長短</font></font></dt>
+        <dd class="duration"><font><font>2天</font></font></dd>
+      </dl>
+                      </div>
+    
+    <h6 class="quick-info-label"><font><font>快速信息</font></font></h6>
+    
+    <div class="quick-info">
+            <hgroup>
+        <h3><font><font>身心靈和諧之旅</font></font></h3>        <h4><font><font>激動的情緒 </font></font></h4>      </hgroup>
+            <p class="loves">
+        <span class="love-count"><font><font>0</font></font></span>
+        <span class="love-icon small"></span>
+      </p>
+      <ul class="traits">
+                <li class="trait-emblem small soul"><span><font><font>靈</font></font></span></li>
+                <li class="trait-emblem small body"><span><font><font>身</font></font></span></li>
+                <li class="trait-emblem small mind"><span><font><font>心</font></font></span></li>
+              </ul>
+                  <p class="price"><font><font> </font></font></p>
+      <h5><font><font>快速洞察：</font></font></h5>
+      <p><font><font>
+      我們在遇到不如意事或遭受到打擊時，情緒激動在所難免。	菩薩觀照一切人空，法空，能夠不為所動，寬恕他人，願意解開其苦難。	雖然我們不具有這樣的智慧，但是在平時如果能夠時常練習著觀照身心的狀態，保持身心的平衡，那麼在情緒激動的時刻，就很容易自我返照。   </font></font></p>
+    </div>
+  </a>
+
