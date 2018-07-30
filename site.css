@@ -558,6 +558,51 @@ body { min-width: 1018px; overflow-x: hidden; overflow-y: auto; }
 #home #recent-posts .post { display: inline; float: left; margin-left: 30px; }
 #home #recent-posts .post.first, #home #recent-posts .post:first-child { margin-left: 0; }
 
+
+/* pages加home2*/
+#home2 #siteheader { background: none; border: none; }
+#home2 #siteheader .wrapper { padding-top: 36px; padding-bottom: 17px; }
+#home2 #siteheader .mainnav { bottom: 17px; }
+#home2 #hero-container { position: relative; margin-bottom: 150px; }
+.js #home2 #hero-container { -webkit-transition: opacity 800ms ease-out; -webkit-transition-delay: 0; -moz-transition: opacity 800ms ease-out 0; -o-transition: opacity 800ms ease-out 0; transition: opacity 800ms ease-out 0; opacity: 1; }
+.js #home2 #hero-container.loading { opacity: 0; }
+#home2 #hero-container .mountain-view { margin-top: -74px; height: 595px; background: url('img/home-background-mountains2.png?1381420814') no-repeat; }
+#home2 #hero-container .mountain-view h1 { text-align: center; width: 900px; margin: 0 auto 30px; padding-top: 190px; }
+#home2 #hero-container .mountain-view h1 span { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('img/home-title-come.png?1349959292'); background-repeat: no-repeat; background-position: 50% 50%; }
+#home2 #hero-container .mountain-view h1 span.ht-come { background-image: url('img/home-title-come.png?1349959292'); width: 149px; height: 55px; }
+#home2 #hero-container .mountain-view h1 span.ht-back { background-image: url('img/home-title-back.png?1349959326'); width: 202px; height: 55px; }
+#home2 #hero-container .mountain-view h1 span.ht-different { background-image: url('img/home-title-different.png?1349956854'); width: 212px; height: 55px; }
+#home2 #hero-container .mountain-view h1 span.ht-bird { background-image: url('img/home-title-birdie.png?1349956830'); width: 151px; height: 151px; }
+#home2 #hero-container .mountain-view h1 span, #home2 #hero-container .mountain-view h2 { -webkit-transition: all 600ms ease-out; -webkit-transition-delay: cubic-bezier(0.32, 0.22, 0.35, 0.98); -moz-transition: all 600ms ease-out cubic-bezier(0.32, 0.22, 0.35, 0.98); -o-transition: all 600ms ease-out cubic-bezier(0.32, 0.22, 0.35, 0.98); transition: all 600ms ease-out cubic-bezier(0.32, 0.22, 0.35, 0.98); }
+#home2 #hero-container .mountain-view h1 span.ht-come, #home2 #hero-container .mountain-view h1 span.ht-back, #home2 #hero-container .mountain-view h1 span.ht-different { padding-right: 20px; opacity: 0; }
+#home2 #hero-container .mountain-view h1 span.ht-bird { width: 0; -webkit-transition-delay: 900ms; -moz-transition-delay: 900ms; -o-transition-delay: 900ms; transition-delay: 900ms; -webkit-transition-duration: 360ms; -moz-transition-duration: 360ms; -o-transition-duration: 360ms; transition-duration: 360ms; }
+#home2 #hero-container .mountain-view h2 { font-size: 23px; line-height: 30px; font-weight: 300; width: 530px; margin: 0 auto; opacity: 0; }
+#home2 #hero-container .mountain-view.loaded h1 span.ht-come, #home2 #hero-container .mountain-view.loaded h1 span.ht-back, #home2 #hero-container .mountain-view.loaded h1 span.ht-different, .no-js #home2 #hero-container .mountain-view h1 span.ht-come, .no-js #home2 #hero-container .mountain-view h1 span.ht-back, .no-js #home2 #hero-container .mountain-view h1 span.ht-different { opacity: 1; }
+#home2 #hero-container .mountain-view.loaded h1 span.ht-bird, .no-js #home2 #hero-container .mountain-view h1 span.ht-bird { padding-right: 20px; width: 151px; }
+#home2 #hero-container .mountain-view.loaded h2, .no-js #home2 #hero-container .mountain-view h2 { opacity: 1; }
+#home2 #hero-container .traits { position: absolute; left: 50%; bottom: -125px; margin-left: -489px; height: 520px; *zoom: 1; }
+#home2 #hero-container .traits:after { content: ""; display: table; clear: both; }
+#home2 #hero-container .traits .trait-box { position: absolute; bottom: 0; width: 326px; }
+#home2 #hero-container .traits .trait-box.mind { left: -2px; }
+#home2 #hero-container .traits .trait-box.body { left: 326px; }
+#home2 #hero-container .traits .trait-box.soul { left: 654px; }
+#home2 #featured-holidays { *zoom: 1; background: transparent url('img/wave-pattern-hor-beige.png?1350490248') left top repeat-x; padding: 50px 0; }
+#home2 #featured-holidays:after { content: ""; display: table; clear: both; }
+#home2 #featured-holidays h3 { text-transform: uppercase; font-family: "brandon-grotesque", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 1px; font-size: 12px; color: #e8554e; margin-bottom: 20px; }
+#home2 #featured-holidays .featured-holiday { display: inline; float: left; min-height: 250px; margin-left: 30px; margin-bottom: 20px; }
+#home2 #featured-holidays .featured-holiday h1 { font-size: 14px; }
+#home2 #featured-holidays .featured-holiday.first { margin-left: 0; clear: left; }
+#home2 #recent-posts { *zoom: 1; position: relative; background: transparent url('img/wave-pattern-hor-beige.png?1350490248') left 47px repeat-x; padding: 0 0 50px; margin-bottom: 25px; }
+#home2 #recent-posts:after { content: ""; display: table; clear: both; }
+#home2 #recent-posts #home-blog-link { position: absolute; right: 0; top: 22px; text-transform: uppercase; font-family: "brandon-grotesque", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 1px; color: #a2a39e; font-size: 11px; }
+#home2 #recent-posts #home-blog-link:hover { color: #e8554e; text-decoration: none; }
+#home2 #recent-posts h3 { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('img/home-blog-badge.png?1381413517'); background-repeat: no-repeat; background-position: 50% 50%; width: 94px; height: 104px; margin: 0 auto 30px; }
+#home2 #recent-posts .post { display: inline; float: left; margin-left: 30px; }
+#home2 #recent-posts .post.first, #home2 #recent-posts .post:first-child { margin-left: 0; }
+/* pages加home2--end*/
+
+
+
 #about section { text-align: left; font-size: 16px; line-height: 25px; }
 #about section .wrapper { *zoom: 1; }
 #about section .wrapper:after { content: ""; display: table; clear: both; }
