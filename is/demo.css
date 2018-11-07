@@ -1,0 +1,153 @@
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+
+.flowchart-demo .window {
+    border: 1px solid #346789;
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+    -moz-box-shadow: 2px 2px 19px #aaa;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    opacity: 0.8;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    z-index: 20;
+    position: absolute;
+    background-color: #f4a460;
+    color: black;
+    font-family: helvetica, sans-serif;
+    padding: 0.5em;
+    font-size: 0.9em;
+    -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+    -moz-transition: -moz-box-shadow 0.15s ease-in;
+    -o-transition: -o-box-shadow 0.15s ease-in;
+    transition: box-shadow 0.15s ease-in;
+}
+
+.flowchart-demo .window:hover {
+    box-shadow: 2px 2px 19px #444;
+    -o-box-shadow: 2px 2px 19px #444;
+    -webkit-box-shadow: 2px 2px 19px #444;
+    -moz-box-shadow: 2px 2px 19px #444;
+    opacity: 0.6;
+}
+
+.flowchart-demo .active {
+    border: 1px dotted green;
+}
+
+.flowchart-demo .hover {
+    border: 1px dotted salmon;
+}
+
+#flowchartWindow1 {
+    top: 8em;
+    left: 60em;
+}
+
+#flowchartWindow2 {
+    top: 18em;
+    left: 60em;
+}
+
+#flowchartWindow3 {
+    top: 8em;
+    left: 40em;
+}
+
+#flowchartWindow4 {
+    top: 23em;
+    left: 40em;
+}
+
+#flowchartWindow5 {
+    top: 38em;
+    left: 40em;
+}
+
+#flowchartWindow6 {
+    top: 53em;
+    left: 40em;
+}
+
+#flowchartWindow7 {
+    top: 53em;
+    left: 80em;
+}
+
+#flowchartWindow8 {
+    top: 8em;
+    left: 22em;
+}
+#flowchartWindow9 {
+    top: 23em;
+    left: 22em;
+}
+
+#flowchartWindow10 {
+    top: 38em;
+    left: 22em;
+}
+
+
+#flowchartWindow20 {
+    top: 28em;
+    left: 63em;
+}
+
+
+#flowchartWindow21 {
+    top: 33em;
+    left: 63em;
+}
+
+
+.flowchart-demo .jtk-connector {
+    z-index: 4;
+}
+
+.flowchart-demo .jtk-endpoint, .endpointTargetLabel, .endpointSourceLabel {
+    z-index: 21;
+    cursor: pointer;
+}
+
+.flowchart-demo .aLabel {
+    background-color: white;
+    padding: 0.2em;
+    font: 12px sans-serif;
+    color: #444;
+    z-index: 21;
+    border: 1px dotted gray;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.flowchart-demo .aLabel.jtk-hover {
+    background-color: #5C96BC;
+    color: white;
+    border: 1px solid white;
+}
+
+.window.jtk-connected {
+    border: 1px solid green;
+}
+
+.jtk-drag {
+    outline: 4px solid pink !important;
+}
+
+path, .jtk-endpoint {
+    cursor: pointer;
+}
+
+.jtk-overlay {
+    background-color:transparent;
+}
