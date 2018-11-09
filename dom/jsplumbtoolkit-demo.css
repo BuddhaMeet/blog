@@ -7,7 +7,7 @@ body {
     color: #434343;
     font-family: "Lato", sans-serif;
     font-size: 14px;
-    font-weight: 1400;
+    font-weight: 400;
     height: 100%;
     padding: 0;
 }
@@ -53,8 +53,8 @@ body {
 }
 
 .jtk-demo-canvas {    
-    height:1050px;
-    max-height:900px;
+    height:850px;
+    max-height:600px;
     border:1px solid #CCC;
     background-color:white;
     display: flex;
