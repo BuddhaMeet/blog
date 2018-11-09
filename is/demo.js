@@ -121,7 +121,7 @@ jsPlumb.ready(function () {
         _addEndpoints("Window8", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
         _addEndpoints("Window3", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
         _addEndpoints("Window1", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
-        _addEndpoints("Window2", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
+        _addEndpoints("Window2", ["LeftMiddle", "RightMiddle"], ["TopCenter", "BottomCenter"]);
         _addEndpoints("Window4", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
         _addEndpoints("Window5", ["RightMiddle", "BottomCenter"], ["LeftMiddle", "TopCenter"]);
         _addEndpoints("Window20", ["RightMiddle", "BottomCenter"], ["LeftMiddle", "TopCenter"]);
@@ -147,13 +147,13 @@ jsPlumb.ready(function () {
         instance.connect({uuids: ["Window4BottomCenter", "Window5TopCenter"], editable: true});
         instance.connect({uuids: ["Window5BottomCenter", "Window6TopCenter"], editable: true});
         instance.connect({uuids: ["Window6RightMiddle", "Window7LeftMiddle"], editable: true});
-        instance.connect({uuids: ["Window7TopCenter", "Window1RightMiddle"], editable: true});
+        instance.connect({uuids: ["Window7RightMiddle", "Window1RightMiddle"], editable: true});
         instance.connect({uuids: ["Window3LeftMiddle", "Window8RightMiddle"], editable: true});
         instance.connect({uuids: ["Window8BottomCenter", "Window9TopCenter"], editable: true});
         instance.connect({uuids: ["Window9BottomCenter", "Window10TopCenter"], editable: true});
         instance.connect({uuids: ["Window10RightMiddle", "Window5LeftMiddle"], editable: true});
-        instance.connect({uuids: ["Window20RightMiddle", "Window2RightMiddle"], editable: true});
-        instance.connect({uuids: ["Window21RightMiddle", "Window2RightMiddle"], editable: true});
+        instance.connect({uuids: ["Window20RightMiddle", "Window2BottomCenter"], editable: true});
+        instance.connect({uuids: ["Window21RightMiddle", "Window2BottomCenter"], editable: true});
         //
 
         //
