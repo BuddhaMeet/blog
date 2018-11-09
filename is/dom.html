@@ -45,7 +45,7 @@
         </div>
 
        <!-- JS -->
-        <script src="jsplumb.js"></script>
+        <script src=></script>
         
         <!-- /JS -->
 
@@ -55,9 +55,20 @@
         <!-- demo list -->
         <script src="demo-list.js"></script>
 
-<!-- 延遲載入defer中放入 src="jsplump.js" -->
-
-	    
+<!-- 延遲載入defer中放入 src="jsplumb.js" -->
+<script type="text/javascript">
+function downloadJSAtOnload() {
+  var element = document.createElement("script");
+  element.src = "jsplumb.js";
+  document.body.appendChild(element);
+}
+if (window.addEventListener)
+  window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+  window.attachEvent("onload", downloadJSAtOnload);
+else
+  window.onload = downloadJSAtOnload;
+</script>	    
 	
 </body>
 </html>
