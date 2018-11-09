@@ -45,7 +45,7 @@
         </div>
 
         <!-- JS -->
-        <script src=""></script>
+      
         <!-- /JS -->
 
         <!--  demo code -->
@@ -58,7 +58,7 @@
 <script type="text/javascript">
 function downloadJSAtOnload() {
   var element = document.createElement("script");
-  element.src = "jsplumb.js";
+  element.src ="defer.js";
   document.body.appendChild(element);
 }
 if (window.addEventListener)
@@ -67,6 +67,10 @@ else if (window.attachEvent)
   window.attachEvent("onload", downloadJSAtOnload);
 else
   window.onload = downloadJSAtOnload;
+	
+  <script src="jsplumb.js"></script>
+	
+	
 </script>    
 	
 </body>
