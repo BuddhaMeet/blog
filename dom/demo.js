@@ -119,9 +119,9 @@ jsPlumb.ready(function () {
         
         _addEndpoints("Window9", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
         _addEndpoints("Window8", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
-        _addEndpoints("Window3", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
+        _addEndpoints("Window2", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
         _addEndpoints("Window1", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
-        _addEndpoints("Window2", ["LeftMiddle", "RightMiddle"], ["TopCenter", "BottomCenter"]);
+        _addEndpoints("Window3", ["LeftMiddle", "RightMiddle"], ["TopCenter", "BottomCenter"]);
         _addEndpoints("Window4", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
         _addEndpoints("Window5", ["RightMiddle", "BottomCenter"], ["LeftMiddle", "TopCenter"]);
         _addEndpoints("Window20", ["RightMiddle", "BottomCenter"], ["LeftMiddle", "TopCenter"]);
@@ -140,20 +140,20 @@ jsPlumb.ready(function () {
         //jsPlumb.draggable(document.querySelectorAll(".window"), { grid: [20, 20] });
 
         // connect a few up
-        instance.connect({uuids: ["Window2LeftMiddle", "Window4RightMiddle"], editable: true});
-        instance.connect({uuids: ["Window1BottomCenter", "Window2TopCenter"], editable: true});
-        instance.connect({uuids: ["Window1LeftMiddle", "Window3RightMiddle"], editable: true});
-        instance.connect({uuids: ["Window3BottomCenter", "Window4TopCenter"], editable: true});
+        instance.connect({uuids: ["Window3LeftMiddle", "Window4RightMiddle"], editable: true});
+        instance.connect({uuids: ["Window1BottomCenter", "Window3TopCenter"], editable: true});
+        instance.connect({uuids: ["Window1LeftMiddle", "Window2RightMiddle"], editable: true});
+        instance.connect({uuids: ["Window2BottomCenter", "Window4TopCenter"], editable: true});
         instance.connect({uuids: ["Window4BottomCenter", "Window5TopCenter"], editable: true});
         instance.connect({uuids: ["Window5BottomCenter", "Window6TopCenter"], editable: true});
         instance.connect({uuids: ["Window6RightMiddle", "Window7LeftMiddle"], editable: true});
         instance.connect({uuids: ["Window7RightMiddle", "Window1RightMiddle"], editable: true});
-        instance.connect({uuids: ["Window3LeftMiddle", "Window8RightMiddle"], editable: true});
+        instance.connect({uuids: ["Window2LeftMiddle", "Window8RightMiddle"], editable: true});
         instance.connect({uuids: ["Window8BottomCenter", "Window9TopCenter"], editable: true});
         instance.connect({uuids: ["Window9BottomCenter", "Window10TopCenter"], editable: true});
         instance.connect({uuids: ["Window10RightMiddle", "Window5LeftMiddle"], editable: true});
-        instance.connect({uuids: ["Window20RightMiddle", "Window2BottomCenter"], editable: true});
-        instance.connect({uuids: ["Window21RightMiddle", "Window2BottomCenter"], editable: true});
+        instance.connect({uuids: ["Window20RightMiddle", "Window3BottomCenter"], editable: true});
+        instance.connect({uuids: ["Window21RightMiddle", "Window3BottomCenter"], editable: true});
         //
 
         //

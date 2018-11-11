@@ -9,8 +9,8 @@
     -o-box-shadow: 2px 2px 19px #aaa;
     -webkit-box-shadow: 2px 2px 19px #aaa;
     -moz-box-shadow: 2px 2px 19px #aaa;
-    -moz-border-radius: 0.5em;
-    border-radius: 0.5em;
+    -moz-border-radius: 0.6em;
+    border-radius: 0.6em;
     opacity: 0.8;
     width: 50px;
     height: 30px;
@@ -21,7 +21,7 @@
     text-align: center;
     z-index: 20;
     position: absolute;
-    background-color: #f4a460;
+    background-color: #ffd296;
     color: black;
     font-family: helvetica, sans-serif;
     padding: 0.5em;
@@ -53,12 +53,12 @@
     left: 27em;
 }
 
-#flowchartWindow2 {
+#flowchartWindow3 {
     top: 12em;
     left: 27em;
 }
 
-#flowchartWindow3 {
+#flowchartWindow2 {
     top: 2em;
     left: 13em;
 }
