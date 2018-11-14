@@ -37,16 +37,13 @@
     -o-box-shadow: 2px 2px 19px #444;
     -webkit-box-shadow: 2px 2px 19px #444;
     -moz-box-shadow: 2px 2px 19px #444;
-    opacity: 0.6;
-}
+    opacity: 0.6;pointer-events: none;}
 
 .flowchart-demo .active {
-    border: 1px dotted green;
-}
+    border: 1px dotted green;pointer-events: none;}
 
 .flowchart-demo .hover {
-    border: 1px dotted salmon;
-}
+    border: 1px dotted salmon;pointer-events: none;}
 
 #flowchartWindow1 {
     top: 2em;
