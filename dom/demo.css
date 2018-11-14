@@ -1,6 +1,6 @@
 .demo {
     /* for IE10+ touch devices */
-    touch-action:none;pointer-events: none;}
+    touch-action:none;}
 
 .flowchart-demo .window {
     border: 1px solid #346789;
@@ -36,13 +36,13 @@
     -o-box-shadow: 2px 2px 19px #444;
     -webkit-box-shadow: 2px 2px 19px #444;
     -moz-box-shadow: 2px 2px 19px #444;
-    opacity: 0.6;pointer-events: none;}
+    opacity: 0.6;}
 
 .flowchart-demo .active {
-    border: 1px dotted green;pointer-events: none;}
+    border: 1px dotted green;}
 
 .flowchart-demo .hover {
-    border: 1px dotted salmon;pointer-events: none;}
+    border: 1px dotted salmon;}
 
 #flowchartWindow1 {
     top: 2em;
@@ -111,7 +111,7 @@
 
 .flowchart-demo .jtk-endpoint, .endpointTargetLabel, .endpointSourceLabel {
     z-index: 21;
-    cursor: pointer;pointer-events: none;}
+    cursor: pointer;}
 
 .flowchart-demo .aLabel {
     background-color: white;
@@ -121,21 +121,21 @@
     z-index: 21;
     border: 1px dotted gray;
     opacity: 0.8;
-    cursor: pointer;pointer-events: none;}
+    cursor: pointer;}
 
 .flowchart-demo .aLabel.jtk-hover {
     background-color: #5C96BC;
     color: white;
-    border: 1px solid white;pointer-events: none;}
+    border: 1px solid white;}
 
 .window.jtk-connected {
-    border: 1px solid green;pointer-events: none;}
+    border: 1px solid green;}
 
 .jtk-drag {
-    outline: 4px solid pink !important;pointer-events: none;}
+    outline: 4px solid pink !important;}
 
 path, .jtk-endpoint {
-    cursor: pointer;pointer-events: none;}
+    cursor: pointer;}
 
 .jtk-overlay {
-    background-color:transparent;pointer-events: none;}
+    background-color:transparent;}
