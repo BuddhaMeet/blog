@@ -138,8 +138,7 @@
 }
 
 .jtk-drag {
-    outline: 4px solid pink !important;
-}
+    outline: 4px solid pink !important;pointer-events: none;}
 
 path, .jtk-endpoint {
     cursor: pointer;
