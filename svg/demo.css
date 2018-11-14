@@ -1,8 +1,4 @@
-.display { display:inline-block; width:720px; height:800px;background-color:#ffffff; text-align: right;font-family: 'Roboto',Helvetica,Arial,sans-serif;
-    font-size: 4.3rem;
-    font-weight: 400;
-    color:#ff9e96;
-    line-height: 5rem;}
+
 
 #test { pointer-events: fill;}
 #test:hover { fill: #09f;}
