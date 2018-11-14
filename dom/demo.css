@@ -107,7 +107,7 @@
 
 
 .flowchart-demo .jtk-connector {
-    z-index: 4;pointer-events: none;}
+    z-index: 4;}
 
 .flowchart-demo .jtk-endpoint, .endpointTargetLabel, .endpointSourceLabel {
     z-index: 21;
