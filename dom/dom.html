@@ -247,17 +247,17 @@ svg.addEventListener('mousedown', mouseDown, false)
 svg.addEventListener('mousemove', drag, false)
 svg.addEventListener('mouseup', mouseUp, false)
 //	縮放的事件
-svg.addEventListener('wheel', zoom, false)
-
-
-    }
+svg.addEventListener('wheel', zoom, false) 
+ }
 
 </script>
 
 </head>
 <body>  
-
-<div class="display" ><br>修行的規劃路線和連結圖<br></div>
+ <a href="dom.html"><img src="行程表1.png" alt="行程表1連結" style="width:100px;height:100px;border:5;"></a>
+<a href="dom.html"><img src="行程表2.png" alt="行程表1連結" style="width:100px;height:100px;border:5;"></a>
+ <a href="dom.html"><img src="行程表3.png" alt="行程表1連結" style="width:100px;height:100px;border:5;border-color：#000;"></a>
+<div class="display" >  禪修規劃及連結</div>
     
  <!-- SVG可視圖形大小 -->    
   <svg id="svg" width="1200" height="600" viewBox="0 0 600 600">
@@ -370,18 +370,8 @@ svg.addEventListener('wheel', zoom, false)
      <polyline x="20" y="50" points="115,273 115,348" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>    <!-- 5-6指示線 -->  
     <polyline x="20" y="50" points="262,403 262,478" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>   
       
-      
-      
-      
-      
-      
-      
-</svg>
-
-
-    
-    
-    
+    </svg>
+        
     
 <!-- 取得游標座標資訊 -->
 <div id="info">
@@ -399,7 +389,6 @@ svg.addEventListener('wheel', zoom, false)
   <button id="setViewBoxBtn">設定</button>
 </div>
 
-  
   <script>
     // tell the embed parent frame the height of the content
     if (window.parent && window.parent.parent){
