@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Colorlib Villa</title>
+    <title>Enjoy the Buddhist wisdom and the temple of meditation.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,9 +17,28 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+      
+    <!--添加全視頻背景 Style -->
+<style>  
+#myVideo {
+    position: fixed;
+    min-width: 100%; 
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+}
+</style>  
+ <!--end全視頻背景 Style -->    
+      
+      
   </head>
   <body>
-    
+    <!--添加全視頻背景  -->  
+<video autoplay muted loop id="myVideo" poster="img/a01.jpg">
+  <source src="img/Mainpage.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video> 
+ <!--end全視頻背景  -->    
     <header class="site-header">
       <div class="container-fluid">
         <div class="row">
@@ -40,11 +59,15 @@
                   <div class="row full-height align-items-center">
                     <div class="col-md-6">
                       <ul class="list-unstyled menu">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="hotel.html">Hotel</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="index.html">首頁</a></li>
+                        <li><a href="hotel.html">解除煩惱</a></li>
+                        <li><a href="about.html">如何禪修</a></li>
+                        <li><a href="blog.html">參加禪修活動</a></li>
+                        <li><a href="blog.html">閱讀佛教書籍</a></li>
+                        <li><a href="blog.html">記錄自我成長</a></li> 
+                        <li><a href="contact.html">護持道場</a></li>
+                        <li><a href="about.html">關於我們</a></li>  
+                          <li><a href="about.html">聯絡資訊</a></li> 
                       </ul>
                     </div>
                     <div class="col-md-6 extra-info">
@@ -64,8 +87,28 @@
                             <li><a href="#">Instagram</a></li>
                           </ul>
                         </div>
+                         <!--多加  -->   
+                         <div class="col-md-6">
+                          <h3>Connect With Us</h3>
+                          <ul class="list-unstyled">
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                          </ul>
+                        </div>
+                          
+                            <div class="col-md-6">
+                          <h3>Connect With Us</h3>
+                          <ul class="list-unstyled">
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                          </ul>
+                        </div>  
+                        <!--end多加  -->    
                       </div>
                     </div>
+              
                   </div>
                 </div>
               </nav>
@@ -76,7 +119,7 @@
     </header>
     <!-- END head -->
 
-    <section class="site-hero overlay" style="background-image: url(img/hero_1.jpg)">
+    <section class="site-hero overlay bg-pattern" style="background-image: url(img/hero_1.jpg)">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center">
@@ -90,81 +133,14 @@
     </section>
     <!-- END section -->
 
-    <section class="section visit-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading" data-aos="fade-right">You Can Visit</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right">
-            <a href="restaurant.html"><img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Food &amp; Wines</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              3,239 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="100">
-            <a href="restaurant.html"><img src="img/img_2.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Resort &amp; Spa</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              4,921 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="200">
-            <a href="hotel.html"><img src="img/img_4.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="hotel.html">Hotel Rooms</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              2,112 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="300">
-            <a href="yacht.html"><img src="img/img_5.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="yacht.html">Yacht Club</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              6,421 reviews
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
+    
 
-    <section class="section slider-section">
+    <section class="section slider-section bg-pattern">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">A gorgeous place to enjoy your life.</h2>
-            <p class="lead" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias. Sed.</p>
+            <h2 class="heading" data-aos="fade-up">享受佛教智慧和修學禪定的寺廟</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">在這裡您只要靜下心來，您立即可以找尋到對治煩惱的方法。也有系統化的圖表連結，有效的理解到如何解除內心根本的問題。另外您想進一步，也可以經由禪修系統表中得到禪修語音的引導，讓自己在家裡也能夠練習。這裡的一切配置，都是果聞法師我排除萬難提供給您們免費學習之用。假如您覺得很受用，有歡喜心，歡迎您持續的護念及長期的護持，使得道場與及禪修教學活動能夠沒有掛慮的運作，並感恩您的使用。有任何問題，歡迎在Facebook臉書Email或其他社群網站上私訊留言，有時間會給您適當的答覆。希望您使用愉快！  </p>
           </div>
         </div>
         <div class="row">
@@ -203,8 +179,8 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">Recent Blog Post</h2>
-            <p class="lead" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias. Sed.</p>
+            <h2 class="heading" data-aos="fade-up">最近您關注的事！</h2>
+              <p class="lead" data-aos="fade-up">您可能會想要知道如何解除煩惱、如何禪修、如何參加禪修活動、如何閱讀佛教書籍、如何記錄自我修行的成長。等等！(You may want to know how to get rid of your troubles, how to meditate, how to participate in meditation activities, how to read Buddhist books, and how to record yourself. and many more!)</p>
           </div>
         </div>
         <div class="row">
@@ -237,65 +213,43 @@
               </div>
             </div>
           </div>
+           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
+            <div class="media media-custom d-block mb-4">
+              <a href="#" class="mb-4 d-block"><img src="img/img_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">February 26, 2018</span>
+                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at Villa Resort</a></h2>
+              </div>
+            </div>
+          </div> 
+           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
+            <div class="media media-custom d-block mb-4">
+              <a href="#" class="mb-4 d-block"><img src="img/img_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">February 26, 2018</span>
+                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at Villa Resort</a></h2>
+              </div>
+            </div>
+          </div> 
+           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
+            <div class="media media-custom d-block mb-4">
+              <a href="#" class="mb-4 d-block"><img src="img/img_3.jpg" alt="Image placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">February 26, 2018</span>
+                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at Villa Resort</a></h2>
+              </div>
+            </div>
+          </div> 
+            
         </div>
       </div>
     </section>
     <!-- END section -->
-    <section class="section testimonial-section">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">Testimonial</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial text-center">
-              <div class="author-image mb-3">
-                <img src="img/person_1.jpg" alt="Image placeholder" class="rounded-circle">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;Et quidem, impedit eum fugiat excepturi iste aliquid suscipit, tempore, delectus rem soluta voluptatem distinctio sed dolores, magni fugit nemo cum expedita. Totam a accusantium sunt aut autem placeat officia.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; Jean Smith</em></p>
-              
-            </div>
-          </div>
-          <!-- END col -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial text-center">
-              <div class="author-image mb-3">
-                <img src="img/person_2.jpg" alt="Image placeholder" class="rounded-circle">
-              </div>
-              <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
-            </div>
-          </div>
-          <!-- END col -->
-
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial text-center">
-              <div class="author-image mb-3">
-                <img src="img/person_3.jpg" alt="Image placeholder" class="rounded-circle">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;Nostrum, alias, provident magnam sit blanditiis laboriosam unde quaerat, at ipsam, ratione maiores saepe nisi modi corporis quas! Beatae quam, quod aspernatur debitis nesciunt quasi porro ea iste nobis aliquid perspiciatis nostrum culpa impedit aut, iure blanditiis itaque similique sunt!&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
-            </div>
-          </div>
-          <!-- END col -->
-        </div>
-      </div>
-    </section>
+    
     <footer class="section footer-section">
       <div class="container">
-        <div class="row mb-4">
-          <div class="col-md-3 mb-5">
+        <div class="row mb-4 ">
+          <div class="col-md-3 mb-5 ">
             <ul class="list-unstyled link">
               <li><a href="#">About Us</a></li>
               <li><a href="#">Terms &amp; Conditions</a></li>
@@ -341,7 +295,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
       </div>
     </footer>
-    
+     <!--添加全視頻背景 script -->    
+    <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+    </script>
+    <!--end全視頻背景 script --> 
+      
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
