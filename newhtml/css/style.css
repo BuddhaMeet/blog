@@ -4,7 +4,7 @@ body {
   font-weight: 200;
   font-size: 16px;
   line-height: 1.8;
-  color: #6c757d;
+  color: #444444;
 }
 
 ::-moz-selection {
@@ -114,7 +114,7 @@ textarea.form-control {
 
 .site-navbar nav .menu li a {
   color: #000;
-  font-size: 40px;
+  font-size: 32px;
   padding: 5px 10px;
   position: relative;
 }
@@ -126,7 +126,7 @@ textarea.form-control {
   height: 50%;
   width: 0%;
   z-index: -1;
-  background: #e61c5d;
+  background: #c61c7d;
   -webkit-transition: .3s all ease-in-out;
   -o-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
@@ -151,7 +151,7 @@ textarea.form-control {
 .site-navbar .extra-info h3 {
   font-family: "Mukta Mahee", arial, sans-serif;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: .2em;
   color: #adb5bd;
   margin-bottom: 30px;
@@ -184,7 +184,7 @@ textarea.form-control {
 }
 
 .site-hero.overlay:before {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.1);
   content: "";
   position: absolute;
   height: 100vh;
@@ -263,7 +263,7 @@ textarea.form-control {
 .site-menu-toggle span {
   display: block;
   position: absolute;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background: #fff;
   border-radius: 9px;
@@ -327,7 +327,7 @@ textarea.form-control {
 
 @media (max-width: 991.98px) {
   .lead {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 
@@ -370,7 +370,7 @@ textarea.form-control {
 }
 
 .heading-serif, .testimonial-section .heading, .slider-section .heading, .blog-post-entry .heading {
-  font-size: 80px;
+  font-size: 40px;
   font-family: "Playfair+Display", times, serif;
 }
 
@@ -383,6 +383,11 @@ textarea.form-control {
 .bg-pattern {
   background: #e9ecef url("../img/round.png");
 }
+
+ .bg1-pattern {
+  background:rgba(25, 0, 0, 0.6) ;
+}
+
 
 .slider-section {
   position: relative;
@@ -924,3 +929,6 @@ textarea.form-control {
   -webkit-box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
 }
+
+
+ 
