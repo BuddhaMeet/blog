@@ -33,17 +33,17 @@
     </style>  
     <!--end全視頻背景 Style -->       
   </head>
-  <body>
+  <body onload=" setTimeout (' location.reload()', 3000)">
       <!--添加全視頻背景  -->  
    <video autoplay muted loop id="myVideo" poster="img/a01.jpg">
    <source src="img/ddm.mp4" type="video/mp4">
-   Your browser does not support HTML5 video.
-   </video> 
-      <!--end全視頻背景  -->    
+      Your browser does not support HTML5 video.
+   </video><audio loop="" autoplay="" src="http://ddm.nctu.me/a01.html"></audio> 
+        <!--end全視頻背景  -->    
     <header class="site-header">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4 site-logo" data-aos="fade"> <a id="bms-logo" href="http://ddm.nctu.me/"><img src="img/bms-logo-sans.png" alt="身心靈和諧之旅" width="60" height="60">  賞心．禪悅</a>
+          <div class="col-4 site-logo" data-aos="fade"> <a id="bms-logo" href="index.html"><img src="img/bms-logo-sans.png" alt="身心靈和諧之旅" width="60" height="60">  賞心．禪悅</a>
           </div>
           <div class="col-8">
             <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
@@ -226,9 +226,9 @@
     <!-- END section -->        
         <div class="row bordertop pt-5">
           <p class="col-md-6 text-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">釋果聞</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://ddm.nctu.me/" target="_blank">釋果聞</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                
-        </div>     
+        </div>  
      <!--添加全視頻背景 script -->    
     <script>
      var video = document.getElementById("myVideo");
@@ -290,9 +290,28 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script>
 !function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
 </script>    
-<!-- end 分享按鈕 --> 
- 
- <!-- 允許自動播放。-->  <iframe src = "https://zentaiwan.github.io/blog/newhtml/sounds/sa-1.html" allow = "autoplay" >  </iframe> 
+<!-- end 分享按鈕 --> <!-- Autoplay is allowed. -->
+ <!-- 允許自動播放。-->      
+ <div>     
+<iframe src="http://ddm.nctu.me/newhtml/sounds/sa-1.html" allow="autoplay"> </iframe>
+      </div>
+      
+  <audio controls autoplay ="autoplay" >
+  <source src="piano.ogg" type="audio/ogg">
+  <source src="sounds/piano.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>      
+      
+<script>
+ var audio = document.getElementById('audio'); 
+window.onload=function(){ 
+audio.play(); 
+}            
+    
+ $('html').one('touchstart',function(){ 
+audio.play(); 
+}); 
+ </script>
 
   
   </body>
