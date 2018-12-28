@@ -329,129 +329,264 @@ svg.addEventListener('wheel', zoom, false)
 
         
  <div>   
- <!-- SVG可視圖形大小 -->    
-  <svg id="svg" width="1200" height="600" viewBox="0 0 600 600">
+  <!-- SVG可視圖形大小 -->    
+  <svg id="svg" width="1200" height="600" viewBox="0 0 1400 1400">
  <!-- SVG圖形背景大小及顏色 -->    
-  <rect x="0" y="0" fill="none" stroke="#eb7b2d" stroke-width="2" width="600" height="600" />
+  <rect x="0" y="0" fill="none" stroke="#eb7b2d" stroke-width="3" width="1400" height="1400" />
   
  <!--svg箭頭標籤 -->      
 <defs>
-  
-   
-    
    <marker id="Arr" markerWidth="8" markerHeight="8" refx="2" refy="5" orient="auto"><path d="M2,2 L2,8 L8,5 L2,2" style="fill: #ffc0cb;" />  
    </marker>
    <marker id="Arb" markerWidth="8" markerHeight="8" refx="2" refy="5" orient="auto"><path d="M2,2 L2,8 L8,5 L2,2" style="fill: #00bfff;" />  
-   </marker>  
+   </marker> 
+    <!--svg橢圓標籤 --> 
+    <marker id="B03" markerWidth="126" markerHeight="68" refx="63" refy="34" orient="0"><ellipse fill="#ffa8e6" stroke="#708090" stroke-width="1" cx="63" cy="34" rx="60" ry="32"/></marker> 
+    <!--svg橢圓標籤 --> 
+    <marker id="B04" markerWidth="126" markerHeight="68" refx="63" refy="34" orient="0"><ellipse fill="#90eed0" stroke="#708090" stroke-width="1" cx="63" cy="34" rx="60" ry="32"/></marker> 
+     <!--svg橢圓標籤 --> 
+    <marker id="B05" markerWidth="126" markerHeight="68" refx="63" refy="34" orient="0"><ellipse fill="#add8e6" stroke="#708090" stroke-width="1" cx="63" cy="34" rx="60" ry="32"/></marker> 
+     <!--svg橢圓標籤 --> 
+    <marker id="B06" markerWidth="126" markerHeight="68" refx="63" refy="34" orient="0"><ellipse fill="#add8e6" stroke="#708090" stroke-width="1" cx="63" cy="34" rx="60" ry="32"/></marker> 
+     <!--svg橢圓標籤 --> 
+    <marker id="B07" markerWidth="126" markerHeight="68" refx="63" refy="34" orient="0"><ellipse fill="#f1d977" stroke="#708090" stroke-width="1" cx="63" cy="34" rx="60" ry="32"/></marker>
+    
  </defs>   
    
-<!-- 各個方塊連結與文字位置 --> 
-    <text x="501" y="128"  style="font-size:18px;" >開始</text>
-    <a href="0Medit-1.html"><rect x="488" y="100" width="62" height="43"  rx="15" ry="15" fill="white" opacity=".3" stroke="#0088ff" stroke-width="3" id="test" /></a>     
-    
-    
+    <!-- 各個方塊連結與文字位置 --> 
       
-    <text x="392" y="126"  style="font-size:14px;" >1隨觀</text>
-    <text x="342" y="116"  style="font-size:14px;" >Yes</text>
-    <text x="415" y="166"  style="font-size:14px;" >No</text>
-    <a href="1Medit-1.html"><rect x="380" y="100" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>            
-          
-    <text x="392" y="256"  style="font-size:14px;" >3禪法</text>
-    <a href="31Medit-1.html"><rect x="380" y="230" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>      
-          
-    <text x="382" y="414"  style="font-size:14px;" >32其他</text>
-    <a href="31Medit-1.html"><rect x="380" y="388" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>
+      <text x="200" y="100"  style="font-size:100px" fill="indianred" >世間煩惱</text>
       
-    <text x="382" y="376"  style="font-size:14px;" >31默照禪</text>
-    <a href="31Medit-1.html"><rect x="380" y="350" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>
       
-      <text x="382" y="338"  style="font-size:14px;" >30呼吸法</text>
-    <a href="30Medit-1.html"><rect x="380" y="312" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>
-      
-    <text x="392" y="516"  style="font-size:14px;" >7正見</text>
-    <a href="7Medit-1.html"><rect x="380" y="490" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a> 
-      
-    <text x="414" y="583"  style="font-size:14px;" >71出世間八正道－涅槃道</text>
-    <a href="Read.html"><rect x="410" y="557" width="162" height="43"  rx="7" ry="7" fill="royalblue" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a> 
-      
-    <text x="238" y="583"  style="font-size:14px;" >72世間八正道－菩薩道</text>
-    <a href="Read.html"><rect x="236" y="557" width="176" height="43"  rx="7" ry="7" fill="maroon" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>  
-      
-    <text x="229" y="126"  style="font-size:14px;" >2如實正念</text>
-    <text x="195" y="116"  style="font-size:14px;" >No</text>
-    <text x="265" y="166"  style="font-size:14px;" >Yes</text>  
-    <a href="2Medit-1.html"><rect x="230" y="100" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" id="test" /></a>            
-          
-    <text x="234" y="256"  style="font-size:14px;" >4四念處</text>
-    <a href="4Medit-1.html"><rect x="230" y="230" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" 
-        id="test" /></a>      
-          
-    <text x="234" y="386"  style="font-size:14px;" >5七覺支</text>
-    <a href="5Medit-1.html"><rect x="230" y="360" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" 
+      <text x="60" y="28"  style="font-size:14px;" >8五蓋對治</text>
+      <a href="8Medit-1.html"><rect x="56" y="2" width="82" height="43"  rx="7" ry="7" fill="red" opacity=".3" stroke="#006600" stroke-width="1" 
         id="test" /></a>
+    <!-- 8-欲愛 指示線 --> 
+      <polyline x="20" y="50" points="110,45 245,672" fill="none" stroke="pink" stroke-width="2" marker-end="url(#Arr)" ></polyline> 
+      
+    <!-- 各個方塊連結與文字位置 --> 
+      <polyline x="20" y="50" points="250,700 342,700" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="230" y="707"  style="font-size:18px;" ><a href="b01.html">欲愛</a></text>      
+      
+      <polyline x="20" y="50" points="342,700 512,256" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>  
+      <polyline x="20" y="50" points="342,700 512,426" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <polyline x="20" y="50" points="342,700 450,740" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <polyline x="20" y="50" points="342,700 462,1196" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline> 
+      <text x="322" y="707"  style="font-size:18px;" ><a href="b02.html">有愛</a></text>
+      
+      
+    <!--貪欲想  -->
+      <polyline x="20" y="50" points="512,256 612,310" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+      <polyline x="20" y="50" points="512,256 612,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+      <text x="492" y="263"  style="font-size:18px;" ><a href="b03.html">貪欲</a></text>
+      
+      <polyline x="20" y="50" points="612,206 712,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+      <text x="592" y="211"  style="font-size:18px;" ><a href="d01.html">慳吝</a></text>
+      
+      <polyline x="20" y="50" points="712,206 802,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+      <text x="692" y="211"  style="font-size:18px;" ><a href="d02.html">忘念</a></text>      
         
-   <text x="234" y="516"  style="font-size:14px;" >6四聖諦</text>
-    <a href="31Medit-24.html"><rect x="230" y="490" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" 
-        id="test" /></a>
-    
-     <text x="79" y="126"  style="font-size:14px;" >8五蓋對治</text>
-      <text x="108" y="86"  style="font-size:14px;" >No</text>
-    <text x="118" y="166"  style="font-size:14px;" >Yes</text> 
-    <a href="8Medit-1.html"><rect x="80" y="100" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" 
-        id="test" /></a>            
-          
-    <text x="84" y="256"  style="font-size:14px;" >9四正勤</text>
-    <a href="9Medit-1.html"><rect x="80" y="230" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" 
-        id="test" /></a>      
-          
-    <text x="83" y="386"  style="font-size:14px;" >10六入觸</text>
-    <a href="31Medit-12.html"><rect x="80" y="360" width="62" height="43"  rx="7" ry="7" fill="orange" opacity=".3" stroke="#006600" stroke-width="1" 
-        id="test" /></a>
-    
-      <text x="60" y="28"  style="font-size:14px;" >81世間煩惱</text>
-    <a href="81Medit.html"><rect x="56" y="2" width="82" height="43"  rx="7" ry="7" fill="red" opacity=".3" stroke="#006600" stroke-width="1" 
-        id="test" /></a>
+      <polyline x="20" y="50" points="802,206 902,156" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>      
+      <polyline x="20" y="50" points="802,206 902,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+      <text x="782" y="211"  style="font-size:18px;" ><a href="d02.html">放逸</a></text>      
       
+      <polyline x="20" y="50" points="902,156 992,106" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>     
+      <polyline x="20" y="50" points="902,156 992,156" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>   
+      <text x="882" y="161"  style="font-size:18px;" ><a href="d03.html">昏沈</a></text>
+      <text x="972" y="111"  style="font-size:18px;" ><a href="d05.html">睡眠</a></text>
+      <text x="972" y="161"  style="font-size:18px;" ><a href="d06.html">懈怠</a></text>      
      
-    <!-- 8-81指示線 --> 
-    <polyline x="20" y="50" points="110,100 100,57" fill="none" stroke="pink" stroke-width="2" marker-end="url(#Arr)" ></polyline> 
-      <!-- 1-3指示線 --> 
-      <polyline x="20" y="50" points="412,143 412,218" fill="none" stroke="pink" stroke-width="2" marker-end="url(#Arr)" ></polyline>  
-      <!-- 2-8指示線 --> 
-     <polyline x="20" y="50" points="230,120 155,120" fill="none" stroke="pink" stroke-width="2" marker-end="url(#Arr)" ></polyline> 
+      <polyline x="20" y="50" points="902,206 1082,156" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <polyline x="20" y="50" points="902,206 992,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="882" y="211"  style="font-size:18px;" ><a href="d04.html">尋思</a></text>
+      <text x="1062" y="161"  style="font-size:18px;" ><a href="d07.html">掉舉</a></text>
       
-     <!-- 開始-1指示線 -->  
-   <polyline x="20" y="50" points="487,120 454,120" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>  
-     <!-- 1-2指示線 -->  
-   <polyline x="20" y="50" points="380,120 304,120" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>
-     <!-- 2-4指示線 -->  
-    <polyline x="20" y="50" points="262,143 262,218" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>
-      <!-- 8-9指示線 --> 
-     <polyline x="20" y="50" points="115,143 115,218" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>   
-      <!-- 7-71指示線 --> 
-    <polyline x="20" y="50" points="411,533 411,560" fill="none" stroke="deepskyblue" stroke-width="2"></polyline>      <!-- 7-1指示線 -->   
-    <path d="M442 512 H500 Q520 512, 520 480 V155" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></path> 
-     <!-- 30-3指示線 -->   
-     <polyline x="20" y="50" points="412,312 412,285" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>  
-    
-      <!-- 3-4指示線 -->  
-   <polyline x="20" y="50" points="380,250 304,250" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline> 
+      <polyline x="20" y="50" points="992,206 1082,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="972" y="211"  style="font-size:18px;" ><a href="d08.html">散亂</a></text>
       
-   <!-- 6-7指示線 -->  
-   <polyline x="20" y="50" points="292,512 368,512" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>
-    <!-- 10-5指示線 -->  
-   <polyline x="20" y="50" points="142,380 218,380" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>  
+      <polyline x="20" y="50" points="1082,206 1172,206" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="1062" y="211"  style="font-size:18px;" ><a href="d09.html">幻想</a></text>
+      <text x="1152" y="211"  style="font-size:18px;" ><a href="d10.html">窮困</a></text>          
       
-    <!-- 4-5指示線 -->  
-    <polyline x="20" y="50" points="262,273 262,348" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>
-      <!-- 9-10指示線 --> 
-     <polyline x="20" y="50" points="115,273 115,348" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>    <!-- 5-6指示線 -->  
-    <polyline x="20" y="50" points="262,403 262,478" fill="none" stroke="deepskyblue" stroke-width="2" marker-end="url(#Arb)" ></polyline>   
-     <text x="210" y="50"  style="font-size:50px" fill="lightslategray" >禪修行程</text>    
-    </svg>
+       <polyline x="20" y="50" points="612,310 702,310" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+       <text x="592" y="317"  style="font-size:18px;" ><a href="e01.html">覆藏</a></text>
+      
+       <polyline x="20" y="50" points="702,310 792,310" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+       <text x="682" y="317"  style="font-size:18px;" ><a href="e02.html">厭惡</a></text>  
+       <polyline x="20" y="50" points="792,310 882,310" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>    
+       <text x="772" y="317"  style="font-size:18px;" ><a href="e03.html">排斥</a></text> 
+       
+       <polyline x="20" y="50" points="882,310 972,310" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>        
+       <polyline x="20" y="50" points="882,310 972,260" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline>        
+       <text x="862" y="317"  style="font-size:18px;" ><a href="e04.html">拒絕</a></text>
+       <text x="952" y="317"  style="font-size:18px;" ><a href="e06.html">挑剔</a></text> 
+       <text x="952" y="267"  style="font-size:18px;" ><a href="e05.html">對立</a></text> 
+      
+      
+      
+    <!--瞋想  -->
+      <polyline x="20" y="50" points="512,426 612,480" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline> 
+      <polyline x="20" y="50" points="512,426 612,426" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>  
+      <polyline x="20" y="50" points="512,426 612,376" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>    
+      <text x="492" y="433"  style="font-size:18px;" ><a href="b04.html">瞋心</a></text>
+      
+      <polyline x="20" y="50" points="612,376 712,376" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>    
+      <text x="592" y="383"  style="font-size:18px;" ><a href="f01.html">忿心</a></text>
+      
+      <polyline x="20" y="50" points="712,376 802,376" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>    
+      <text x="692" y="383"  style="font-size:18px;" ><a href="f02.html">責怪</a></text>
+      <text x="782" y="383"  style="font-size:18px;" ><a href="f03.html">埋怨</a></text>
+      
+      
+      <polyline x="20" y="50" points="612,480 702,480" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>    
+      <text x="592" y="487"  style="font-size:18px;" ><a href="f07.html">惱怒</a></text>
+      <text x="682" y="487"  style="font-size:18px;" ><a href="f08.html">厭惡</a></text> 
+      
+      <polyline x="20" y="50" points="612,426 712,426" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>    
+      <text x="592" y="433"  style="font-size:18px;" ><a href="f04.html">恨意</a></text>
+      
+      <polyline x="20" y="50" points="712,426 802,426" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B04)" marker-end="url(#B04)" ></polyline>    
+      <text x="692" y="433"  style="font-size:18px;" ><a href="f05.html">逃避</a></text>
+      <text x="782" y="433"  style="font-size:18px;" ><a href="f06.html">不滿</a></text>
+      
+    <!--驕慢  -->
+      
+      <polyline x="20" y="50" points="450,740 542,740" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B05)" ></polyline> 
+      <text x="430" y="747"  style="font-size:18px;" ><a href="b05.html">嬌傲</a></text>
+      
+      
+      <polyline x="20" y="50" points="542,740 612,566" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B05)" ></polyline>  
+      <polyline x="20" y="50" points="542,740 612,676" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B05)" ></polyline>
+      <polyline x="20" y="50" points="542,740 612,806" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B05)" ></polyline>
+      <polyline x="20" y="50" points="542,740 612,906" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B05)" ></polyline>       
+      <text x="522" y="747"  style="font-size:18px;" ><a href="b06.html">傲慢</a></text>
+      
+      
+      <polyline x="20" y="50" points="612,566 762,536" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>
+      <text x="592" y="572"  style="font-size:18px;" ><a href="g01.html">疑猜</a></text>
+      
+      <polyline x="20" y="50" points="762,536 912,536" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>
+      <text x="742" y="542"  style="font-size:18px;" ><a href="g02.html">妒忌</a></text>
+      
+      <polyline x="20" y="50" points="912,536 1012,610" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline> 
+      <polyline x="20" y="50" points="912,536 1012,556" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>  
+      <polyline x="20" y="50" points="912,536 1012,506" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>
+      <polyline x="20" y="50" points="912,536 1012,456" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>  
+      <polyline x="20" y="50" points="912,536 1012,406" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline> 
+      <text x="892" y="543"  style="font-size:18px;" ><a href="g03.html">憎恨</a></text>
+      <text x="992" y="561"  style="font-size:18px;" ><a href="g08.html">中傷</a></text>
+      <text x="992" y="461"  style="font-size:18px;" ><a href="g05.html">挑撥</a></text>
+      <text x="992" y="411"  style="font-size:18px;" ><a href="g04.html">批評</a></text>
+      
+      <polyline x="20" y="50" points="1012,506 1112,506" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>    
+      <text x="992" y="513"  style="font-size:18px;" ><a href="g06.html">造謠</a></text>
+      <text x="1092" y="513"  style="font-size:18px;" ><a href="g07.html">狂妄</a></text>
+      
+      <polyline x="20" y="50" points="1012,610 1102,610" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B05)" marker-end="url(#B05)" ></polyline>    
+      <text x="992" y="617"  style="font-size:18px;" ><a href="g09.html">陷害</a></text>
+      <text x="1082" y="617"  style="font-size:18px;" ><a href="g10.html">殺害</a></text> 
+      
+      <polyline x="20" y="50" points="612,676 712,750" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>       
+      <polyline x="20" y="50" points="612,676 712,700" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline> 
+      <polyline x="20" y="50" points="612,676 712,646" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>  
+      <polyline x="20" y="50" points="612,676 712,596" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <text x="592" y="683"  style="font-size:18px;" ><a href="h01.html">自高</a></text>
+      <text x="692" y="757"  style="font-size:18px;" ><a href="h09.html">邪見</a></text> 
+      
+      <polyline x="20" y="50" points="712,596 812,596" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <text x="692" y="603"  style="font-size:18px;" ><a href="h02.html">無慚</a></text>
+      <text x="792" y="603"  style="font-size:18px;" ><a href="h02.html">輕視</a></text>      
+      
+      <polyline x="20" y="50" points="712,700 802,700" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <text x="692" y="707"  style="font-size:18px;" ><a href="h07.html">不信</a></text>
+      <text x="782" y="707"  style="font-size:18px;" ><a href="h08.html">頑固</a></text> 
+      
+      <polyline x="20" y="50" points="712,646 812,646" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <text x="692" y="651"  style="font-size:18px;" ><a href="h04.html">無愧</a></text>
+      
+      <polyline x="20" y="50" points="812,646 902,646" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <text x="792" y="651"  style="font-size:18px;" ><a href="h05.html">挑剔</a></text>
+      <text x="882" y="651"  style="font-size:18px;" ><a href="h06.html">要求</a></text>
+      
+      <polyline x="20" y="50" points="612,806 712,846" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <polyline x="20" y="50" points="612,806 712,800" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>  
+      <text x="592" y="813"  style="font-size:18px;" ><a href="i01.html">自卑</a></text>
+      
+      <polyline x="20" y="50" points="712,800 802,800" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>    
+      <text x="692" y="807"  style="font-size:18px;" ><a href="i02.html">虛妄</a></text>
+      <text x="782" y="807"  style="font-size:18px;" ><a href="i03.html">不實</a></text> 
+      
+      <polyline x="20" y="50" points="712,846 802,846" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline> 
+      <polyline x="20" y="50" points="802,846 902,846" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline> 
+      <text x="692" y="853"  style="font-size:18px;" ><a href="i04.html">攀緣</a></text>
+      <text x="775" y="853"  style="font-size:18px;" ><a href="i05.html">若干想</a></text> 
+      
+      <polyline x="20" y="50" points="902,846 1002,796" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <polyline x="20" y="50" points="902,846 992,846" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="882" y="851"  style="font-size:18px;" ><a href="d04.html">尋思</a></text>
+      <text x="982" y="801"  style="font-size:18px;" ><a href="d07.html">掉舉</a></text>
+      
+      <polyline x="20" y="50" points="992,846 1082,846" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="972" y="851"  style="font-size:18px;" ><a href="d08.html">散亂</a></text>
+      
+      <polyline x="20" y="50" points="1082,846 1172,846" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B03)" marker-end="url(#B03)" ></polyline> 
+      <text x="1062" y="851"  style="font-size:18px;" ><a href="d09.html">幻想</a></text>
+      <text x="1152" y="851"  style="font-size:18px;" ><a href="d10.html">窮困</a></text>
+      
+      <polyline x="20" y="50" points="612,906 712,906" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B06)" marker-end="url(#B06)" ></polyline>  
+      <text x="592" y="913"  style="font-size:18px;" ><a href="i06.html">惱恨</a></text>   
+      <text x="692" y="913"  style="font-size:18px;" ><a href="i07.html">灰心</a></text>
+      
+     <!--失落  --> 
+      <polyline x="20" y="50" points="462,1196 612,1150" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline> 
+      <polyline x="20" y="50" points="462,1196 612,1096" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>  
+      <polyline x="20" y="50" points="462,1196 612,1046" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <polyline x="20" y="50" points="462,1196 612,1200" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <polyline x="20" y="50" points="462,1196 612,1250" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <polyline x="20" y="50" points="462,1196 612,1300" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <polyline x="20" y="50" points="462,1196 612,1350" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>
+      <text x="442" y="1203"  style="font-size:18px;" ><a href="b07.html">失落</a></text>
+      <text x="592" y="1357"  style="font-size:18px;" ><a href="j11.html">疲倦</a></text>
+      
+      <polyline x="20" y="50" points="612,1046 712,996" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline> 
+      <polyline x="20" y="50" points="612,1046 712,1046" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="592" y="1053"  style="font-size:18px;" ><a href="j03.html">憂慮</a></text>
+      
+      <polyline x="20" y="50" points="712,1046 802,1046" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="692" y="1053"  style="font-size:18px;" ><a href="j06.html">恐懼</a></text>
+      <text x="775" y="1053"  style="font-size:18px;" ><a href="j07.html">神經質</a></text>
+      
+      <polyline x="20" y="50" points="712,996 802,996" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="692" y="1003"  style="font-size:18px;" ><a href="j04.html">焦慮</a></text>
+      <text x="782" y="1003"  style="font-size:18px;" ><a href="j05.html">擾亂</a></text>
+      
+      <polyline x="20" y="50" points="612,1096 712,1096" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="592" y="1103"  style="font-size:18px;" ><a href="j08.html">無助</a></text>
+      
+      <polyline x="20" y="50" points="712,1096 802,1096" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="686" y="1103"  style="font-size:18px;" ><a href="j09.html">孤獨感</a></text>
+      <text x="782" y="1103"  style="font-size:18px;" ><a href="j10.html">無望</a></text>
+            
+      <polyline x="20" y="50" points="612,1150 702,1150" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="592" y="1157"  style="font-size:18px;" ><a href="j01.html">悲傷</a></text>
+      <text x="682" y="1157"  style="font-size:18px;" ><a href="j02.html">自憐</a></text> 
+      
+      <polyline x="20" y="50" points="612,1200 702,1200" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="592" y="1207"  style="font-size:18px;" ><a href="j12.html">驚嚇</a></text>
+      <text x="682" y="1207"  style="font-size:18px;" ><a href="j13.html">麻木</a></text> 
+      
+      <polyline x="20" y="50" points="612,1250 702,1250" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="592" y="1257"  style="font-size:18px;" ><a href="j14.html">自責</a></text>
+      <text x="682" y="1257"  style="font-size:18px;" ><a href="j15.html">悔恨</a></text> 
+      
+      <polyline x="20" y="50" points="612,1300 702,1300" fill="none" stroke="slategray" stroke-width=".5" marker-start="url(#B07)" marker-end="url(#B07)" ></polyline>    
+      <text x="592" y="1307"  style="font-size:18px;" ><a href="j16.html">思念</a></text>
+      <text x="682" y="1307"  style="font-size:18px;" ><a href="j17.html">幻覺</a></text> 
+      
+     </svg>
     </div>
    <div calls=mainnav> <form>
-       <p>使用說明：當法友們準備好要禪修時，請從開始方向，<br/>並依個人實際狀況選擇路徑。假如合乎條件可選Yes,不符合即選No路徑。<br/>原則上每次語音開示可作為一日的練習，因此它不是讓您急躁想獲得什麼知識？而是很有耐心的練習。<br/>所以每個單元練習後您必須回到禪修行程的選單或是重複練習。<br/>感謝您的使用！</p></form> </div>
+       <p>（請按Alt＆＋來放大電腦螢幕）<br/>使用說明：這是協助法友們在禪修時有很粗的煩惱，因此讓您連結到世俗的煩惱。<br/>您可以依個人實際狀況選擇需要對治的方案來給自己有個參考的方向。<br/>除此之外您也可以從這麼有系統的表單裡，能夠看到自己的煩惱是從哪裡發生的。<br/>希望您使用愉快並<br/>感謝您的使用！</p></form> </div>
 
 <!-- 設定 viewBox 用 -->
  <script>
