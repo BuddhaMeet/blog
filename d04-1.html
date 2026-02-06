@@ -65,40 +65,10 @@
     
   </head>
 
-<body>
-<!-- 確保 id="content" 與 JS 中的對應 -->
-<p id="content">你好，這是一段測試 AI 朗讀的文字。  雜念尋思與不安 :
 
-                             造成內心不安及緊張的原因， 至少可由兩方面來看 。 一是有所需求，對於將來，充滿期待與追求之心，所形成。 另一可能是，所擁有依賴的事物，即將要消失 ，內心害怕、 擔心所造成。
 
-                             將兩者統合歸類， 不難看出內心不安， 主要是因為 ，對於未來的不明確性， 無法掌握所致。
 
-                             但是無論世事，未來的變化如何的奇特， 期間如何的長久 ，最後都會在，現在這一刻，在你的面前， 呈現出來。
 
-                             你如果是用，好的心情來迎接它， 即使是糟糕的事，也會有轉機的思維。
-
-                             如果是安住於現在， 平衡在當下， 保持正念 ，照見五蘊皆空， 那麼再大的奇蹟發生， 在你心中也只是，輕描淡寫一番， 不為所動的。
-
-                             在此感恩您，祈願您一切,幸福與圓滿！</p>
-
-<!-- 按鈕必須在 body 內 -->
-<button onclick="readContent()">點我朗讀</button>
-
-<script>
-function readContent() {
-const text = document.getElementById('content').innerText;
-
-// 檢查瀏覽器是否支援
-if ('speechSynthesis' in window) {
-const utterance = new SpeechSynthesisUtterance(text);
-utterance.lang = 'zh-TW';
-window.speechSynthesis.speak(utterance);
-} else {
-alert("抱歉，您的瀏覽器不支援語音功能。");
-}
-}
-</script>
-</body>
 
   
 <body id="holiday-detail" class="catalogue">
@@ -301,22 +271,38 @@ alert("抱歉，您的瀏覽器不支援語音功能。");
   
                    <div class="texts">
                          <div id="t-description" class="tab" style="display: block;"><p1>                         
-<!--6666 -->  
-                              <p>雜念尋思與不安 :</p>
+<!--6666 --><!-- 確保 id="content" 與 JS 中的對應 -->
+<p id="content">
+                              雜念尋思與不安 :
 
-                             <p>造成內心不安及緊張的原因， 至少可由兩方面來看 。 一是有所需求，對於將來，充滿期待與追求之心，所形成。 另一可能是，所擁有依賴的事物，即將要消失 ，內心害怕、 擔心所造成。</p>
+                             造成內心不安及緊張的原因， 至少可由兩方面來看 。 一是有所需求，對於將來，充滿期待與追求之心，所形成。 另一可能是，所擁有依賴的事物，即將要消失 ，內心害怕、 擔心所造成。
 
-                             <p>將兩者統合歸類， 不難看出內心不安， 主要是因為 ，對於未來的不明確性， 無法掌握所致。</p>
+                            將兩者統合歸類， 不難看出內心不安， 主要是因為 ，對於未來的不明確性， 無法掌握所致。
 
-                             <p>但是無論世事，未來的變化如何的奇特， 期間如何的長久 ，最後都會在，現在這一刻，在你的面前， 呈現出來。</p>
+                            但是無論世事，未來的變化如何的奇特， 期間如何的長久 ，最後都會在，現在這一刻，在你的面前， 呈現出來。
 
-                             <p>你如果是用，好的心情來迎接它， 即使是糟糕的事，也會有轉機的思維。</p>
+                            你如果是用，好的心情來迎接它， 即使是糟糕的事，也會有轉機的思維。
 
-                             <p>如果是安住於現在， 平衡在當下， 保持正念 ，照見五蘊皆空， 那麼再大的奇蹟發生， 在你心中也只是，輕描淡寫一番， 不為所動的。</p>
+                           如果是安住於現在， 平衡在當下， 保持正念 ，照見五蘊皆空， 那麼再大的奇蹟發生， 在你心中也只是，輕描淡寫一番， 不為所動的。
 
-                             <p>在此感恩您，祈願您一切,幸福與圓滿！</p>
+                            在此感恩您，祈願您一切,幸福與圓滿！</p>
                              
-<!--6666end--> 
+<!--6666end--> <!-- 按鈕必須在 body 內 -->
+<button onclick="readContent()">點我朗讀</button>                           
+                           <script>
+function readContent() {
+const text = document.getElementById('content').innerText;
+
+// 檢查瀏覽器是否支援
+if ('speechSynthesis' in window) {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'zh-TW';
+window.speechSynthesis.speak(utterance);
+} else {
+alert("抱歉，您的瀏覽器不支援語音功能。");
+}
+}
+</script>
                        </p1> </div> 
                    </div>
                    <div class="comments">
@@ -937,6 +923,7 @@ jQuery(document).ready(function($) {
     
 </body>
 </html>
+
 
 
 
