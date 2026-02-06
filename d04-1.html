@@ -64,28 +64,7 @@
     <!-- end Media Player style -->
     
   </head>
-<body>
-<!-- 確保 id="content" 與 JS 中的對應 -->
-<p id="content">你好，這是一段測試 AI 朗讀的文字。</p>
 
-<!-- 按鈕必須在 body 內 -->
-<button onclick="readContent()">點我朗讀</button>
-
-<script>
-function readContent() {
-const text = document.getElementById('content').innerText;
-
-// 檢查瀏覽器是否支援
-if ('speechSynthesis' in window) {
-const utterance = new SpeechSynthesisUtterance(text);
-utterance.lang = 'zh-TW';
-window.speechSynthesis.speak(utterance);
-} else {
-alert("抱歉，您的瀏覽器不支援語音功能。");
-}
-}
-</script>
-</body>  
 <body id="holiday-detail" class="catalogue">
 <div id="page">
    <div id="main-container">
@@ -286,9 +265,11 @@ alert("抱歉，您的瀏覽器不支援語音功能。");
   
                    <div class="texts">
                          <div id="t-description" class="tab" style="display: block;"><p1>                         
-<!--6666 --> 這是一段文字。
-<button onclick="readContent()">朗讀</button>
- <p id="content"><p>雜念尋思與不安 :</p>
+<!--6666 --> 
+                          <body>
+<!-- 確保 id="content" 與 JS 中的對應 -->
+<p id="content">
+                            <p>雜念尋思與不安 :</p>
 
                              <p>造成內心不安及緊張的原因， 至少可由兩方面來看 。 一是有所需求，對於將來，充滿期待與追求之心，所形成。 另一可能是，所擁有依賴的事物，即將要消失 ，內心害怕、 擔心所造成。</p>
 
@@ -302,7 +283,27 @@ alert("抱歉，您的瀏覽器不支援語音功能。");
 
                              <p>在此感恩您，祈願您一切,幸福與圓滿！</p>
                              </p>
-<!--6666end--> 
+
+ 你好，這是一段測試 AI 朗讀的文字。</p>
+
+<!-- 按鈕必須在 body 內 -->
+<button onclick="readContent()">點我朗讀</button>
+
+<script>
+function readContent() {
+const text = document.getElementById('content').innerText;
+
+// 檢查瀏覽器是否支援
+if ('speechSynthesis' in window) {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'zh-TW';
+window.speechSynthesis.speak(utterance);
+} else {
+alert("抱歉，您的瀏覽器不支援語音功能。");
+}
+}
+</script>
+</body>  <!--6666end--> 
                        </p1> </div> 
                    </div>
                    <div class="comments">
@@ -913,14 +914,7 @@ jQuery(document).ready(function($) {
   </script>  
 
      
-<script>
-function readContent() {
-const text = document.getElementById('content').innerText;
-const utterance = new SpeechSynthesisUtterance(text);
-utterance.lang = 'zh-TW'; // 設定語言
-window.speechSynthesis.speak(utterance); // 執行朗讀
-}
-</script>
+
    <!-- 分享按鈕 --> 
 <script>
 !function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
@@ -934,6 +928,7 @@ window.speechSynthesis.speak(utterance); // 執行朗讀
 </body>
 
 </html>
+
 
 
 
