@@ -65,6 +65,37 @@
     
   </head>
 <body id="holiday-detail" class="catalogue">
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI 朗讀測試</title>
+</head>
+<body>
+<!-- 確保 id="content" 與 JS 中的對應 -->
+<p id="content">你好，這是一段測試 AI 朗讀的文字。</p>
+
+<!-- 按鈕必須在 body 內 -->
+<button onclick="readContent()">點我朗讀</button>
+
+<script>
+function readContent() {
+const text = document.getElementById('content').innerText;
+
+// 檢查瀏覽器是否支援
+if ('speechSynthesis' in window) {
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'zh-TW';
+window.speechSynthesis.speak(utterance);
+} else {
+alert("抱歉，您的瀏覽器不支援語音功能。");
+}
+}
+</script>
+</body>
+</html>
+  
 <div id="page">
    <div id="main-container">
      <header id="siteheader">
@@ -912,5 +943,6 @@ window.speechSynthesis.speak(utterance); // 執行朗讀
 </body>
 
 </html>
+
 
 
