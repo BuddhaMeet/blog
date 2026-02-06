@@ -264,8 +264,9 @@
   
                    <div class="texts">
                          <div id="t-description" class="tab" style="display: block;"><p1>                         
-<!--6666 -->  
-                              <p>雜念尋思與不安 :</p>
+<!--6666 --> 這是一段文字。
+<button onclick="readContent()">朗讀</button>
+ <p id="content"><p>雜念尋思與不安 :</p>
 
                              <p>造成內心不安及緊張的原因， 至少可由兩方面來看 。 一是有所需求，對於將來，充滿期待與追求之心，所形成。 另一可能是，所擁有依賴的事物，即將要消失 ，內心害怕、 擔心所造成。</p>
 
@@ -278,7 +279,7 @@
                              <p>如果是安住於現在， 平衡在當下， 保持正念 ，照見五蘊皆空， 那麼再大的奇蹟發生， 在你心中也只是，輕描淡寫一番， 不為所動的。</p>
 
                              <p>在此感恩您，祈願您一切,幸福與圓滿！</p>
-                             
+                             </p>
 <!--6666end--> 
                        </p1> </div> 
                    </div>
@@ -888,6 +889,16 @@ jQuery(document).ready(function($) {
       }
     }
   </script>  
+
+     
+<script>
+function readContent() {
+const text = document.getElementById('content').innerText;
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'zh-TW'; // 設定語言
+window.speechSynthesis.speak(utterance); // 執行朗讀
+}
+</script>
    <!-- 分享按鈕 --> 
 <script>
 !function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
@@ -899,4 +910,5 @@ jQuery(document).ready(function($) {
 </div>  
     
 </body>
+
 </html>
