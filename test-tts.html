@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS 語音測試 - Buddhist Calm TTS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif TC', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .test-section h2 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .text-content {
+            line-height: 2;
+            color: #333;
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .tts-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .tts-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .tts-button:active {
+            transform: translateY(0);
+        }
+        
+        .tts-button.playing {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .tts-button svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .info p {
+            margin: 5px 0;
+            color: #1565c0;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        .status.idle {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .status.speaking {
+            background: #fff3e0;
+            color: #e65100;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔊 Buddhist Calm TTS 語音測試</h1>
+        
+        <!-- 測試 1：短句測試 -->
+        <div class="test-section">
+            <h2>📝 測試 1：短句朗讀</h2>
+            <div class="text-content" id="short-text">
+                南無阿彌陀佛
+            </div>
+            <div class="controls">
+                <button class="tts-button" onclick="speakText('short-text')">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                    播放短句
+                </button>
+                <button class="tts-button" onclick="stopSpeaking()">
+                    <svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+                    停止
+                </button>
+            </div>
+        </div>
+        
+        <!-- 測試 2：中等段落 -->
+        <div class="test-section">
+            <h2>📖 測試 2：段落朗讀</h2>
+            <div class="text-content" id="medium-text">
+                佛法修行，始於正見。正見者，了知諸法實相，不為妄念所惑。修行之道，當從戒定慧入手，循序漸進，方能證得菩提。
+            </div>
+            <div class="controls">
+                <button class="tts-button" onclick="speakText('medium-text')">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                    播放段落
+                </button>
+                <button class="tts-button" onclick="stopSpeaking()">
+                    <svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+                    停止
+                </button>
+            </div>
+        </div>
+        
+        <!-- 測試 3：完整經文 -->
+        <div class="test-section">
+            <h2>📜 測試 3：完整經文段落</h2>
+            <div class="text-content" id="long-text">
+                觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。舍利子，色不異空，空不異色，色即是空，空即是色，受想行識，亦復如是。舍利子，是諸法空相，不生不滅，不垢不淨，不增不減。
+            </div>
+            <div class="controls">
+                <button class="tts-button" onclick="speakText('long-text')">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                    播放經文
+                </button>
+                <button class="tts-button" onclick="stopSpeaking()">
+                    <svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+                    停止
+                </button>
+            </div>
+        </div>
+        
+        <!-- 狀態顯示 -->
+        <div id="status" class="status idle">準備就緒</div>
+        
+        <!-- 系統資訊 -->
+        <div class="info">
+            <p><strong>🎙️ 語音引擎：</strong>Web Speech API (瀏覽器內建)</p>
+            <p><strong>🌏 語言：</strong>繁體中文（zh-TW）</p>
+            <p><strong>⚙️ 特性：</strong>平靜語調、標點停頓、自動暫停/繼續</p>
+            <p><strong>💡 提示：</strong>首次播放可能需要幾秒鐘初始化</p>
+        </div>
+    </div>
+    
+    <!-- 載入 TTS 腳本 -->
+    <script src="js/buddhist-calm-tts.js"></script>
+    
+    <script>
+        let tts = null;
+        
+        // 頁面載入時初始化 TTS
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof BuddhistCalmTTS !== 'undefined') {
+                tts = new BuddhistCalmTTS();
+                console.log('✅ TTS 初始化成功');
+                updateStatus('準備就緒 ✅', 'idle');
+            } else {
+                console.error('❌ TTS 腳本載入失敗');
+                updateStatus('TTS 腳本載入失敗 ❌', 'idle');
+            }
+        });
+        
+        function speakText(elementId) {
+            if (!tts) {
+                alert('TTS 尚未初始化，請重新整理頁面');
+                return;
+            }
+            
+            const element = document.getElementById(elementId);
+            const text = element.textContent.trim();
+            
+            // 更新所有按鈕狀態
+            document.querySelectorAll('.tts-button').forEach(btn => {
+                btn.classList.remove('playing');
+            });
+            
+            // 標記當前播放的按鈕
+            event.target.classList.add('playing');
+            
+            updateStatus('正在朗讀... 🔊', 'speaking');
+            
+            tts.speak(text, {
+                onEnd: () => {
+                    updateStatus('朗讀完成 ✅', 'idle');
+                    event.target.classList.remove('playing');
+                },
+                onError: (error) => {
+                    updateStatus('發生錯誤：' + error.message, 'idle');
+                    event.target.classList.remove('playing');
+                }
+            });
+        }
+        
+        function stopSpeaking() {
+            if (tts) {
+                tts.stop();
+                updateStatus('已停止 ⏹️', 'idle');
+                
+                // 移除所有播放狀態
+                document.querySelectorAll('.tts-button').forEach(btn => {
+                    btn.classList.remove('playing');
+                });
+            }
+        }
+        
+        function updateStatus(message, className) {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = message;
+            statusEl.className = 'status ' + className;
+        }
+        
+        // 鍵盤快捷鍵
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && e.target.tagName !== 'BUTTON') {
+                e.preventDefault();
+                stopSpeaking();
+            }
+        });
+    </script>
+</body>
+</html>
