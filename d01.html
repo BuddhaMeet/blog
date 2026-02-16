@@ -247,20 +247,24 @@
          <nav class="tabbar" >          
           <a href="" class="current1">再一次聆聽</a>          
          </nav>   
-         	<svg id="svg">
-<!-- SVG圖形背景大小及顏色 -->
-<rect x="0" y="0" fill="none" stroke="#fff" stroke-width="0" width="166" height="39" />
-<rect x="2" y="3" width="162" height="32" rx="15" ry="15" fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" id="test" />
-                
-<!-- 4444-->               
- <a href="b03.html">
-     
-     
-<text x="14" y="25" style="font-size:15px" fill="#b26" >進一步聆聽其它的 ▶︎</text></a>               
-                   </svg>
-                  <!-- 加入 Media Player-->   
-<!-- 5555-->  <span><div class="mediPlayer">         </div>                
-                </span>
+         	<!-- 修正版：可點擊的 SVG 按鈕 -->
+<svg id="svg" viewBox="0 0 166 39" width="166" height="39" style="display: block; cursor: pointer;">
+    <!-- SVG圖形背景 -->
+    <rect x="0" y="0" fill="none" stroke="#fff" stroke-width="0" width="166" height="39" />
+    <rect x="2" y="3" width="162" height="32" rx="15" ry="15" 
+          fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" id="test" />
+    
+    <!-- 可點擊連結 -->
+    <a href="b03.html" style="cursor: pointer;">
+        <text x="14" y="25" style="font-size:15px; pointer-events: all;" fill="#b26">
+            進一步聆聽其它的 ▶︎
+        </text>
+    </a>
+</svg>
+
+<!-- 加入 Media Player -->
+<span><div class="mediPlayer"></div></span>
+                 
            <!-- SVG圖形背景大小及顏色 -->
   
                    <div class="texts">
@@ -900,3 +904,4 @@ jQuery(document).ready(function($) {
 </body>
 
 </html>
+
