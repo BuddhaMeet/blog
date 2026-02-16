@@ -249,23 +249,67 @@
     <a href="" class="current1">再一次聆聽</a>          
 </nav>
 
-<!-- 加強版：確保可見 -->
-<div style="margin: 15px 0; clear: both;">
-    <svg id="svg" viewBox="0 0 166 39" width="166" height="39" 
-         style="cursor: pointer; background: transparent;">
-        <rect x="2" y="3" width="162" height="32" rx="15" ry="15" 
-              fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" id="test" />
-        
-        <a href="b03.html" style="cursor: pointer;">
-            <text x="14" y="25" style="font-size:15px; pointer-events: all;" fill="#b26">
+<!-- 修正後的 HTML 片段 -->
+
+<!-- 「再一次聆聽」按鈕 -->
+<nav class="tabbar">          
+    <a href="" class="current1">再一次聆聽</a>          
+</nav>
+
+<!-- SVG 按鈕區域（加入獨立樣式避免衝突） -->
+<div style="margin: 15px 0; clear: both; position: relative; z-index: 10;">
+    <a href="b03.html" style="text-decoration: none; display: block;">
+        <svg id="svg-next-button" viewBox="0 0 166 39" width="166" height="39" 
+             style="cursor: pointer; display: block; opacity: 1 !important; visibility: visible !important;">
+            <!-- SVG 圖形背景 -->
+            <rect x="2" y="3" width="162" height="32" rx="15" ry="15" 
+                  fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" 
+                  class="svg-btn-bg" />
+            
+            <!-- 按鈕文字 -->
+            <text x="14" y="25" style="font-size:15px; pointer-events: none;" fill="#b26">
                 進一步聆聽其它的 ▶︎
             </text>
-        </a>
-    </svg>
+        </svg>
+    </a>
 </div>
 
-<!-- 加入 Media Player -->
-<span><div class="mediPlayer"></div></span>
+<!-- Media Player 區域 -->
+<span>
+    <div class="mediPlayer">
+        <audio class="listen" preload="none" data-size="100" 
+               src="https://dl.dropbox.com/s/g5cp3uam34vsrdf/d01.wav"></audio>
+    </div>
+</span>
+
+<!-- 加入保護性 CSS -->
+<style>
+/* 確保 SVG 按鈕可見且不受 mediPlayer 樣式影響 */
+#svg-next-button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+#svg-next-button * {
+    pointer-events: auto !important;
+}
+
+/* SVG 按鈕 hover 效果 */
+#svg-next-button .svg-btn-bg {
+    transition: all 0.3s ease;
+}
+
+#svg-next-button:hover .svg-btn-bg {
+    fill: #ddf;
+    opacity: 0.6 !important;
+}
+
+#svg-next-button:hover text {
+    fill: #a15;
+}
+</style>
 
 
                  
@@ -908,6 +952,7 @@ jQuery(document).ready(function($) {
 </body>
 
 </html>
+
 
 
 
