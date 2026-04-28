@@ -181,7 +181,7 @@ Speaker 2:May your heart be peaceful, and may you shine brightly.  Namaste.
     </div>
 </div>
 
-<audio id="audio" src="m4a/g01.m4a"></audio>
+<audio id="audio" src="m4a/g01.mp3"></audio>
 
 <script>
     const audio = document.getElementById('audio');
@@ -197,28 +197,17 @@ Speaker 2:May your heart be peaceful, and may you shine brightly.  Namaste.
     let isUserScrolling = false;
     let scrollTimeout;
 
-   playBtn.addEventListener('click', () => {
-    // 1. 強制加載：解決 Mac/Safari 抓不到資源的問題
-    if (audio.readyState === 0) {
-        audio.load();
-    }
-
-    if (audio.paused) {
-        // 2. 加上 .catch()：這是為了符合 Chrome/Safari 的安全播放規範
-        audio.play().then(() => {
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
             iconPlay.style.display = 'none';
             iconPause.style.display = 'block';
-        }).catch(e => {
-            // 如果還是沒聲音，這裡會抓到原因（例如路徑 404）
-            console.error("播放失敗:", e);
-        });
-    } else {
-        audio.pause();
-        iconPlay.style.display = 'block';
-        iconPause.style.display = 'none';
-    }
-});
-
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
 
     // 監測使用者手動滾動，暫停自動滾動 3 秒
     scrollContainer.addEventListener('scroll', () => {
