@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   z-index: 99999;
-  text-align: center;
+  text-align: center;pointer-events: none;
 }
 
 #app-loading .logo {
@@ -148,7 +148,7 @@
     </style>
 </head>
 <body>
- <div id="install-tip" style="display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#5E6AD2;color:white;padding:10px 16px;border-radius:12px;font-size:14px;">
+ <div id="install-tip" style="display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#5E6AD2;color:white;padding:10px 16px;border-radius:12px;font-size:14px;z-index:100000;">
   點右上角「加入主畫面」即可安裝雨後涼亭
 </div>  
 <div id="app-loading">
@@ -207,15 +207,20 @@
    
  <script>
 window.addEventListener("load", () => {
-  const loader = document.getElementById("app-loading");
-  if (!loader) return;
-
   setTimeout(() => {
-    loader.style.opacity = "0";
-    loader.style.transition = "opacity 0.4s ease";
+    const loader = document.getElementById("app-loading");
+    if (loader) loader.remove();
 
-    setTimeout(() => loader.remove(), 400);
-  }, 600); // 短延遲讓畫面穩定
+    const tip = document.getElementById("install-tip");
+
+    const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isIOS && isSafari && tip) {
+      tip.style.display = "block";
+    }
+
+  }, 600);
 });
 </script>
     
