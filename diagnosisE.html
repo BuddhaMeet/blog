@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有不知名的負面情緒與心理困擾</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+            background-color: #f2f0e9; /* 與閱讀器背景一致 */
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #f7e7cb; /* 與閱讀器容器一致 */
+            border-radius: 28px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border: 1px solid #e8e4d8;
+        }
+
+        header { text-align: center; margin-bottom: 45px; }
+
+        h1 { 
+    /* 改用宋體，字體淡一點（深灰色帶棕），增加呼吸感 */
+    color: #8f6a3b; 
+    font-family: "Noto Serif TC", "PMingLiU", serif;
+    font-size: 1.8em; 
+    margin-bottom: 12px;
+    letter-spacing: 5px; /* 增加字間距，讓字體不擁擠 */
+    font-weight: 700;
+    text-align: center;
+    /* 弱化陰影，改用非常淡的擴散感 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.subtitle { 
+    color: #8c7662; 
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 0.95em; 
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    opacity: 0.85; /* 讓副標題稍微退後，突出標題 */
+}
+
+        .options-list { display: flex; flex-direction: column; gap: 18px; }
+
+        .option-btn {
+            background-color: #ffffff;
+            border: 1.5px solid #EAEAEA;
+            border-radius: 20px;
+            padding: 22px 25px 22px 80px; 
+            color: #614a3d;
+            font-size: 1.15em;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            cursor: pointer; 
+            /* 初始硬邊陰影 */
+            box-shadow: 3px 3px 0px 0px rgba(97, 74, 61, 0.1);
+        }
+
+        .icon-circle {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            background-color: #f2f0e9; /* 淺米色圓圈 */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        /* 懸停效果：保留往左上跳 + 陰影加深 */
+        .option-btn:hover {
+            background-color: #fcfbf7;
+            border-color: #ba896c; /* 閱讀器Footer主色 */
+            color: #ba896c;
+            transform: translate(-4px, -4px); /* 往左上跳 */
+            box-shadow: 8px 8px 0px 0px rgba(186, 137, 108, 0.2); /* 陰影隨之變長 */
+        }
+
+        /* 懸停時圖標稍微放大，但不改變圖標原始色彩 */
+        .option-btn:hover .icon-circle {
+            background-color: #f7e7cb;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* 點擊瞬間：物理下沉感 */
+        .option-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            transition: all 0.1s;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 35px 20px; }
+            h1 { font-size: 1.8em; }
+            .option-btn { padding-left: 70px; font-size: 1.05em; }
+            .icon-circle { width: 40px; height: 40px; left: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>有不知名的負面情緒與心理困擾</h1>
+            <p class="subtitle">選擇您目前最貼近的感受，即將引導您如何沐浴內心</p>
+        </header>
+
+        <div class="options-list">
+            
+         <a href="e01.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                我珍惜並積累我的物質與精神財富，但似乎有調整的空間
+            </a>
+            
+            <a href="e02.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+               我討厭別人打擾到我或處理我的財產
+            </a>
+            
+            
+            <a href="e03.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                我排斥他人要我離開享樂或禪樂這樣的事實
+            </a>
+            
+            
+            <a href="e04.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                想要叫我做事,門都沒有!我要拒絕他
+            </a>
+            
+            
+            <a href="e05.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                我疾言厲色與他對立
+            </a>
+            
+            <a href="e06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                對於他的要求我百般的挑剔
+            </a>   
+            
+            <a href="b04.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+
+                我覺得我是個缺乏愛心的人
+            </a>
+
+            <a href="f01.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                我經常對他人提供的服務不夠理想而生氣
+            </a>
+
+            <a href="f02.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                甚至當面指責對方
+            </a>
+
+            <a href="f03.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                埋怨屬下上司或他人
+            </a>
+
+            <a href="f04.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                遇到了討厭的人,恨意難消
+            </a>
+            
+
+            <a href="f05.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                試圖逃避討厭的人事物
+            </a>
+
+            <a href="f06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                我永遠不滿意厭惡之人的任何善意表現
+            </a>
+
+            <a href="f07.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                我對任何的人事物讓我受害損失感到非常的惱怒
+            </a>
+
+            <a href="f08.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24">
+               <path fill="#00873D" d="M12,2L1,12H4L3,16H6L5,20H11V22H13V20H19L18,16H21L20,12H23L12,2Z"/>
+               </svg>
+               </span>
+                甚至惱怒到非常的激動
+            </a>            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</body>
+</html>

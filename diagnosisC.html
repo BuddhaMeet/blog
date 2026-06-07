@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在學習人際關係與情感連結的課題</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+            background-color: #f2f0e9; /* 與閱讀器背景一致 */
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #f7e7cb; /* 與閱讀器容器一致 */
+            border-radius: 28px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border: 1px solid #e8e4d8;
+        }
+
+        header { text-align: center; margin-bottom: 45px; }
+
+        h1 { 
+    /* 改用宋體，字體淡一點（深灰色帶棕），增加呼吸感 */
+    color: #8f6a3b; 
+    font-family: "Noto Serif TC", "PMingLiU", serif;
+    font-size: 1.8em; 
+    margin-bottom: 12px;
+    letter-spacing: 5px; /* 增加字間距，讓字體不擁擠 */
+    font-weight: 700;
+    text-align: center;
+    /* 弱化陰影，改用非常淡的擴散感 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.subtitle { 
+    color: #8c7662; 
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 0.95em; 
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    opacity: 0.85; /* 讓副標題稍微退後，突出標題 */
+}
+
+        .options-list { display: flex; flex-direction: column; gap: 18px; }
+
+        .option-btn {
+            background-color: #ffffff;
+            border: 1.5px solid #EAEAEA;
+            border-radius: 20px;
+            padding: 22px 25px 22px 80px; 
+            color: #614a3d;
+            font-size: 1.15em;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            cursor: pointer; 
+            /* 初始硬邊陰影 */
+            box-shadow: 3px 3px 0px 0px rgba(97, 74, 61, 0.1);
+        }
+
+        .icon-circle {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            background-color: #f2f0e9; /* 淺米色圓圈 */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        /* 懸停效果：保留往左上跳 + 陰影加深 */
+        .option-btn:hover {
+            background-color: #fcfbf7;
+            border-color: #ba896c; /* 閱讀器Footer主色 */
+            color: #ba896c;
+            transform: translate(-4px, -4px); /* 往左上跳 */
+            box-shadow: 8px 8px 0px 0px rgba(186, 137, 108, 0.2); /* 陰影隨之變長 */
+        }
+
+        /* 懸停時圖標稍微放大，但不改變圖標原始色彩 */
+        .option-btn:hover .icon-circle {
+            background-color: #f7e7cb;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* 點擊瞬間：物理下沉感 */
+        .option-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            transition: all 0.1s;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 35px 20px; }
+            h1 { font-size: 1.8em; }
+            .option-btn { padding-left: 70px; font-size: 1.05em; }
+            .icon-circle { width: 40px; height: 40px; left: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>正在學習人際關係與情感連結的課題</h1>
+            <p class="subtitle">選擇您目前最貼近的感受，即將引導您如何沐浴內心</p>
+        </header>
+
+        <div class="options-list">
+            <!-- 1. 禪修 -->
+            
+        <a href="b06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+
+
+
+                我只在乎我自己,不禮賢下士
+            </a>
+
+            
+
+            <a href="g01.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我猜疑他人的能力
+            </a>
+
+            
+
+            <a href="g02.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我妒忌別人的能力超越我
+            </a>
+
+            
+
+            <a href="g03.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我憎恨他人比我有更好的名聲
+            </a>
+ 
+            
+
+            <a href="g04.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我批評他人所做的好事
+            </a>       
+        
+ 
+            
+
+            <a href="g06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我故意挑撥,造謠生變
+            </a>       
+ 
+            
+
+            <a href="g08.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我用言語來中傷他
+            </a>
+ 
+            
+
+            <a href="g09.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我內心有極大的憤慨，我要陷害他
+            </a>
+  
+            
+
+            <a href="g10.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我已經發狂了,要讓他不得好死
+            </a>
+  
+            
+
+            <a href="h01.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我高人一等是最優秀的種族
+            </a>
+  
+            
+
+            <a href="h03.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                其他人都應該侍奉我
+            </a>
+   
+            
+
+            <a href="h03.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我看不起其他人
+            </a>
+   
+            <a href="h06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                只要是不滿意的東西我通通不要,
+            </a>
+            
+            <a href="h06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我可以要求人,別人不能要求我
+            </a>
+            
+
+            <a href="h07.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我只信任自己的看法,不相信任何宗教
+            </a>
+            
+            <a href="h09.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我的信仰及偶像才是最高級的
+            </a>
+            
+            <a href="i01.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+               我正處於自信低潮，常感覺低人一等
+            </a>
+            
+           <a href="i02.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我像是在夾縫中求生存
+            </a>
+            
+            <a href="i03.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我用各種方法騙取他人財物
+            </a>
+            
+            <a href="i04.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我喜歡攀緣高貴
+            </a>
+            
+            <a href="i05.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                經常想著如何發財
+            </a>
+            
+            <a href="d04B.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                無法安定,經常追求工作以外的東西
+            </a>
+            
+            
+            <a href="d08B.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我的心六神無主散亂無章
+            </a>
+            
+            <a href="d09B.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                經常做白日夢得大獎賞
+            </a>
+            
+            <a href="d10B.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                最後還是窮困寥落
+            </a>
+            
+            <a href="i06.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我懊惱應該有更好的待遇,怎麼落得如此下場
+            </a>
+            
+            <a href="i07.html" class="option-btn">
+                <span class="icon-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="#FF8A80" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+                </span>
+                我心灰意冷,完全沒有信心
+            </a>
+            
+            
+            
+        </div>
+    </div>
+</body>
+</html>

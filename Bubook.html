@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>禪修參考用電子書 PDF </title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+            background-color: #f0f1f5; 
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            background-color: #fffaef; /* 延續雨後涼亭的溫暖米黃色 */
+            border-radius: 28px;
+            padding: 45px 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header { text-align: center; margin-bottom: 35px; }
+        
+        h1 { 
+            color: #5E6AD2; 
+            font-size: 1.8em; 
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(94, 106, 210, 0.1); 
+        }
+        
+        .subtitle { 
+            color: #7a7a7a; 
+            font-size: 1em; 
+        }
+
+        /* 精美表格容器 */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #EAEAEA;
+        }
+
+        .book-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        /* 表頭樣式 */
+        .book-table th {
+            background-color: #F0F2FF; /* 精緻的淺紫底色 */
+            color: #5E6AD2;
+            padding: 18px 24px;
+            font-size: 1.05em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #E4E7FC;
+        }
+
+        /* 表身列樣式 */
+        .book-table tr {
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #F5F5F5;
+        }
+
+        /* 滑過整行變色 */
+        .book-table tr:hover {
+            background-color: #FAF9FF;
+        }
+
+        .book-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .book-table td {
+            padding: 20px 24px;
+            vertical-align: middle;
+            color: #555555;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* 書目超連結設計（具備點擊動態效果） */
+        .book-link {
+            color: #E67E22; /* 暖橘色系書目 */
+            font-weight: 600;
+            font-size: 1.05em;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+
+        /* 滑過書名時變深並加上底線 */
+        .book-link:hover {
+            color: #D35400;
+            text-decoration: underline;
+        }
+
+        .book-author {
+            color: #444444;
+            font-weight: 500;
+        }
+
+        .book-desc {
+            color: #777777;
+        }
+
+        /* 📱 針對手機板（RWD）的優化 */
+        @media (max-width: 768px) {
+            .container { padding: 30px 15px; border-radius: 20px; }
+            h1 { font-size: 1.5em; }
+            
+            .book-table, .book-table thead, .book-table tbody, .book-table th, .book-table td, .book-table tr { 
+                display: block; 
+            }
+            
+            .book-table thead { display: none; }
+            
+            .book-table tr {
+                padding: 15px;
+                margin: 15px;
+                background: #ffffff;
+                border: 1px solid #EAEAEA;
+                border-radius: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            }
+            
+            .book-table td {
+                padding: 6px 0;
+                border: none;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .book-table td::before {
+                font-size: 0.85em;
+                color: #A0A0A0;
+                margin-bottom: 2px;
+                font-weight: bold;
+            }
+            
+            .book-table td:nth-of-type(1)::before { content: "電子書目 (點擊下載)"; }
+            .book-table td:nth-of-type(2)::before { content: "作者"; }
+            .book-table td:nth-of-type(3)::before { content: "內容說明"; }
+            
+            .book-link { font-size: 1.1em; display: inline-block; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>禪修參考用電子書 PDF</h1><a href="index.html"  download class="book-link">回首頁 </a>
+            <p class="subtitle">點擊書目即可隨身下載閱讀</p>
+        </header>
+
+        <!-- 表格區域 -->
+        <div class="table-responsive">
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">電子書目 (點擊下載)</th>
+                        <th style="width: 25%;">作者</th>
+                        <th style="width: 40%;">內容說明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 💡 提醒：請將下方的 book01.pdf 等更換為您在 Bubook 資料夾中實際的 PDF 檔名 -->
+                    
+                    
+                    
+                    <!-- 列 1 -->
+                    <tr>
+                        <td>
+                            <a href="http://buddhaspace.org/agama/" download class="book-link" >《好讀 雜阿含經》線上版 📥</a>
+                        </td>
+                        <td class="book-author">台大獅子吼佛學專站</td>
+                        <td class="book-desc"><a href="https://github.com/heavenchou/Samyukta-Agama_CBS"   download class="book-link">github上下載電子書</a></td>
+                    </tr>
+                    
+                    
+                    <!-- 列 1 -->
+                    <tr>
+                        <td>
+                            <a href="https://ddc.shengyen.org/?doc=04-09-001&tree_id=j1_1218" download class="book-link">法鼓全集－禪的世界 📥</a>
+                       <br>
+                            <a href="https://ddc.shengyen.org/?doc=04-09-001&tree_id=j1_1250" download class="book-link">法鼓全集－禪鑰 📥</a>
+                        
+                        </td>
+                        <td class="book-author">聖嚴法師</td>
+                        <td class="book-desc">
+                        <!-- 只加入這行：點擊就會觸發下載 APP 的視窗 -->
+                           <a href="javascript:void(0);" onclick="openAppModal()" style="color: #fa9333; font-weight: bold; text-decoration: none;">📱 下載法鼓全集APP</a>
+                        </td>
+
+                    </tr>                  
+                 <!-- 列 1 -->
+                    <tr>
+                        <td>
+                            <a href="https://buddhameet.github.io/blog/bel-a.html" download class="book-link">佛陀傳記 線上版 📥</a>
+                        </td>
+                        <td class="book-author">果聞法師</td>
+                        <td class="book-desc">網頁上文字觀看</td>
+                    </tr>
+                    <!-- 列 2 -->   
+                    
+                    
+                    
+                    
+                    <!-- 列 1 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/file/d/0B4t3yrvpzBYEYndxcE02QWxRUGc/view?usp=docslist_api" target="_blank" download class="book-link">沙門果經講義 📥</a>
+                        </td>
+                        <td class="book-author">瑪欣德比庫</td>
+                        <td class="book-desc"><a href="https://youtu.be/03Jngp4v1wg?si=N_JlSGfxnaWSttyB"   download class="book-link">YouTube上觀看</a></td>
+                    </tr>
+                    <!-- 列 2 -->
+                    <tr>
+                        <td>
+                            <a href="https://santavana.sharepoint.com/sites/santavanainfogroup9/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fsantavanainfogroup9%2FShared%20Documents%2FGeneral%2F%E9%96%8B%E7%A4%BA%E6%AA%94%E6%A1%88%2F%E5%BC%80%E5%8D%B0%E9%98%BF%E9%98%87%E6%A2%A8%2F%E4%BD%9B%E5%AD%B8%E5%BD%B1%E9%9F%B3%2F%E5%9B%9B%E3%80%81%E4%BD%9B%E6%95%99%E7%B6%93%E8%AB%96%2F08%2D11%2E%E3%80%8A%E6%B2%99%E9%96%80%E6%9E%9C%E7%B6%93%E3%80%8B%E5%8F%8A%E5%85%B6%E8%A8%BB%E7%96%8F%2F%E8%AE%B2%E4%B9%89%2F17%EF%BC%8921%E9%82%AA%E5%91%BD%2Epdf&viewid=1335572d%2Db56c%2D4b39%2Dbe89%2D026cd693867d&parent=%2Fsites%2Fsantavanainfogroup9%2FShared%20Documents%2FGeneral%2F%E9%96%8B%E7%A4%BA%E6%AA%94%E6%A1%88%2F%E5%BC%80%E5%8D%B0%E9%98%BF%E9%98%87%E6%A2%A8%2F%E4%BD%9B%E5%AD%B8%E5%BD%B1%E9%9F%B3%2F%E5%9B%9B%E3%80%81%E4%BD%9B%E6%95%99%E7%B6%93%E8%AB%96%2F08%2D11%2E%E3%80%8A%E6%B2%99%E9%96%80%E6%9E%9C%E7%B6%93%E3%80%8B%E5%8F%8A%E5%85%B6%E8%A8%BB%E7%96%8F%2F%E8%AE%B2%E4%B9%89" download class="book-link">《沙門果經》及其註疏 📥</a>
+                        </td>
+                        <td class="book-author">開印比丘</td>
+                        <td class="book-desc"><a href="https://youtu.be/L7UsWyegsvM?si=W_fJ8IHxRG-mc1CB"  download class="book-link">YouTube上觀看</a></td>
+                    </tr>
+                    <!-- 列 3 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEQWtxbzRYeW9adk0" download class="book-link">觀呼吸與觀四界 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">止觀禪法。</td>
+                    </tr>
+                    <!-- 列 4 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYENkFaTnhXNWhackE" download class="book-link">入出息念 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">止禪</td>
+                    </tr>
+                    <!-- 列 5 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEMUVDeXJ3Q25UQ0k" download class="book-link">正念之道 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">止觀禪法。</td>
+                    </tr>
+                    <!-- 列 6 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYELVdIdTVBNHM3cVU" download class="book-link">智慧之光 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">合輯</td>
+                    </tr>
+                    <!-- 列 7 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEc3k2ZGlYTzdMUmc" download class="book-link">如實之見 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">止觀指導與問答。</td>
+                    </tr>
+                    <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEanBiYTlZU0tnb0U" download class="book-link">帕奧禪師－佛法講座及問答 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">佛法講座及問答。</td>
+                    </tr>
+  <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEanBiYTlZU0tnb0U" download class="book-link">帕奧禪師－佛法講座及問答 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">佛法講座及問答。</td>
+                    </tr> 
+   <!-- 列 8-1 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEQ1JjcklGakdSdVE" download class="book-link">帕奧襌師佛學問答整理 📥</a>
+                        </td>
+                        <td class="book-author">帕奧禪師</td>
+                        <td class="book-desc">佛法講座及問答。</td>
+                    </tr>                 
+   <!-- 列 8-2 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYELXBOOXYxVGJhS0U" download class="book-link">靜止的流水 📥</a>
+                        </td>
+                        <td class="book-author">阿姜查的禪修世界</td>
+                        <td class="book-desc">以法為贈禮。</td>
+                    </tr>                 
+  <!-- 列 8-3 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYESFBIUDBuNXZvWWM" download class="book-link" >禪修之旅 📥</a>
+                        </td>
+                        <td class="book-author">焦諦卡禪師</td>
+                        <td class="book-desc">禪修基本技巧 十六內觀襌</td>
+                    </tr>                  
+   <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEYmExZFcwSkdQdFk" download class="book-link" >禪修手冊 📥</a>
+                        </td>
+                        <td class="book-author">法雨道場</td>
+                        <td class="book-desc">禪修者參考之用。</td>
+                    </tr>                 
+  <!-- 列 8-4 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEZXFTVHhJRk5IQjQ" download class="book-link" >禪修開示-迦那卡禪師演講集 📥</a>
+                        </td>
+                        <td class="book-author">焦諦卡禪師</td>
+                        <td class="book-desc">內觀襌實修。</td>
+                    </tr>
+ <!-- 列 8-5 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEMjJLeWg1cGxHcGM" download class="book-link" >覺知生命的七封信 📥</a>
+                        </td>
+                        <td class="book-author">焦諦卡禪師</td>
+                        <td class="book-desc">面對自己。</td>
+                    </tr>                   
+                    
+    <!-- 列 8-6 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYETUdORXk0ZVNfMnM" download class="book-link" >寧靜的森林水池 📥</a>
+                        </td>
+                        <td class="book-author">阿姜查尊者</td>
+                        <td class="book-desc">森林襌修開示。</td>
+                    </tr>                
+                    
+    <!-- 列 8-7 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEekxFd3ZHWGx3c0E" download class="book-link" >阿姜查語錄之止觀解析與禪宗會通 📥</a>
+                        </td>
+                        <td class="book-author">阿姜查尊者</td>
+                        <td class="book-desc">阿姜查禪師開示法語</td>
+                    </tr>                
+   <!-- 列 8-8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYERXF3Z1N5UzdhQ1k" download class="book-link" >阿姜查的禪修世界 📥</a>
+                        </td>
+                        <td class="book-author">阿姜查尊者</td>
+                        <td class="book-desc">阿姜查禪師開示法語錄。</td>
+                    </tr>
+                    
+ <!-- 列 8-9 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEdjJXVGp5eFVqV1U" download class="book-link">阿姜查與阿姜佛使的禪修世界 📥</a>
+                        </td>
+                        <td class="book-author">莊春江剪輯</td>
+                        <td class="book-desc">放下苦樂,放下執著。</td>
+                    </tr>                   
+  <!-- 列 8-10 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYENUFGNDZJazlUWWM" download class="book-link">修習正念的二十個練習 📥</a>
+                        </td>
+                        <td class="book-author">一行襌師</td>
+                        <td class="book-desc">傳授修習正念的方法:</td>
+                        
+                        
+                    </tr>
+                    
+  <!-- 列 8-1 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEc3F0NTZzN1I3VEU" download class="book-link">念處之道；《大念處經》講記 📥</a>
+                        </td>
+                        <td class="book-author">性空法師</td>
+                        <td class="book-desc">總釋四念處禪修法。</td>
+                    </tr>                 
+   <!-- 列 8-2 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYER1J1Wnlsd1NwTk0" download class="book-link">念住：通往證悟的直接之道 📥</a>
+                        </td>
+                        <td class="book-author">無著比丘</td>
+                        <td class="book-desc">傳承與新解:修持念住的理論與實踐。</td>
+                    </tr>                 
+  <!-- 列 8-3 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEWUlYUWg3aHNnRDA" download class="book-link">正念的四個練習 📥</a>
+                        </td>
+                        <td class="book-author">喜戒襌師</td>
+                        <td class="book-desc">大念處經內容。</td>
+                    </tr>                  
+   <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="http://enlight.lib.ntu.edu.tw/FULLTEXT/JR-BJ093/bj093387708.pdf" download class="book-link">通往覺悟的基石 📥</a>
+                        </td>
+                        <td class="book-author">菩提長老</td>
+                        <td class="book-desc">修習「正念」即是訓練心安住當下。</td>
+                    </tr>                 
+  <!-- 列 8-4 -->
+                    <tr>
+                        <td>
+                            <a href="http://www.tt034.org.tw/newrain/books/Chanmyay-Vipassana-Meditation-by-Sujiva.pdf" download class="book-link">開悟之道 📥</a>
+                        </td>
+                        <td class="book-author">恰宓禪師</td>
+                        <td class="book-desc">禪修者初步的教法及四念處教法。</td>
+                    </tr>
+ <!-- 列 8-5 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEdkdYeXVjNW9hVjQ" download class="book-link">宣隆內觀禪修法（二） 📥</a>
+                        </td>
+                        <td class="book-author">宣隆尊者</td>
+                        <td class="book-desc">屬於一種純內觀修習法。</td>
+                    </tr>                   
+                    
+    <!-- 列 8-6 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEeHBCOFpYRndtYnM" download class="book-link">森林寺院內觀法 📥</a>
+                        </td>
+                        <td class="book-author">阿姜摩訶布瓦</td>
+                        <td class="book-desc">介紹上座部佛法傳統所教的內觀禪修練習。</td>
+                    </tr>                
+                    
+    <!-- 列 8-7 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEcU52c1FSdnZYRGc" download class="book-link">繫念禪修法 📥</a>
+                        </td>
+                        <td class="book-author">海那尊者</td>
+                        <td class="book-desc">襌修調身丶調心丶繫念。</td>
+                    </tr>                
+   <!-- 列 8-8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEMXJicTBhUG8xZlk" download class="book-link">觀呼吸-平靜的第一堂課📥</a>
+                        </td>
+                        <td class="book-author">德宝法師</td>
+                        <td class="book-desc">襌修調身丶調心丶正念與禪定。</td>
+                    </tr>
+                    
+ <!-- 列 8-9 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEM1plbGFyVC1yUmc" download class="book-link">觀智進程 📥</a>
+                        </td>
+                        <td class="book-author">馬雜湊尊者</td>
+                        <td class="book-desc">觀智的進程和相應的清淨的層次。為了那些已在禪修中獲得明 顯成果的禪修者的利益,作者寫了這篇簡短的論文。</td>
+                    </tr>                   
+  <!-- 列 8-102 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYETFF3Rk0yUVVINEU" download class="book-link">禪修的基本方法 📥</a>
+                        </td>
+                        <td class="book-author">阿姜布拉姆</td>
+                        <td class="book-desc">覺知呼吸到初禪。</td>
+                    </tr>              
+   <!-- 列 8-1 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEWmctOVdRemdCNzg" download class="book-link">禪悅——快樂呼吸16法 📥</a>
+                        </td>
+                        <td class="book-author">阿姜布拉姆</td>
+                        <td class="book-desc">正念的層次。</td>
+                    </tr>                 
+   <!-- 列 8-2 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYERXZJbUUtWG96YWs" download class="book-link">美妙的氣息 📥</a>
+                        </td>
+                        <td class="book-author">阿姜布拉姆</td>
+                        <td class="book-desc">著重在氣息上描述呼吸觀的修行方法。</td>
+                    </tr>                 
+  <!-- 列 8-3 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYENGUtWHNxR1RDY00" download class="book-link" >四念處 📥</a>
+                        </td>
+                        <td class="book-author">阿姜布拉姆</td>
+                        <td class="book-desc">四念處不離八正道。</td>
+                    </tr>                  
+   <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEeG5oOHo4S0NiNEk" download class="book-link">一本讀懂大念住經 📥</a>
+                        </td>
+                        <td class="book-author">釋見愷</td>
+                        <td class="book-desc">認識四念住。</td>
+                    </tr>                 
+  <!-- 列 8-4 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYER2lBNGtJRS1rQzA" download class="book-link">8個放下憂慮的禪修練習 📥</a>
+                        </td>
+                        <td class="book-author">傑克·康菲爾德</td>
+                        <td class="book-desc">觀照思維及全然接受。</td>
+                    </tr>
+ <!-- 列 8-5 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYERUo4cy1zVTkzV2c" download class="book-link">內觀十日課程開示(葛印卡) 📥</a>
+                        </td>
+                        <td class="book-author">葛印卡禪師</td>
+                        <td class="book-desc">內觀十日課程開示集要。</td>
+                    </tr>                   
+                    
+    <!-- 列 8-6 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEY1o5aWgxR3ZNeVU" download class="book-link">身念處禪觀修法 📥</a>
+                        </td>
+                        <td class="book-author">阿姜念 著</td>
+                        <td class="book-desc">將身心分析成更微細的功能和部份，然後去觀 察每一部份皆無我。</td>
+                    </tr>                
+                    
+    <!-- 列 8-7 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEZXFTVHhJRk5IQjQ" download class="book-link">生活的藝術 📥</a>
+                        </td>
+                        <td class="book-author">葛印卡禪師</td>
+                        <td class="book-desc">內觀問答集要。</td>
+                    </tr>                
+   <!-- 列 8-8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYERldGeTVlOEZzbjQ" download class="book-link">葛印卡老師文集 📥</a>
+                        </td>
+                        <td class="book-author">葛印卡禪師</td>
+                        <td class="book-desc">內觀問答。</td>
+                    </tr>
+                    
+ <!-- 列 8-9 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEZlRaMEViQVhKT0k" download class="book-link">葛印卡老師文集2 📥</a>
+                        </td>
+                        <td class="book-author">葛印卡禪師</td>
+                        <td class="book-desc">內觀問答。</td>
+                    </tr>                   
+  <!-- 列 8-103 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEcHRJLTFSMGwwMEU" download class="book-link">內觀捷徑 📥</a>
+                        </td>
+                        <td class="book-author">佛使比丘</td>
+                        <td class="book-desc">由許多次開示所集成的。</td>
+                    </tr>
+   <!-- 列 8-1 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYET21vd1k3VDhjdEE" download class="book-link">內觀實踐📥</a>
+                        </td>
+                        <td class="book-author">馬哈西，阿姜查，摩訶布瓦 ，隆波田襌師</td>
+                        <td class="book-desc">內觀禪修基楚。</td>
+                    </tr>                 
+   <!-- 列 8-2 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYERENLZ0taZ2RoOUk" download class="book-link">內觀禪修手冊 📥</a>
+                        </td>
+                        <td class="book-author">蘇諦南法師</td>
+                        <td class="book-desc">阿姜達磨多羅所傳的內觀法－圖。</td>
+                    </tr>                 
+  <!-- 列 8-3 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYETTZJdzNzZ0JpUHc" download class="book-link">天眼第一 阿奴盧塔 📥</a>
+                        </td>
+                        <td class="book-author">阿那律尊者傳記</td>
+                        <td class="book-desc">阿那律尊者傳記。</td>
+                    </tr>                  
+   <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="https://www.blogger.com/Bhikkhu%20nanamoli%20%20https://drive.google.com/open?id=0B4t3yrvpzBYENXhwRHpVYlpLQWs" download class="book-link">從巴利藏經看佛陀的一生 📥</a>
+                        </td>
+                        <td class="book-author">Bhikkhu nanamoli</td>
+                        <td class="book-desc">現代佛陀傳記。</td>
+                    </tr>                 
+  <!-- 列 8-4 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEY2NrTXV1REZic2s" download class="book-link">四聖諦與修行的關係 📥</a>
+                        </td>
+                        <td class="book-author">性空法師</td>
+                        <td class="book-desc">轉法輪經內容。</td>
+                    </tr>
+ <!-- 列 8-5 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEZFI0WkpOcllsS2M" download class="book-link">本生經 📥</a>
+                        </td>
+                        <td class="book-author">悟醒 譯</td>
+                        <td class="book-desc">關於宗教的相關文章或心得。</td>
+                    </tr>                   
+                    
+    <!-- 列 8-6 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEcWJ2RDcyeWNRU0k" download class="book-link">無礙解道論 📥</a>
+                        </td>
+                        <td class="book-author">悟醒 譯</td>
+                        <td class="book-desc">巴利論典。</td>
+                    </tr>                
+                    
+    <!-- 列 8-7 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEbkxHRUk3eXRaczA" download class="book-link">何來有我 📥</a>
+                        </td>
+                        <td class="book-author">艾雅 柯瑪</td>
+                        <td class="book-desc">一個為期三週的禪修營中的講座。</td>
+                    </tr>                
+   <!-- 列 8-8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYESVJ1TkFFeTFVRFk" download class="book-link">佛陀的女兒 📥</a>
+                        </td>
+                        <td class="book-author">Dipama</td>
+                        <td class="book-desc">上座部傳統中第一位真正有大成就的女修行者的事蹟。</td>
+                    </tr>
+                    
+ <!-- 列 8-9 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEZGJKWldDdU5hbzQ" download class="book-link">生命的意義(袖珍本) 📥</a>
+                        </td>
+                        <td class="book-author">瑪欣德比丘</td>
+                        <td class="book-desc">佛教生命觀。</td>
+                    </tr>                   
+  <!-- 列 8-104 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEUVQzVjBYNnF5eW8" download class="book-link">阿毗達摩實用手冊 📥</a>
+                        </td>
+                        <td class="book-author">善戒尼師</td>
+                        <td class="book-desc">理論與生活的運用。</td>
+                    </tr>                   
+                    
+      <!-- 列 8-1 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEUVQzVjBYNnF5eW8" download class="book-link">阿毘達磨的理論與實踐 📥</a>
+                        </td>
+                        <td class="book-author">性空法師</td>
+                        <td class="book-desc">介紹止禪及觀禪的修學次第和成果。</td>
+                    </tr>                 
+   <!-- 列 8-2 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEV1F3NHRkdlM4eWM" download class="book-link">觉悟之路 📥</a>
+                        </td>
+                        <td class="book-author">那烂陀 长老</td>
+                        <td class="book-desc">佛陀傳記。</td>
+                    </tr>                 
+  <!-- 列 8-3 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEWUlYUWg3aHNnRDA" download class="book-link">正念獲得動力 📥</a>
+                        </td>
+                        <td class="book-author">德加尼亞尊者</td>
+                        <td class="book-desc">不為難自己,只要接受你的狀態。</td>
+                    </tr>                  
+   <!-- 列 8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYETTZJdzNzZ0JpUHc" download class="book-link">別輕視煩惱 您將會被取笑 📥</a>
+                        </td>
+                        <td class="book-author">德加尼亞尊者</td>
+                        <td class="book-desc">念處禪法,什麼是禪修的正確態度。</td>
+                    </tr>                 
+  <!-- 列 8-4 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEOEM2UXlGQTRiZVU" download class="book-link">炎夏飄雪 📥</a>
+                        </td>
+                        <td class="book-author">焦諦卡襌師</td>
+                        <td class="book-desc">內部溝通及對生命(問題)的深入瞭解。</td>
+                    </tr>
+ <!-- 列 8-5 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYENFdlS2psUGU2Vms" download class="book-link">處處皆佛法 📥</a>
+                        </td>
+                        <td class="book-author">德加尼亞尊者</td>
+                        <td class="book-desc">協助禪修者更清楚瞭解念住禪,使修行更深入。</td>
+                    </tr>                   
+                    
+    <!-- 列 8-6 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYESHQ5cmE4U2Voa2s" download class="book-link">僅有覺知是不夠的 📥</a>
+                        </td>
+                        <td class="book-author">德加尼亞尊者</td>
+                        <td class="book-desc">個人襌修問答。</td>
+                    </tr>                
+                    
+    <!-- 列 8-7 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEUVlyNVNzWlRSdE0" download class="book-link">精神食糧 📥</a>
+                        </td>
+                        <td class="book-author">德加尼亞尊者</td>
+                        <td class="book-desc">尊者的一些反思、思想和建議的混合。</td>
+                    </tr>                
+   <!-- 列 8-8 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYEek52TGlBYTRITjg" download class="book-link">慧眼初開 📥</a>
+                        </td>
+                        <td class="book-author">蘇吉達</td>
+                        <td class="book-desc">一本有趣、精簡易明、人人可讀的「佛教內觀禪修」入門書。</td>
+                    </tr>
+                    
+ <!-- 列 8-9 -->
+                    <tr>
+                        <td>
+                            <a href="http://%E4%BE%9D%E6%93%9A%E4%BD%9B%E6%95%99%E5%B7%B4%E5%88%A9%E6%96%87%E7%B6%93%E8%97%8F%E4%B8%AD%E4%B8%96%E5%B0%8A%E7%9A%84%E8%AA%9E%E8%A8%80%2C%E6%93%87%E5%85%B6%E7%B2%BE%E8%8F%AF%2C%E5%86%8D%E4%BE%9D%E6%AC%A1%E5%BA%8F%E6%9C%89%E7%B3%BB%E7%B5%B1%E5%8C%96%E5%9C%B0%E6%8A%8A%E5%AE%83%E7%B7%A8%E8%BC%AF%E6%88%90%E6%9B%B8%E3%80%82/" download class="book-link">覺者之言 📥</a>
+                        </td>
+                        <td class="book-author">巴利文經藏中世尊的語言</td>
+                        <td class="book-desc">依據佛教巴利文經藏中世尊的語言,擇其精華,再依次序有系統化地把它編輯成書。</td>
+                    </tr>                   
+  <!-- 列 8-105 -->
+                    <tr>
+                        <td>
+                            <a href="https://drive.google.com/open?id=0B4t3yrvpzBYETjU3WmZPc05SalE" download class="book-link">覺醒之翼 📥</a>
+                        </td>
+                        <td class="book-author">坦尼沙羅尊者</td>
+                        <td class="book-desc">上座部佛教文獻選譯集。</td>
+                    </tr>                
+ 
+                  
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+    
+ <!-- ==================== 以下是新增的「下載APP」專屬彈窗程式碼 ==================== -->
+<style>
+    /* 彈窗背景遮罩 */
+    .img-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px;
+    }
+    /* 彈窗主體外觀（依據您的圖片完美還原白底、圓角與微陰影） */
+    .img-modal-box {
+        background-color: #ffffff;
+        border-radius: 12px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        position: relative;
+        font-family: "Microsoft JhengHei", sans-serif;
+        overflow: hidden;
+    }
+    /* 彈窗標題與關閉叉叉 */
+    .img-modal-header {
+        padding: 20px 25px;
+        border-bottom: 1px solid #EEEEEE;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .img-modal-title {
+        color: #D35400; /* 溫暖的深橘色標題 */
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .img-modal-close-btn {
+        font-size: 24px;
+        color: #999999;
+        cursor: pointer;
+        line-height: 1;
+    }
+    .img-modal-close-btn:hover { color: #333; }
+    /* 彈窗內部內容 */
+    .img-modal-body {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .img-modal-hint {
+        color: #555555;
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+    /* QR Code 區塊排列 */
+    .qrcode-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .qrcode-item {
+        text-align: center;
+        width: 160px;
+    }
+    .qrcode-img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #EAEAEA;
+        border-radius: 8px;
+        padding: 5px;
+        background: #fff;
+    }
+    .qrcode-label {
+        margin-top: 10px;
+        font-size: 0.95em;
+        color: #333333;
+        font-weight: bold;
+    }
+    /* 底部關閉按鈕區域 */
+    .img-modal-footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #FAFAFA;
+        border-top: 1px solid #EEEEEE;
+    }
+    .img-modal-btn-red {
+        background-color: #E74C3C;
+        color: #ffffff;
+        border: none;
+        padding: 10px 35px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+    }
+    .img-modal-btn-red:hover {
+        background-color: #C0392B;
+    }
+</style>
+
+<!-- 彈窗的 HTML 結構 -->
+<div id="appQrModal" class="img-modal-overlay">
+    <div class="img-modal-box">
+        <!-- 標題列 -->
+        <div class="img-modal-header">
+            <span class="img-modal-title">歡迎下載法鼓全集2020紀念版APP</span>
+            <span class="img-modal-close-btn" onclick="closeAppModal()">&times;</span>
+        </div>
+        <!-- 內容列 -->
+        <div class="img-modal-body">
+            <p class="img-modal-hint">請點圖或掃描 QRcode 下載：</p>
+            <div class="qrcode-container">
+                <!-- 🍏 App Store (iOS) -->
+                <div class="qrcode-item">
+                    <!-- 💡 提醒：請將下方 qrcode_ios.png 更換為您實際的 QR Code 圖片路徑 -->
+                    <a href="https://apps.apple.com/tw/app/id6470000259" target="_blank">
+                        <img src="https://ddc.shengyen.org/img/appstore.png" alt="App Store" class="qrcode-img">
+                    </a>
+                    <div class="qrcode-label">appstore</div>
+                </div>
+                <!-- 🤖 Google Play (Android) -->
+                <div class="qrcode-item">
+                    <!-- 💡 提醒：請將下方 qrcode_android.png 更換為您實際的 QR Code 圖片路徑 -->
+                    <a href="https://play.google.com/store/apps/details?id=tw.edu.dila.fgqj" target="_blank">
+                        <img src="https://ddc.shengyen.org/img/googleplay.png" alt="Google Play" class="qrcode-img">
+                    </a>
+                    <div class="qrcode-label">google play</div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按鈕列 -->
+        <div class="img-modal-footer">
+            <button class="img-modal-btn-red" onclick="closeAppModal()">關閉</button>
+        </div>
+    </div>
+</div>
+
+<!-- 控制彈窗打開與關閉的指令 -->
+<!-- 控制彈窗打開與關閉的指令（已修復關閉無效問題） -->
+<script>
+    // 打開視窗
+    function openAppModal() {
+        document.getElementById('appQrModal').style.display = 'flex';
+    }
+    // 關閉視窗
+    function closeAppModal() {
+        document.getElementById('appQrModal').style.display = 'none';
+    }
+    // 點選遮罩空白處也可以關閉
+    window.onclick = function(event) {
+        var modal = document.getElementById('appQrModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- ==================== 以上是新增的「下載APP」專屬彈窗程式碼 ==================== -->
+   
+    
+    
+</html>
