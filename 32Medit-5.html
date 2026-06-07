@@ -1,561 +1,392 @@
 <!DOCTYPE html>
-<!--[if IE]>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en" lang="en" dir="ltr" class="no-js en ie">
-<![endif]-->
-<!--[if !IE]> -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en" lang="en" dir="ltr" class="no-js en">
-<!-- <![endif]-->
-
+<html lang="zh-TW">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script id="LR1" type="text/javascript" async="" src="static/js/client.js"></script>
-<script type="text/javascript" src="static/js/auth016.js"></script>
-<script type="text/javascript" src="static/js/widgets.js"></script>
-  <!--分享按鈕圖標位置-->  
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
- <!--end分享按鈕圖標位置-->   
-<link rel="stylesheet" type="text/css" href="static/js/widget118.css" media="all">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>四念處默照禪修 |有關 </title>
-<meta name="description" content="生活中透過和諧的身心及禪修的練習，回歸如實的心靈故鄉">
-  <!--[if lt IE 9]><script type="text/javascript" src="static/js/shiv/html5.js"></script><![endif]-->
-<script type="text/javascript" async="" src="static/js/ga.js"></script>
-<script id="facebook-jssdk" src="static/js/all.js"></script>
-<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js');})(document.documentElement);</script>
-  
-<script type="text/javascript" src="static/js/vkt2fib.js"></script>
-<style type="text/css">.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}.tk-museo-slab{font-family:"museo-slab",serif;}</style>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  
-<link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
-<link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
-<link rel="stylesheet" type="text/css" href="site.css" media="screen">
-<link rel="stylesheet" type="text/css" href="jquery-ui-1.9.0.custom.min.css" media="screen">
-<script type="text/javascript" src="static/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="static/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.imagesloaded.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.scrollto.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.addons.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.mousedownoutside.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.modal.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.pager.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.tabbar.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
 
- <!--Media Player style -->    
-    <link rel="stylesheet"
-    href="sounds/progres-bar.css">
-   <!--end Media Player style -->   
-    
-  <link rel="stylesheet" href="css/style.css">      
-    <!--Media Player style  -->
-    <style> 
-    .container { margin:150px auto; max-width:720px ;margin-top:200px;}
-    .mediPlayer { float:left; margin:20px;vertical-align:text-top;}
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
 
-    </style>  
-    <!--end Media Player style -->      
-  </head>
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
 
-<body id="holiday-detail" class="catalogue">
-<div id="page">
-   <div id="main-container">
-     <header id="siteheader">
-        <div class="wrapper">
-           <a id="bms-logo" href="index.html"><img src="img/bms-logo-sans.png" alt="佛教禪修身心靈和諧網站" width="182" height="60"></a><br/>
-                 <nav class="mainnav">
-                  <a class="mn-offers" href="index.html">簡介</a>   
-                  <a class="mn-trait" href="Relief.html">解除煩惱.</a>
-                  <a class="mn-offers" href="Meditat.html">禪修指導.</a>
-                  <a class="mn-trait" href="Activity.html">參加禪修活動.</a>
-                  <a class="mn-offers" href="Read.html">閱讀佛教書籍.</a>
-                  <a class="mn-offers" href="Record.html">記錄自我成長.</a>
-                  <a class="mn-trait" href="Help.html">護持道場.</a> 
-                  <a class="mn-trait" href="Contact.html">聯絡資訊</a>  
-                  <a class="mn-blog" href="https://ddmgwens.blogspot.tw/">部落格</a>
-                 </nav>
-         </div>
-       </header>
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
 
-         <div id="sitecontent">
-            <div class="wrapper">
-              <header id="holiday-header">
-                    <h1>四念處默照禪修 |有關</h1><iframe src="sounds/piano.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-               <div>
-               <ul class="traits">
-                 <li class="trait-emblem small soul"><span><audio  controls="auto" autoplay="autoplay"> 
-                               <source src="song.ogg" type="audio/ogg"> 
-                               <source src="sounds/piano.mp3" type="audio/mpeg"> 
-                                 瀏覽器不支援請改用其他如Chrome等. 
-                           </audio> </span></li>
-               </ul>
-             
-               <hgroup>
-               <h2>背景音樂</h2>
-               </hgroup>
-               </div>
-              </header>
-                
-                <div id="holiday-info">
-                    
-                 <span> <script>
-  (function() {
-    var cx = '016411462484733944146:ibiefeim9bs';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search></span>     
-                    
-                    
-                    
-                <h3>加入我們社群</h3>
-                          <ul class="list-unstyled">     
-                            <li><a href="https://www.facebook.com/gwensddm">Facebook</a></li>
-                            <li><a href="http://line.me/ti/p/5A4SSXa_pe">LINE</a></li>
-                            
-                          </ul>
-                    
-                <div class="insight"><h4>使用方法：</h4>
-                    <p class="text1"><!--css 704 --> 法友們平常請依照欄位的語音去練習。<br/>
-願您使用愉快!<br/></p>        
-<h4>四念處默照禪修：</h4>                 
-<ol type=1>
-<li><a href="32Medit-1.html">(01)感恩心</a> 
-<li><a href="32Medit-2.html">(02)坐姿</a>
-<li><a href="32Medit-3.html">(03)安靜面對自己</a>
-<li><a href="32Medit-4.html">(04)默照基礎放鬆</a>
-<li><a href="32Medit-5.html">(05)佛法的觀念「苦」</a>
-<li><a href="32Medit-6.html">(06)普遍的照</a>
-<li><a href="32Medit-7.html">(07)只管打坐</a>
-<li><a href="32Medit-8.html">(08)佛法的觀念「無常」</a>
-<li><a href="32Medit-9.html">(09)明和靜</a>   
-</ol>                  
-   
-</div>            
- <p class="ref-code"><font><font>行程代碼：32Medit</font></font></p>
-            </div>
-             
-               <div id="holiday-main">
-                  <div class="gallery pager">
-                    <ul class="images">
-                        <li><video autoplay muted loop width="642" height="360" poster="img/a01.jpg" alt="" >
-   <source src="img/ddm.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-   </video> </li>
-                        
-                     </ul>
-                     <p class="pagination">
-                      <span class="current-image"></span>
-                                                  
-                        <span class="image-count"></span>
-                     </p>
-                     <nav class="navigation">
-                     <a href="#" class="previous">上一頁</a>
-                     <a href="#" class="next">下一頁</a>
-                     </nav>
-                   </div>
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
 
-                   <div class="socials">
-                   </div>
-        <nav class="tabbar" >          
-          <a href="" class="current1">再一次聆聽</a>          
-         </nav>   
-         	<svg id="svg">
-<!-- SVG圖形背景大小及顏色 -->
-<rect x="0" y="0" fill="none" stroke="#fff" stroke-width="0" width="166" height="39" />
-<rect x="2" y="3" width="162" height="32" rx="15" ry="15" fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" id="test" />
- <a href="32Medit-6.html">
-<text x="14" y="25" style="font-size:15px" fill="#b26" >進一步聆聽其它的 ▶︎</text></a>               
-                   </svg>
-                   <!-- 加入 Media Player-->   
-            <span><div class="mediPlayer"><audio class="listen" preload="none" data-size="100" src="https://dl.dropbox.com/s/gn8803oovtiwx5z/med13.m4a"></audio>         </div>                
-                </span>
-            <!--end Media Player-->
-  
-                   <div class="texts">
-                         <div id="t-description" class="tab" style="display: block;">
-   <p/> 佛法的觀念「苦」
-<p/> 佛法的修行應該是方法和觀念相輔相成，有觀念而沒有方法呢，用不上力！有方法而沒有觀念呢，那就不是佛法，而修的是外道法。所以這叫做「行解並重」又叫做呢「知行合一」。
-<p/> 現在這個時間講佛法的觀念「苦」，
-在佛法中禪修的方法並沒有那麼困難，但是要有正確的觀念作為引導，也就是「行解並重」修行的方向才能正確。所以禪修應該是方法和觀念相輔相成。有觀念而沒有方法呢？就會使不上力！只有方法而沒有觀念呢？那就不是佛法，而修的是外道法。所以這叫做「行解並重」又叫做呢「知行合一」。
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
 
-<p/>佛法的觀念是什麼？主要有四種。覺悟到「執著是苦」「一切都會改變」「沒有不變而能掌握的我」和「離開有自我煩惱的道路」。「離開有自我煩惱的道路」也就是離開有煩惱的「偏見」又叫做「中道」也叫做「捨」這個字。佛法的這四種觀念就是「苦、無常、無我、捨」或是「苦、無常、無我、中道」。這四種觀念能夠幫助修行者解脫自我得自在。
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
 
-<p/>現在我講這個普遍性的觀念是，佛法指出的是「苦」這個字。宇宙真理實相叫做「無我」沒有相對立的存在、不存在的問題。有執著就帶來「苦」！執著不好的「苦」的明顯，執著好的因緣改變就有失落的痛苦。好與不好間就是我們的「人生」，所以「人生」是從苦中而來又從苦中求「人生」的不斷輪迴過程。「人生」因為有「苦」所以我們要求得到，從「苦」得解脫的方法，和從「苦」得解脫的觀念。然後呢？才能夠產生真正得解脫的結果。
-<p/>人的生命的過程，從生到死亡，過程之中啊，都是「苦」的多，樂的機會少。是什麼東西讓我們「苦」？是因為有身體，身體和環境產生不協調的時候會苦。環境是什麼呢？環境是人、事、物等等的狀況。說不知足者心不自由，有衝突有矛盾就變成了苦。那「苦」的感受誰都不希望持續下去，因此呢，就希望追求啊不要「苦」的結果。事實上愈追求「苦」得愈多。偶爾可能好像是在快樂，但是快樂的背後愈是苦。「苦」啊這是開始也是結束，這是佛法所指出的事實真理。我們身體的疼痛通常跟「苦」是連再一起的。但是呢佛法告訴我們啊用方法和用觀念啊可以調整。調整「苦」的感受變成呢不苦！從「苦」的感受得到解脫。那就是要用方法用觀念。一個「觀念」是什麼？觀念是人的生命就是「苦多而樂少」啊！既然「苦」這是事實，逃避沒有用，抗拒也沒有用，害怕、憂愁沒有用！要來的還是要來。 能夠面對啊「苦」的事實，接受「苦」的事實，那「苦」至少啊不會造成人的恐懼，人的憂慮，人的煩惱。另外呢？要用方法！「方法」是我們啊，減少負擔。減少什麼負擔？減少我們精神上的負擔，以及啊肉體上的負擔。什麼負擔？就是感覺的負擔。比如說，我們現在教大家用放鬆的方法。能夠放鬆就頭部放鬆，心情放鬆，還有呢？身體放鬆。那身心放鬆就是，既然能放鬆你負擔就會減輕，負擔減輕了那痛苦啊就會減少。當我們的心不是啊，在茫茫然，或是在胡思亂想，或則是在啊七上八下在坎坷不安，那我們的心是平靜的。心的平靜就會減少很多的煩惱的痛苦。煩惱的苦啊就會相對的減少、減輕。身體如果放鬆的話，那身體上的負擔，身體上的啊種種的阻礙也會減少。所以叫「無事一身輕」，沒有負擔你身體也輕，頭腦也輕。因此呢我們在禪修期間呢就是練習著，放下你的身心的負擔，隨時練習著身心放鬆，面對它、接受它，放下身心的負擔，那你就能減少你那痛苦的感受。這也就是啊，從苦獲得解脫的方法，也是從苦獲得解脫的觀念。
-               
- <p/> 
-                             <p></p>
-                             <p></p>
-                        </div> 
-                   </div>
-                   <div class="comments">
-                      <div class="fb-comments" data-href="index.html" data-colorscheme="light" data-numposts="10" data-width="585">
-                          <h4>分享歡喜給我的朋友們:</h4> 
-                      <!--分享按鈕 --> <script>document.write(unescape("%3Cdiv%20id%3D%27rndShareBtn%27%3E%0A%09%3C%21--%20fb%20--%3E%0A%09%3Ca%20class%3D%27rs_fb%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20FB%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-facebook%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20g+%20--%3E%0A%09%3Ca%20class%3D%27rs_gplus%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20Telegram%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-telegram%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20line%20--%3E%0A%09%3Ca%20class%3D%27rs_line%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20LINE%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-commenting%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20plurk%20--%3E%0A%09%3Ca%20class%3D%27rs_plurk%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20PLURK%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-plurk%20fa-stack-1x%27%3EP%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20weibo%20--%3E%0A%09%3Ca%20class%3D%27rs_weibo%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20%u5FAE%u535A%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-weibo%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20twitter%20--%3E%0A%09%3Ca%20class%3D%27rs_twitter%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20TWITTER%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-twitter%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20tumblr%20--%3E%0A%09%3Ca%20class%3D%27rs_tumblr%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20TUMBLR%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-tumblr%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20pinterest%20--%3E%0A%09%3Ca%20class%3D%27rs_pinterest%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20PINTEREST%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-pinterest-p%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20email%20--%3E%0A%09%3Ca%20class%3D%27rs_email%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20EMAIL%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-envelope%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%3C/div%3E"));</script>
-           <!-- end 分享按鈕 -->   
-                       
-                       
-                       
-                       
-                       </div>
-                   </div>
-               </div>
-     
-    
-               <div id="more-like-this">
-  <h4 class="minititle"></h4>
-                   <div class="holiday-list">
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
 
-              </div>
-             </div>                        
-                       
-</div></div>
-       
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('.comlove')
-      .on('submit', function(e) {
-        e.preventDefault();
-        
-        var $node = $(this).closest('.comlove'),
-            $form = $node,
-            loveCount = parseInt($node.data('love-count'), 10) + 1;
-        
-        $node
-          .data('love-count', loveCount)
-          .find('.love-count')
-            .text(loveCount)
-          .end()
-          .find('.loves .love-icon')
-            .removeClass('no-love')
-          .end()
-          .find('.love-button .love-icon')
-            .addClass('has-love')
-          .end()
-          .find('.love-button')
-            .prop('disabled', true)
-          .end();
-          
-          $.post($form.attr('action'), $form.serialize());
-      });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('#more-like-this')
-      .on('click', '.quick-info-label', function(e) {
-        e.preventDefault();
-      })
-      .on('mouseenter', '.quick-info-label', function(e) {
-        $(this).closest('.holiday').addClass('expanded');
-      })
-      .on('mouseleave', '.holiday', function(e) {
-        $(this).removeClass('expanded');
-      });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('#holiday-info')
-      .on('mouseenter', '.info-icon', function(e) {
-        $('#best-price-popover').addClass('open');
-      })
-      .on('mouseleave', '.info-icon', function(e) {
-        $('#best-price-popover').removeClass('open');
-      });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    var width = 650,
-        height = 430;
-    
-    $('.popup').on('click', 'a', function(e) {
-      e.preventDefault();
-      window.open(
-        $(this).attr('href'),
-        '_blank',
-        'width=' + width + ', ' +
-        'height=' + height + ', ' +
-        'scrollbars=yes');
-    });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    var $currentImageContainer = $('.gallery .current-image');
-    $('.gallery').imagesLoaded(function() {
-      $('.gallery')
-        .removeClass('loading')
-        .pager({
-          cycle: true,
-          items: '.images li'
-        })
-        .pagernav({
-          node: '.navigation'
-        })
-        .on('pagerchange', function(e, ui) {
-          $currentImageContainer.html(ui.page + 1);
-          ui.previousPageItems.removeClass('current');
-          ui.pageItems.addClass('current');
-          // ui.previousPageItems.stop(true, true).fadeOut();
-          // ui.pageItems.stop(true, true).fadeIn();
-        })
-        .find('.images li:first-child').addClass('current');
-        // .find('.images li').not(':first-child').hide();
-    });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('.tabbar').tabbar();
-  });
-</script>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  jQuery(document).ready(function($) {
-    
-    var $mainModal = $('#main-modal').modal();
-    $('.more-info-button').on('click', 'a', function(e) {
-      e.preventDefault();
-      $mainModal.modal('load', $(this).attr('href'), 'ajax');
-    });
-    
-    var _xhr = null;
-    
-    $mainModal
-      .on('submit', 'form', function(e) {
-        if (_xhr) return;
-        
-        e.preventDefault();
-        
-        var $self = $(this),
-            href = $(this).addClass('loading').attr('action');
-        
-        _xhr = $.ajax({
-            url: href,
-            type: 'POST',
-            dataType: 'html',
-            cache: false,
-            data: $(this).serialize()
-          })
-          .done(function(data) {
-            $mainModal.find('.modal-content').html(data);
-            _xhr = null;
-            if ($mainModal.find('.modal-content').find('.thank-you').length > 0) {
-              _gaq.push(['_trackPageview', '/request-holiday-information/161/thanks/']);
-            }
-          })
-          .fail(function() {
-            _xhr = null;
-          });
-          
-        $(this).find('input, textarea, button').attr('disabled', 'disabled');
-      })
-      .on('click', '.close-button', function(e) {
-        e.preventDefault();
-        $mainModal.modal('close');
-      });
-  });
-</script>
-
-               
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=165546130235965";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  $('#list-wrapper')
-    .on('click', '.quick-info-label', function(e) {
-      e.preventDefault();
-    })
-    .on('mouseenter', '.quick-info-label', function(e) {
-      $(this).closest('.holiday').addClass('expanded');
-    })
-    .on('mouseleave', '.holiday', function(e) {
-      $(this).removeClass('expanded');
-    });
-});
-</s<script type="text/javascript">
-jQuery(document).ready(function($) {
-  var $backtop = $('#backtop').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $.scrollTo(0, 600, {easing: 'easeOutCubic'});
-  }).hide();
-  
-  if ($backtop.length == 0) return;
-  
-  var initialBottom = parseInt($backtop.css('bottom').replace(/px/g, ''), 10),
-      startLimit, endLimit;
-  
-  function hasMore() {
-    return !!$('#list-wrapper .load-more').length;
-  }
-  
-  function calculateLimits() {
-    var $node = $('#list-wrapper');
-    startLimit = $node.offset().top;
-    endLimit = $node.offset().top + $node.outerHeight();
-  }
-  
-  function windowDidScroll() {
-    var pos = $(window).scrollTop();
-    if (pos > startLimit && pos < endLimit)
-      $backtop.fadeIn();
-    else
-      $backtop.fadeOut();
-    
-    var max = endLimit - initialBottom - $(window).height() - (hasMore() ? 30 : 70),
-        bottom = initialBottom;
-    if (pos > max)
-      bottom += pos - max;
-    setTimeout(function() {
-      $backtop.css('bottom', bottom);
-    });
-  }
-  
-  calculateLimits();
-  
-  $(window).on('scroll', windowDidScroll);
-  
-  function imagesDidLoad(imgLoad) {
-    for (var i = 0, len = imgLoad.images.length; i < len; i++)
-      $(imgLoad.images[i].img).closest('.holiday.loading').removeClass('loading');
-    calculateLimits();
-    windowDidScroll();
-  }
-  
-  $('#list-wrapper').imagesLoaded(function(instance) {
-    imagesDidLoad(instance);
-  });
-  
-  var _xhr = null;
-  
-  $('#list-wrapper')
-    .on('click', '.load-more a', function(e) {
-      e.preventDefault();
-      
-      if (_xhr) return;
-      
-      var $trigger = $(this).closest('.load-more'),
-          href = $(this).addClass('loading').attr('href');
-      
-      _xhr = $.ajax({
-          url: href,
-          type: 'GET',
-          dataType: 'html',
-          cache: false
-        })
-        .done(function(data) {
-          $('#list-wrapper').append(data).imagesLoaded(function(instance) {
-            $trigger.remove();
-            imagesDidLoad(instance);
-          });
-          _xhr = null;
-        })
-        .fail(function() {
-          _xhr = null;
-        });
-    });
-});  
-</script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  var _menu_tid = null,
-      _menu_delay = 250;
-  $('.dropdown')
-    .on('mouseenter', function() {
-      $('.dropdown').not(this).removeClass('hover');
-      clearTimeout(_menu_tid);
-      var self = this;
-      _menu_tid = setTimeout(function() {
-        $(self).addClass('hover');
-      }, _menu_delay);
-    })
-    .on('mouseleave', function() {
-      $('.dropdown').not(this).removeClass('hover');
-      clearTimeout(_menu_tid);
-      var self = this;
-      _menu_tid = setTimeout(function() {
-        $(self).removeClass('hover');
-      }, _menu_delay / 2);
-    });
-});
-</script>
-
-    
- <!-- 加入 Media Player script / -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="static/js/player.js"></script>
-    <script>
-    $(document).ready(function () {
-        $('.mediPlayer').mediaPlayer();
-    });
-    </script>
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-  <!-- end Media Player script / -->    
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
  
- <!-- 分享按鈕 -->    
-   <script type="text/javascript">
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener('load',
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent('onload', function(){ object[attribute] = val; });
-      }
-    }
-  </script>  
-   <!-- 分享按鈕 --> 
+<br>
+世間的一切都是無常而沒有任何執著的。
+Everything in the world is impermanent and free from any attachment.
+<br>
+但是經常我們有著錯誤的認知。
+Yet, often we hold mistaken perceptions.
+<br>
+認為有固定不變的事物與形態。
+Believing there are things and forms that are fixed and unchanging.
+<br>
+以這樣的見解為基礎，而產生分別、對立、排斥和追求的心。
+Based on such views, we develop minds that distinguish, oppose, reject, and pursue.
+<br>
+促使你因為執持而產生了身心的不自在。
+This leads to physical and mental unease due to clinging.
+<br>
+這便是苦。
+This is suffering.
+<br>
+苦是世間上普遍的事實。
+Suffering is a universal fact in this world.
+<br>
+但是你若是不理會它，或許苦就不會影響到你。
+However, if you do not acknowledge it, perhaps suffering will not affect you.
+<br>
+可是你若是起了分別，想要去改變它，就會有更多的苦的產生。
+But if you start to differentiate, wanting to change it, then more suffering will arise.
+<br>
+這樣子的苦，便是由於對立與分別所起的。
+This kind of suffering arises from opposition and differentiation.
+<br>
+因為你只看到一邊，卻沒有看到另一邊的對立。
+Because you only see one side, without seeing the opposition of the other side.
+<br>
+其實是相互平衡不能比較的。
+In truth, they are mutually balanced and cannot be compared.
+<br>
+因而起了分別、執著與排斥。
+Thus, differentiation, clinging, and rejection arise.
+<br>
+因此當你發覺一有「苦」的生起的時候，就應該同時去除對立兩邊的分別心。
+Therefore, when you perceive the arising of 'suffering', you should simultaneously eliminate the discriminative mind towards opposing sides.
+<br>
+不執取任何一邊。
+Do not cling to either side.
+<br>
+這也就是第一天所說的蹺蹺板原理。
+This is also the seesaw principle mentioned on the first day.
+<br>
+只要有念頭生起。
+Whenever a thought arises.
+<br>
+你就要知道它都是一體兩面的。
+You should know that it has two sides, it is a duality.
+<br>
+因此只要念頭一起，馬上捨離兩面。
+Therefore, as soon as a thought arises, immediately let go of both sides.
+<br>
+一有念起馬上捨。
+As soon as a thought arises, immediately let go.
+<br>
+捨，捨到連知道念頭的心，也是對立的，也要一併捨離。
+Let go, let go until even the mind that knows the thought, which is also a duality, must also be let go of.
+<br>
+捨離就是放下。
+Letting go is releasing.
+<br>
+放下所有的執著。
+Release all attachments.
+<br>
+也就是心中無事。
+That is, a mind free from all concerns.
+<br>
+其實一切都在自然放下，無常本身就是不斷的提起與放下。
+In fact, everything is naturally letting go; impermanence itself is a continuous process of arising and ceasing.
+<br>
+提起的時候，同時另外一邊就得放下。
+When something arises, the other side must simultaneously cease.
+<br>
+而放下的同時又是另一邊的提起。
+And as one ceases, the other side simultaneously arises.
+<br>
+然而真正的不執著是，你提起時要放下，同時放下也要放下。
+However, true non-attachment means that when something arises, you must let go, and simultaneously, when you let go, you must also let go.
+
+<br>
+另外「自我中心」也是分別對立的主要來源，而每個人都有跟佛一樣的自我本性。
+Furthermore, 'self-centeredness' is also a main source of differentiation and opposition, yet everyone possesses the same inherent self-nature as the Buddha.
+<br>
+當我們去尋找自我的時候，這個「我」有時候在分別對立的這一邊，有時候又在分別對立的另外一邊。
+When we search for the self, this 'self' is sometimes on one side of differentiation and opposition, and sometimes on the other side.
+<br>
+而事實上它不在這一邊，也不在那一邊，它兩邊都不在。
+But in reality, it is neither on this side nor on that side; it is not on either side.
+<br>
+它無所依住。
+It has no abiding place.
+<br>
+同時捨離了任何的分別與執著。
+Simultaneously letting go of all differentiation and attachment.
+<br>
+這才是真正「無我」的清淨自性。
+This is the true pure self-nature of 'non-self'.
+<br>
+在煩惱的對治上。
+In dealing with afflictions.
+<br>
+比如說，或許你的心有時出現了些許疲累的感受。
+For example, perhaps your mind sometimes experiences a feeling of tiredness.
+<br>
+那麼你要另起一個「聖妙境界」的念頭。
+Then you should bring forth a thought of a 'sacred and wondrous realm'.
+<br>
+來讓你的心力提起，而保持內心的平衡。
+To uplift your mental energy and maintain inner balance.
+<br>
+這是對制的方法。
+This is a method of counteraction.
+<br>
+也是共世間的方法。
+It is also a method common to the world.
+<br>
+但是更微細、準確、徹底的方法是。
+But a more subtle, precise, and thorough method is.
+<br>
+捨離對立的兩邊。
+To let go of both opposing sides.
+<br>
+也就是不執持疲累的一邊，也同時不執持「聖妙境界」的一邊。
+That is, not clinging to the side of tiredness, and simultaneously not clinging to the side of the 'sacred and wondrous realm'.
+<br>
+超越於任何分別之中。
+Transcending any differentiation.
+<br>
+遠離兩邊。
+Moving beyond both sides.
+<br>
+內心不住於任何一邊。
+The mind not dwelling on any side.
+<br>
+但是內心非常的清楚。
+Yet the inner mind is perfectly clear.
+<br>
+清楚什麼?
+Clear about what?
+<br>
+清楚互相對立，相互對應的兩邊所觀境的情況。
+Clear about the conditions of the observed realms on the two opposing and corresponding sides.
+<br>
+也清楚不住任何一邊，無所執取的能觀的心。
+Also clear about the observing mind that does not dwell on any side, with no clinging.
+<br>
+然後這能觀的心以及所觀的境，這種對待關係，也要同時捨離。
+And then, this relationship between the observing mind and the observed realm, this dualistic relationship, must also be simultaneously released.
+<br>
+有無俱遣。
+Both existence and non-existence are cast aside.
+<br>
+能所雙忘。
+Both observer and observed are forgotten.
+<br>
+無我的境地自然現前。
+The state of non-self naturally manifests itself.
+
+<br>
+這才是最有效、最徹底的不共世間的對治任何境界、煩惱的方法。
+This is the most effective, most thorough, and uncommon worldly method for dealing with any state or affliction.
+<br>
+這是「中觀」的方法。
+This is the 'Madhyamaka' (Middle Way) method.
+<br>
+這與「無常」的現象完全吻合。
+This completely aligns with the phenomenon of 'impermanence'.
+<br>
+這種吻合的思想，經常在日常生活中，不斷的觀照與實踐。
+This congruent thought, practiced through constant contemplation and implementation in daily life.
+<br>
+將來內心善根成熟時，就會悟境自然現前。
+When the seeds of goodness within your mind ripen in the future, the state of enlightenment will naturally manifest.
+        </div>
+    </div>
+
+    <div class="footer-controls">
+        <a href="32Medit-4.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="32Medit-6.html" class="nav-link">下一篇</a>
+    </div>
+</div>
+
+<audio id="audio" src="m4a//med13.mp3"></audio>
+
 <script>
-!function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
-</script>    
-<!-- end 分享按鈕 -->
- <!-- 允許點擊手機時自動播放。--> 
-<script>
- var audio = document.getElementById('audio'); 
-window.onload=function(){ 
-audio.play(); 
-}            
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
     
- $('html').one('touchstart',function(){ 
-audio.play(); 
-}); 
- </script>      
-<!-- end允許點擊手機時自動播放。-->        
- </div>
- <p id="ssm">©2014 釋果聞，<a href="disclaimer1.html">保留所有權利。</a> <a href="disclaimer2.html">免責聲明</a></p>   
-</div>  
-    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

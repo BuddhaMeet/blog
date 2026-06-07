@@ -1,619 +1,485 @@
 <!DOCTYPE html>
-<!--[if IE]>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en" lang="en" dir="ltr" class="no-js en ie">
-<![endif]-->
-<!--[if !IE]> -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en" lang="en" dir="ltr" class="no-js en">
-<!-- <![endif]-->
-
+<html lang="zh-TW">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script id="LR1" type="text/javascript" async="" src="static/js/client.js"></script>
-<script type="text/javascript" src="static/js/auth016.js"></script>
-<script type="text/javascript" src="static/js/widgets.js"></script>
-  <!--分享按鈕圖標位置-->  
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
- <!--end分享按鈕圖標位置-->   
-<link rel="stylesheet" type="text/css" href="static/js/widget118.css" media="all">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>四念處禪修 |有關 </title>
-<meta name="description" content="生活中透過和諧的身心及禪修的練習，回歸如實的心靈故鄉">
-  <!--[if lt IE 9]><script type="text/javascript" src="static/js/shiv/html5.js"></script><![endif]-->
-<script type="text/javascript" async="" src="static/js/ga.js"></script>
-<script id="facebook-jssdk" src="static/js/all.js"></script>
-<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js');})(document.documentElement);</script>
-  
-<script type="text/javascript" src="static/js/vkt2fib.js"></script>
-<style type="text/css">.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}.tk-museo-slab{font-family:"museo-slab",serif;}</style>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  
-<link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
-<link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
-<link rel="stylesheet" type="text/css" href="site.css" media="screen">
-<link rel="stylesheet" type="text/css" href="jquery-ui-1.9.0.custom.min.css" media="screen">
-<script type="text/javascript" src="static/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="static/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.imagesloaded.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.scrollto.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.addons.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.mousedownoutside.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.modal.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.pager.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.tabbar.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
 
- <!--Media Player style -->    
-    <link rel="stylesheet"
-    href="sounds/progres-bar.css">
-   <!--end Media Player style -->   
-    
-  <link rel="stylesheet" href="css/style.css">      
-    <!--Media Player style  -->
-    <style> 
-    .container { margin:150px auto; max-width:720px ;margin-top:200px;}
-    .mediPlayer { float:left; margin:20px;vertical-align:text-top;}
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
 
-    </style>  
-    <!--end Media Player style -->      
-  </head>
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
 
-<body id="holiday-detail" class="catalogue">
-<div id="page">
-   <div id="main-container">
-     <header id="siteheader">
-        <div class="wrapper">
-           <a id="bms-logo" href="index.html"><img src="img/bms-logo-sans.png" alt="佛教禪修身心靈和諧網站" width="182" height="60"></a><br/>
-                 <nav class="mainnav">
-                  <a class="mn-offers" href="index.html">簡介</a>   
-                  <a class="mn-trait" href="Relief.html">解除煩惱.</a>
-                  <a class="mn-offers" href="Meditat.html">禪修指導.</a>
-                  <a class="mn-trait" href="Activity.html">參加禪修活動.</a>
-                  <a class="mn-offers" href="Read.html">閱讀佛教書籍.</a>
-                  <a class="mn-offers" href="Record.html">記錄自我成長.</a>
-                  <a class="mn-trait" href="Help.html">護持道場.</a> 
-                  <a class="mn-trait" href="Contact.html">聯絡資訊</a>  
-                  <a class="mn-blog" href="https://ddmgwens.blogspot.tw/">部落格</a>
-                 </nav>
-         </div>
-       </header>
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
 
-         <div id="sitecontent">
-            <div class="wrapper">
-              <header id="holiday-header">
-                    <h1>四念處禪修 |有關</h1><iframe src="sounds/piano.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-               <div>
-               <ul class="traits">
-                 <li class="trait-emblem small soul"><span><audio  controls="auto" autoplay="autoplay"> 
-                               <source src="song.ogg" type="audio/ogg"> 
-                               <source src="sounds/piano.mp3" type="audio/mpeg"> 
-                                 瀏覽器不支援請改用其他如Chrome等. 
-                           </audio> </span></li>
-               </ul>
-             
-               <hgroup>
-               <h2>背景音樂</h2>
-               </hgroup>
-               </div>
-              </header>
-                
-                <div id="holiday-info">
-                    
-                 <span> <script>
-  (function() {
-    var cx = '016411462484733944146:ibiefeim9bs';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search></span>     
-                    
-                    
-                    
-                <h3>加入我們社群</h3>
-                          <ul class="list-unstyled">     
-                            <li><a href="https://www.facebook.com/gwensddm">Facebook</a></li>
-                            <li><a href="http://line.me/ti/p/5A4SSXa_pe">LINE</a></li>
-                            
-                          </ul>
-                    
-                <div class="insight"><h4>使用方法：</h4>
-                    <p class="text1"><!--css 704 --> 法友們平常請依照欄位的語音去練習。<br/>
-願您使用愉快!<br/></p>        
-<h4>四念處止觀禪修：</h4>                 
-<ol type=1>
-<li><a href="31Medit-1.html">(01)身心的發源</a> 
-<li><a href="31Medit-2.html">(02)自然平衡</a>
-<li><a href="31Medit-3.html">(03)活在當下</a>
-<li><a href="31Medit-4.html">(04)出入息</a>
-<li><a href="31Medit-5.html">(05)苦與無常</a>
-<li><a href="31Medit-6.html">(06)慢步經行</a>
-<li><a href="31Medit-7.html">(07)調心平等</a>
-<li><a href="31Medit-8.html">(08)觀四念處</a>
-   
-</ol>                  
-   
-</div>            
- <p class="ref-code"><font><font>行程代碼：31Medit</font></font></p>
-            </div>
-             
-               <div id="holiday-main">
-                  <div class="gallery pager">
-                   <ul class="images">
-                        <li><video autoplay muted loop width="642" height="360" poster="img/a01.jpg" alt="" >
-   <source src="img/ddm.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-   </video> </li>
-                        
-                     </ul>
-                     <p class="pagination">
-                      <span class="current-image"></span>
-                                                  
-                        <span class="image-count"></span>
-                     </p>
-                     <nav class="navigation">
-                     <a href="#" class="previous">上一頁</a>
-                     <a href="#" class="next">下一頁</a>
-                     </nav>
-                   </div>
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
 
-                   <div class="socials">
-                   </div>
-        <nav class="tabbar" >          
-          <a href="" class="current1">再一次聆聽</a>          
-         </nav>   
-         	<svg id="svg">
-<!-- SVG圖形背景大小及顏色 -->
-<rect x="0" y="0" fill="none" stroke="#fff" stroke-width="0" width="166" height="39" />
-<rect x="2" y="3" width="162" height="32" rx="15" ry="15" fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" id="test" />
- <a href="31Medit-7.html">
-<text x="14" y="25" style="font-size:15px" fill="#b26" >進一步聆聽其它的 ▶︎</text></a>               
-                   </svg>
-                   <!-- 加入 Media Player-->   
-            <span><div class="mediPlayer"><audio class="listen" preload="none" data-size="100" src="https://dl.dropbox.com/s/dyb1hbm96qf5vvp/med06.m4a"></audio>         </div>                
-                </span>
-            <!--end Media Player-->
-  
-                   <div class="texts">
-                         <div id="t-description" class="tab" style="display: block;">
-   <p/>  慢步經行                        
-                             
- <p/> 這個時間教您另一種在動中靜心的練習方法，如何利用走路來禪修。
-又叫做經行，經行有許多種，有快丶慢和自然的走等等。
-  先教您慢慢的經行。
-假如您準備好要練習禪修，末學會建議還是從最簡單方便的經行走路開始學起 。
-您可以隨時隨地，依照身處的所在地，先瞭解整個環境找到適當的地方，
-一方面你先放開整個身心，從頭腦、臉部肌肉、手臂、身體到腳整個放鬆，
-一方面你先行靜靜的站立，自然目視著前方，
-了解預定經行的路線，了解現在最真實的身心狀態，
-等你的內心準備好了，要開始經行的時候，才自然提腳前進，
-非常緩慢非常緩慢的過程前進，
-愈慢的過程讓腳移動的覺知變得很清楚，
-這是慢步經行的目的。
-兩手放鬆在沒有壓力的位置，
-在覺知的平衡下很慢很慢的提起你的右腳，
-盡量貼近地面，離地不超過十公分，
-先是後腳跟慢慢很緩慢的提起來，
-再腳掌緩緩的離地，
-最後平衡之中腳趾、腳尖再離地，
-然後平平的往前移動，
-兩腳掌的相距不會超過一個拳頭的距離，
-再腳尖慢慢地著地，腳掌，腳跟，再整個腳很踏實的平衡踏入地面，
-確定平衡之後再輕緩的移動另一隻腳，
-轉灣的時候你可以停下來，站立一下子。
-覺知停止、轉灣、停止，再前進，
-或是你不管轉灣、停止，只是單純的覺知移動的腳步也很好。
-只是知道自然移動的雙腳，接觸地面和離開地面的感受。
-第一個階段，先練習只有單一方面地知道前腳掌皮膚接觸地面的感覺。
-也就是你只專注在每一次的前腳緩緩放下腳掌接觸地面踏實的感覺，
-不去管後腳提起的過程。你練習一段時間之後
-（例如 十至二十分鐘），接著再練習另一個階段。
-                     
-<p/>第二個階段，反過來， 只是單一方面地知道後腳掌離開地面皮膚接觸的感覺。
-也就是你只專注在你的後腳緩緩提起離開地面與腳掌接觸柔軟輕鬆的感覺，
-不去管前腳放下的過程。
-在這兩個階段的過程你可以依照你的意思交互練習一段時間。
-這兩種慢步經行方式，都可以暫時讓內心沉澱下來，不妨可以練習看看！
-很慢很慢的過程。
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
 
-<p/>兩個階段的練習之後，接著你可練習第三者，
-知道前腳踏出放下的感覺，也同時知道後腳支持後提起的感覺。
-也就是說你知道前腳、後腳的整個行走過程的相互關係。
-很清楚的你會發覺到，
-前腳的放下必需有後腳的提起，
-或是後腳的提起必需有前腳放下的過程，才會有雙腳的運行。
-你有沒有發覺到，兩者必需同時而且它們必需達到一個平衡關係才能夠運作，
-如果不是相互支持，互相平衡的關係，那一切行為就無法運作，對不對？
-這樣你練習一段時間，覺知整個前後腳及身心平衡的關係。
-這樣一段時間之後是不是很容易發覺，一件事實，發覺到行走必需雙腳彼此搭配得剛剛好才可能前進，
-同時也可以理解並發覺到，一切事物也是一樣有在平衡的狀態下才能夠運行自如的，有沒有這種明白？
-所以你的每一個動作，每個起心動念，其實它們都在平衡關係之中，而且這個世界每一樣的事物，都是彼此相互平衡恰到好處的關係。
-有這樣練習和瞭解之後，你就可以開放你的心，如實了知當下的因緣都是平衡的過程。那麼我們心裡上就不會為了那些微小的事情在不平衡煩惱了，對不對？
-如果你的後腳不提起來，那麼你的前腳就沒辦法放下。
-假如你的前腳也不放下，你的後腳就提不起來。
-如果沒有前腳放下的因緣，也不會有後腳提起的因緣，
-它們之間都一直存在一個平衡關係，沒有不平衡關係。
-如果沒有不平衡關係那它們的（煩惱）因緣就不動！
-不動，人我對立就消失！什麼我的煩惱因緣也沒有，對不對？
-因為它們都是恰到好處完全平衡的關係，
-當下就已經是最好的因緣了，一切都在安靜無諍。
-即然是恰到好處，
-那麼意思是那裡也不需要取著，當下就具足出離心和捨念的滿足。
-那這樣是不是就不會生出不平衡丶不平等的心了呢？
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
 
-<p/>
-   
-                             
-           
-                             <p></p>
-                             <p></p>
-                        </div> 
-                   </div>
-                   <div class="comments">
-                      <div class="fb-comments" data-href="index.html" data-colorscheme="light" data-numposts="10" data-width="585">
-                          <h4>分享歡喜給我的朋友們:</h4> 
-                      <!--分享按鈕 --> <script>document.write(unescape("%3Cdiv%20id%3D%27rndShareBtn%27%3E%0A%09%3C%21--%20fb%20--%3E%0A%09%3Ca%20class%3D%27rs_fb%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20FB%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-facebook%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20g+%20--%3E%0A%09%3Ca%20class%3D%27rs_gplus%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20Telegram%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-telegram%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20line%20--%3E%0A%09%3Ca%20class%3D%27rs_line%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20LINE%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-commenting%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20plurk%20--%3E%0A%09%3Ca%20class%3D%27rs_plurk%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20PLURK%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-plurk%20fa-stack-1x%27%3EP%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20weibo%20--%3E%0A%09%3Ca%20class%3D%27rs_weibo%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20%u5FAE%u535A%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-weibo%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20twitter%20--%3E%0A%09%3Ca%20class%3D%27rs_twitter%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20TWITTER%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-twitter%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20tumblr%20--%3E%0A%09%3Ca%20class%3D%27rs_tumblr%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20TUMBLR%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-tumblr%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20pinterest%20--%3E%0A%09%3Ca%20class%3D%27rs_pinterest%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20PINTEREST%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-pinterest-p%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20email%20--%3E%0A%09%3Ca%20class%3D%27rs_email%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20EMAIL%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-envelope%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%3C/div%3E"));</script>
-           <!-- end 分享按鈕 -->   
-                       
-                       
-                       
-                       
-                       </div>
-                   </div>
-               </div>
-     
-    
-               <div id="more-like-this">
-  <h4 class="minititle"></h4>
-                   <div class="holiday-list">
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
 
-              </div>
-             </div>                        
-                       
-</div></div>
-       
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('.comlove')
-      .on('submit', function(e) {
-        e.preventDefault();
-        
-        var $node = $(this).closest('.comlove'),
-            $form = $node,
-            loveCount = parseInt($node.data('love-count'), 10) + 1;
-        
-        $node
-          .data('love-count', loveCount)
-          .find('.love-count')
-            .text(loveCount)
-          .end()
-          .find('.loves .love-icon')
-            .removeClass('no-love')
-          .end()
-          .find('.love-button .love-icon')
-            .addClass('has-love')
-          .end()
-          .find('.love-button')
-            .prop('disabled', true)
-          .end();
-          
-          $.post($form.attr('action'), $form.serialize());
-      });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('#more-like-this')
-      .on('click', '.quick-info-label', function(e) {
-        e.preventDefault();
-      })
-      .on('mouseenter', '.quick-info-label', function(e) {
-        $(this).closest('.holiday').addClass('expanded');
-      })
-      .on('mouseleave', '.holiday', function(e) {
-        $(this).removeClass('expanded');
-      });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('#holiday-info')
-      .on('mouseenter', '.info-icon', function(e) {
-        $('#best-price-popover').addClass('open');
-      })
-      .on('mouseleave', '.info-icon', function(e) {
-        $('#best-price-popover').removeClass('open');
-      });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    var width = 650,
-        height = 430;
-    
-    $('.popup').on('click', 'a', function(e) {
-      e.preventDefault();
-      window.open(
-        $(this).attr('href'),
-        '_blank',
-        'width=' + width + ', ' +
-        'height=' + height + ', ' +
-        'scrollbars=yes');
-    });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    var $currentImageContainer = $('.gallery .current-image');
-    $('.gallery').imagesLoaded(function() {
-      $('.gallery')
-        .removeClass('loading')
-        .pager({
-          cycle: true,
-          items: '.images li'
-        })
-        .pagernav({
-          node: '.navigation'
-        })
-        .on('pagerchange', function(e, ui) {
-          $currentImageContainer.html(ui.page + 1);
-          ui.previousPageItems.removeClass('current');
-          ui.pageItems.addClass('current');
-          // ui.previousPageItems.stop(true, true).fadeOut();
-          // ui.pageItems.stop(true, true).fadeIn();
-        })
-        .find('.images li:first-child').addClass('current');
-        // .find('.images li').not(':first-child').hide();
-    });
-  });
-</script>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('.tabbar').tabbar();
-  });
-</script>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  jQuery(document).ready(function($) {
-    
-    var $mainModal = $('#main-modal').modal();
-    $('.more-info-button').on('click', 'a', function(e) {
-      e.preventDefault();
-      $mainModal.modal('load', $(this).attr('href'), 'ajax');
-    });
-    
-    var _xhr = null;
-    
-    $mainModal
-      .on('submit', 'form', function(e) {
-        if (_xhr) return;
-        
-        e.preventDefault();
-        
-        var $self = $(this),
-            href = $(this).addClass('loading').attr('action');
-        
-        _xhr = $.ajax({
-            url: href,
-            type: 'POST',
-            dataType: 'html',
-            cache: false,
-            data: $(this).serialize()
-          })
-          .done(function(data) {
-            $mainModal.find('.modal-content').html(data);
-            _xhr = null;
-            if ($mainModal.find('.modal-content').find('.thank-you').length > 0) {
-              _gaq.push(['_trackPageview', '/request-holiday-information/161/thanks/']);
-            }
-          })
-          .fail(function() {
-            _xhr = null;
-          });
-          
-        $(this).find('input, textarea, button').attr('disabled', 'disabled');
-      })
-      .on('click', '.close-button', function(e) {
-        e.preventDefault();
-        $mainModal.modal('close');
-      });
-  });
-</script>
-
-               
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=165546130235965";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  $('#list-wrapper')
-    .on('click', '.quick-info-label', function(e) {
-      e.preventDefault();
-    })
-    .on('mouseenter', '.quick-info-label', function(e) {
-      $(this).closest('.holiday').addClass('expanded');
-    })
-    .on('mouseleave', '.holiday', function(e) {
-      $(this).removeClass('expanded');
-    });
-});
-</s<script type="text/javascript">
-jQuery(document).ready(function($) {
-  var $backtop = $('#backtop').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $.scrollTo(0, 600, {easing: 'easeOutCubic'});
-  }).hide();
-  
-  if ($backtop.length == 0) return;
-  
-  var initialBottom = parseInt($backtop.css('bottom').replace(/px/g, ''), 10),
-      startLimit, endLimit;
-  
-  function hasMore() {
-    return !!$('#list-wrapper .load-more').length;
-  }
-  
-  function calculateLimits() {
-    var $node = $('#list-wrapper');
-    startLimit = $node.offset().top;
-    endLimit = $node.offset().top + $node.outerHeight();
-  }
-  
-  function windowDidScroll() {
-    var pos = $(window).scrollTop();
-    if (pos > startLimit && pos < endLimit)
-      $backtop.fadeIn();
-    else
-      $backtop.fadeOut();
-    
-    var max = endLimit - initialBottom - $(window).height() - (hasMore() ? 30 : 70),
-        bottom = initialBottom;
-    if (pos > max)
-      bottom += pos - max;
-    setTimeout(function() {
-      $backtop.css('bottom', bottom);
-    });
-  }
-  
-  calculateLimits();
-  
-  $(window).on('scroll', windowDidScroll);
-  
-  function imagesDidLoad(imgLoad) {
-    for (var i = 0, len = imgLoad.images.length; i < len; i++)
-      $(imgLoad.images[i].img).closest('.holiday.loading').removeClass('loading');
-    calculateLimits();
-    windowDidScroll();
-  }
-  
-  $('#list-wrapper').imagesLoaded(function(instance) {
-    imagesDidLoad(instance);
-  });
-  
-  var _xhr = null;
-  
-  $('#list-wrapper')
-    .on('click', '.load-more a', function(e) {
-      e.preventDefault();
-      
-      if (_xhr) return;
-      
-      var $trigger = $(this).closest('.load-more'),
-          href = $(this).addClass('loading').attr('href');
-      
-      _xhr = $.ajax({
-          url: href,
-          type: 'GET',
-          dataType: 'html',
-          cache: false
-        })
-        .done(function(data) {
-          $('#list-wrapper').append(data).imagesLoaded(function(instance) {
-            $trigger.remove();
-            imagesDidLoad(instance);
-          });
-          _xhr = null;
-        })
-        .fail(function() {
-          _xhr = null;
-        });
-    });
-});  
-</script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  var _menu_tid = null,
-      _menu_delay = 250;
-  $('.dropdown')
-    .on('mouseenter', function() {
-      $('.dropdown').not(this).removeClass('hover');
-      clearTimeout(_menu_tid);
-      var self = this;
-      _menu_tid = setTimeout(function() {
-        $(self).addClass('hover');
-      }, _menu_delay);
-    })
-    .on('mouseleave', function() {
-      $('.dropdown').not(this).removeClass('hover');
-      clearTimeout(_menu_tid);
-      var self = this;
-      _menu_tid = setTimeout(function() {
-        $(self).removeClass('hover');
-      }, _menu_delay / 2);
-    });
-});
-</script>
-
-    
- <!-- 加入 Media Player script / -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="static/js/player.js"></script>
-    <script>
-    $(document).ready(function () {
-        $('.mediPlayer').mediaPlayer();
-    });
-    </script>
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-  <!-- end Media Player script / -->    
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
  
- <!-- 分享按鈕 -->    
-   <script type="text/javascript">
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener('load',
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent('onload', function(){ object[attribute] = val; });
-      }
-    }
-  </script>  
-   <!-- 分享按鈕 --> 
+<br>
+這個時間教您另一種在動中靜心的練習方法，如何利用走路來禪修。
+At this time,I will teach you another method of practicing mindfulness in motion,how to use walking for meditation.
+
+
+<br>
+又叫做經行，經行有許多種，有快、慢和自然的走等等。
+It's also called walking meditation,and there are many types:fast,slow,natural walking,and so on.
+
+
+
+<br>
+先教您慢慢的經行。
+First,I will teach you slow walking meditation. 
+
+
+<br>
+假如您準備好要練習禪修，末學會建議還是從最簡單方便的經行走路開始學起。
+If you are ready to practice meditation,I would suggest starting with the simplest and most convenient form of walking meditation.
+
+
+<br>
+您可以隨時隨地，依照身處的所在地，先瞭解整個環境找到適當的地方。
+You can practice anytime, anywhere. Depending on your location,first understand the entire environment to find a suitable spot.
+
+<br>
+一方面你先放開整個身心，從頭腦、臉部肌肉、手臂、身體到腳整個放鬆。
+On one hand,you first let go of your entire body and mind,relaxing completely from your head,facial muscles,arms,body,to your feet.
+
+<br>
+一方面你先行靜靜的站立，自然目視著前方。
+On the other hand,stand quietly,gazing naturally forward.
+
+<br>
+了解預定經行的路線，了解現在最真實的身心狀態。
+Understand your intended walking path,and be aware of your current,true state of body and mind.
+
+<br>
+等你的內心準備好了，要開始經行的時候，才自然提腳前進。
+Once your inner self is ready,and it's time to begin walking meditation,then naturally lift your foot forward.
+
+
+<br>
+非常緩慢非常緩慢的過程前進。
+Advance in a very,very slow process.
+
+<br>
+愈慢的過程讓腳移動的覺知變得很清楚，這是慢步經行的目的。
+The slower the process, the clearer your awareness of the foot's movement becomes. This is the purpose of slow walking meditation.
+
+<br>
+兩手放鬆在沒有壓力的位置。
+Relax both hands in a position without pressure.
+
+<br> 
+在覺知的平衡下很慢很慢的提起你的右腳。
+Under the balance of awareness,very slowly lift your right foot.
+
+<br>
+盡量貼近地面，離地不超過十公分。
+Keep it as close to the ground as possible,no more than ten centimeters off the ground.
+
+<br>
+先是後腳跟慢慢很緩慢的提起來。
+First, the heel slowly,very slowly lifts up.
+
+<br>
+再腳掌緩緩的離地。
+Then the sole of the foot gently leaves the ground.
+
+<br>
+最後平衡之中腳趾、腳尖再離地。
+Finally, in balance,the toes and ball of the foot lift off the ground.
+
+<br>
+然後平平的往前移動。
+Then move forward smoothly.
+
+<br>
+兩腳掌的相距不會超過一個拳頭的距離。
+The distance between your two foot soles should not exceed the width of a fist.
+
+<br>
+再腳尖慢慢地著地，腳掌，腳跟，再整個腳很踏實的平衡踏入地面。
+Then the toes slowly touch down, followed by the sole,the heel,and then the entire foot firmly and balanced steps onto the ground.
+
+<br>
+確定平衡之後再輕緩的移動另一隻腳。
+Once balance is confirmed,then gently move the other foot. 
+
+<br>
+轉彎的時候你可以停下來，站立一下子。
+When turning, you can stop and stand for a moment.
+
+<br>
+覺知停止、轉彎、停止，再前進。
+Be aware of stopping,turning,stopping,then moving forward again.
+
+<br>
+或是你不管轉彎、停止，只是單純的覺知移動的腳步也很好。
+Or, you can simply be aware of the moving foot,regardless of turning or stopping;that is also perfectly fine.
+
+
+<br>
+只是知道自然移動的雙腳，接觸地面和離開地面的感受。
+Just be aware of the natural movement of your feet,the sensation of touching the ground and leaving the ground.
+
+<br>
+第一個階段，先練習只有單一方面地知道前腳掌皮膚接觸地面的感覺。
+In the first stage,practice being aware only of the sensation of the skin of your front foot sole touching the ground.
+
+<br>
+也就是你只專注在每一次的前腳緩緩放下腳掌接觸地面踏實的感覺。
+That means you only focus on the solid sensation of your front foot slowly placing its sole down and touching the ground each time.
+
+
+<br>
+不去管後腳提起的過程。
+Do not concern yourself with the process of the back foot lifting.
+
+<br>
+你練習一段時間之後（例如 十至二十分鐘），接著再練習另一個階段。
+After you practice for a period (for example,ten to twenty minutes),then proceed to the next stage.
+
+
+<br>
+ 第二個階段，反過來。
+In the second stage,you do the opposite. 
+
+
+<br>
+只是單一方面地知道後腳掌離開地面皮膚接觸的感覺。
+Be aware only of the sensation of the skin of your back foot sole leaving the ground.
+
+
+<br>
+也就是你只專注在你的後腳緩緩提起離開地面與腳掌接觸柔軟輕鬆的感覺。
+That means you only focus on the soft, relaxed sensation of your back foot slowly lifting off the ground and its sole's contact with the air.
+
+
+<br>
+不去管前腳放下的過程。
+Do not concern yourself with the process of the front foot placing down. 
+
+<br>
+在這兩個階段的過程你可以依照你的意思交互練習一段時間。
+During these two stages,you can alternate your practice for a period according to your preference.
+
+
+<br>
+這兩種慢步經行方式，都可以暫時讓內心沉澱下來，不妨可以練習看看！
+Both of these slow walking meditation methods can temporarily allow your inner self to settle down.You might want to try practicing them!
+
+
+<br>
+很慢很慢的過程。
+A very,very slow process.
+
+
+<br>
+兩個階段的練習之後，接著你可練習第三者。
+After practicing these two stages,you can then practice the third stage.
+
+
+<br>
+知道前腳踏出放下的感覺，也同時知道後腳支持後提起的感覺。
+Be aware of the sensation of the front foot stepping out and placing down,and simultaneously be aware of the sensation of the back foot supporting and lifting.
+
+
+<br>
+也就是說你知道前腳、後腳的整個行走過程的相互關係。
+In other words, you become aware of the interdependent relationship between the front and back feet throughout the entire walking process.
+
+
+
+<br>
+很清楚的你會發覺到，前腳的放下必需有後腳的提起。
+You will very clearly realize that,the placing down of the front foot requires the lifting of the back foot. 
+
+
+<br>
+或是後腳的提起必需有前腳放下的過程，才會有雙腳的運行。
+Or the lifting of the back foot requires the process of the front foot placing down for the two feet to operate.
+
+
+<br>
+你有沒有發覺到，兩者必需同時而且它們必需達到一個平衡關係才能夠運作？
+Have you realized that both must happen simultaneously,and they must achieve a balanced relationship to function?
+
+
+<br>
+如果不是相互支持，互相平衡的關係，那一切行為就無法運作，對不對？
+If it's not a relationship of mutual support and balance,then all actions cannot operate,right?
+
+<br>
+這樣你練習一段時間，覺知整個前後腳及身心平衡的關係。
+Practice this for a period,becoming aware of the balance between your front and back feet,and your entire body and mind.
+
+<br>
+這樣一段時間之後是不是很容易發覺，一件事實，發覺到行走必需雙腳彼此搭配得剛剛好才可能前進。
+After a period like this,isn't it easy to discover a fact, to realize that walking requires both feet to coordinate perfectly to move forward.
+
+<br>
+同時也可以理解並發覺到，一切事物也是一樣有在平衡的狀態下才能夠運行自如的，有沒有這種明白？
+And at the same time,you can understand and realize that all things likewise can only operate smoothly when in a state of balance.Do you have this clear understanding?
+
+<br>
+所以你的每一個動作，每個起心動念，其實它們都在平衡關係之中，而且這個世界每一樣的事物，都是彼此相互平衡恰到好處的關係。
+Therefore,your every action, every thought and intention,are actually all within a balanced relationship,and every single thing in this world is in a perfectly balanced,interdependent relationship.
+
+
+<br>
+有這樣練習和瞭解之後，你就可以開放你的心，如實了知當下的因緣都是平衡的過程。
+After such practice and understanding,you can open your heart and truly know that all present conditions are processes of balance. 
+
+<br>
+那麼我們心裡上就不會為了那些微小的事情在不平衡煩惱了，對不對？
+Then, psychologically,we will not be troubled by imbalance over small matters, right?
+
+<br>
+如果你的後腳不提起來，那麼你的前腳就沒辦法放下。
+If your back foot does not lift,then your front foot cannot be placed down.
+
+<br>
+假如你的前腳也不放下，你的後腳就提不起來。
+If your front foot also does not place down,your back foot cannot lift.
+
+<br>
+如果沒有前腳放下的因緣，也不會有後腳提起的因緣。
+If there is no condition for the front foot to place down, there will be no condition for the back foot to lift.
+
+<br>
+它們之間都一直存在一個平衡關係，沒有不平衡關係。
+A balanced relationship always exists between them;there is no unbalanced relationship.
+
+<br>
+如果沒有不平衡關係那它們的（煩惱）因緣就不動！
+If there is no unbalanced relationship, then their conditions (for suffering) will not stir!
+
+<br>
+不動，人我對立就消失！
+Without stirring, the 'self and other' opposition disappears!
+
+
+<br>
+什麼我的煩惱因緣也沒有，對不對？
+Then there are no conditions for 'my' suffering, right?  
+
+
+<br>
+因為它們都是恰到好處完全平衡的關係。
+Because they are all perfectly balanced relationships, just right.
+
+
+<br>
+當下就已經是最好的因緣了，一切都在安靜無諍。
+The present moment is already the best condition;everything is calm and without contention.
+
+<br>
+既然是恰到好處，那麼意思是那裡也不需要取著，當下就具足出離心和捨念的滿足。
+Since it is just right,it means there is no need for clinging anywhere;the present moment is already complete with the satisfaction of renunciation and letting go. 
+
+<br>
+那這樣是不是就不會生出不平衡、不平等的心了呢？
+Then, in this way,will an unbalanced,unequal mind not arise?
+
+
+           
+            
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="footer-controls">
+        <a href="31Medit-5.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="31Medit-7.html" class="nav-link">下一篇</a>
+    </div>
+</div>
+
+<audio id="audio" src="m4a//med06.mp3"></audio>
+
 <script>
-!function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
-</script>    
-<!-- end 分享按鈕 -->
- <!-- 允許點擊手機時自動播放。--> 
-<script>
- var audio = document.getElementById('audio'); 
-window.onload=function(){ 
-audio.play(); 
-}            
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
     
- $('html').one('touchstart',function(){ 
-audio.play(); 
-}); 
- </script>      
-<!-- end允許點擊手機時自動播放。-->        
- </div>
- <p id="ssm">©2014 釋果聞，<a href="disclaimer1.html">保留所有權利。</a> <a href="disclaimer2.html">免責聲明</a></p>   
-</div>  
-    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

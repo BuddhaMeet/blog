@@ -1,631 +1,970 @@
 <!DOCTYPE html>
-<!--[if IE]>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en" lang="en" dir="ltr" class="no-js en ie">
-<![endif]-->
-<!--[if !IE]> -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" xml:lang="en" lang="en" dir="ltr" class="no-js en">
-<!-- <![endif]-->
-
+<html lang="zh-TW">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script id="LR1" type="text/javascript" async="" src="static/js/client.js"></script>
-<script type="text/javascript" src="static/js/auth016.js"></script>
-<script type="text/javascript" src="static/js/widgets.js"></script>
-  <!--分享按鈕圖標位置-->  
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
- <!--end分享按鈕圖標位置-->   
-<link rel="stylesheet" type="text/css" href="static/js/widget118.css" media="all">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>四念處禪修 |有關 </title>
-<meta name="description" content="生活中透過和諧的身心及禪修的練習，回歸如實的心靈故鄉">
-  <!--[if lt IE 9]><script type="text/javascript" src="static/js/shiv/html5.js"></script><![endif]-->
-<script type="text/javascript" async="" src="static/js/ga.js"></script>
-<script id="facebook-jssdk" src="static/js/all.js"></script>
-<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js');})(document.documentElement);</script>
-  
-<script type="text/javascript" src="static/js/vkt2fib.js"></script>
-<style type="text/css">.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}.tk-museo-slab{font-family:"museo-slab",serif;}</style>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  
-<link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
-<link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
-<link rel="stylesheet" type="text/css" href="site.css" media="screen">
-<link rel="stylesheet" type="text/css" href="jquery-ui-1.9.0.custom.min.css" media="screen">
-<script type="text/javascript" src="static/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="static/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.imagesloaded.min.js"></script>
-<script type="text/javascript" src="static/js/jquery.scrollto.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.addons.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.mousedownoutside.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.modal.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.pager.js"></script>
-<script type="text/javascript" src="static/js/jquery.rad.ui.tabbar.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
 
- <!--Media Player style -->    
-    <link rel="stylesheet"
-    href="sounds/progres-bar.css">
-   <!--end Media Player style -->   
-    
-  <link rel="stylesheet" href="css/style.css">      
-    <!--Media Player style  -->
-    <style> 
-    .container { margin:150px auto; max-width:720px ;margin-top:200px;}
-    .mediPlayer { float:left; margin:20px;vertical-align:text-top;}
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
 
-    </style>  
-    <!--end Media Player style -->      
-  </head>
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
 
-<body id="holiday-detail" class="catalogue">
-<div id="page">
-   <div id="main-container">
-     <header id="siteheader">
-        <div class="wrapper">
-           <a id="bms-logo" href="index.html"><img src="img/bms-logo-sans.png" alt="佛教禪修身心靈和諧網站" width="182" height="60"></a><br/>
-                 <nav class="mainnav">
-                  <a class="mn-offers" href="index.html">簡介</a>   
-                  <a class="mn-trait" href="Relief.html">解除煩惱.</a>
-                  <a class="mn-offers" href="Meditat.html">禪修指導.</a>
-                  <a class="mn-trait" href="Activity.html">參加禪修活動.</a>
-                  <a class="mn-offers" href="Read.html">閱讀佛教書籍.</a>
-                  <a class="mn-offers" href="Record.html">記錄自我成長.</a>
-                  <a class="mn-trait" href="Help.html">護持道場.</a> 
-                  <a class="mn-trait" href="Contact.html">聯絡資訊</a>  
-                  <a class="mn-blog" href="https://ddmgwens.blogspot.tw/">部落格</a>
-                 </nav>
-         </div>
-       </header>
+        .text-content { 
+            font-size: 1.6em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
 
-         <div id="sitecontent">
-            <div class="wrapper">
-              <header id="holiday-header">
-                    <h1>四念處禪修 |有關</h1><iframe src="sounds/piano.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-               <div>
-               <ul class="traits">
-                 <li class="trait-emblem small soul"><span><audio  controls="auto" autoplay="autoplay"> 
-                               <source src="song.ogg" type="audio/ogg"> 
-                               <source src="sounds/piano.mp3" type="audio/mpeg"> 
-                                 瀏覽器不支援請改用其他如Chrome等. 
-                           </audio> </span></li>
-               </ul>
-             
-               <hgroup>
-               <h2>背景音樂</h2>
-               </hgroup>
-               </div>
-              </header>
-                
-                <div id="holiday-info">
-                    
-                 <span> <script>
-  (function() {
-    var cx = '016411462484733944146:ibiefeim9bs';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search></span>     
-                    
-                    
-                    
-                <h3>加入我們社群</h3>
-                          <ul class="list-unstyled">     
-                            <li><a href="https://www.facebook.com/gwensddm">Facebook</a></li>
-                            <li><a href="http://line.me/ti/p/5A4SSXa_pe">LINE</a></li>
-                            
-                          </ul>
-                    
-                <div class="insight"><h4>使用方法：</h4>
-                    <p class="text1"><!--css 704 --> 法友們平常請依照欄位的語音去練習。<br/>
-願您使用愉快!<br/></p>        
-<h4>四念處止觀禪修：</h4>                 
-<ol type=1>
-<li><a href="31Medit-1.html">(01)身心的發源</a> 
-<li><a href="31Medit-2.html">(02)自然平衡</a>
-<li><a href="31Medit-3.html">(03)活在當下</a>
-<li><a href="31Medit-4.html">(04)出入息</a>
-<li><a href="31Medit-5.html">(05)苦與無常</a>
-<li><a href="31Medit-6.html">(06)慢步經行</a>
-<li><a href="31Medit-7.html">(07)調心平等</a>
-<li><a href="31Medit-8.html">(08)觀四念處</a>
-   
-</ol>                  
-   
-</div>            
- <p class="ref-code"><font><font>行程代碼：31Medit</font></font></p>
-            </div>
-             
-               <div id="holiday-main">
-                  <div class="gallery pager">
-                    <ul class="images">
-                        <li><video autoplay muted loop width="642" height="360" poster="img/a01.jpg" alt="" >
-   <source src="img/ddm.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-   </video> </li>
-                        
-                     </ul>
-                     <p class="pagination">
-                      <span class="current-image"></span>
-                                                  
-                        <span class="image-count"></span>
-                     </p>
-                     <nav class="navigation">
-                     <a href="#" class="previous">上一頁</a>
-                     <a href="#" class="next">下一頁</a>
-                     </nav>
-                   </div>
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
 
-                   <div class="socials">
-                   </div>
-        <nav class="tabbar" >          
-          <a href="" class="current1">再一次聆聽</a>          
-         </nav>   
-         	<svg id="svg">
-<!-- SVG圖形背景大小及顏色 -->
-<rect x="0" y="0" fill="none" stroke="#fff" stroke-width="0" width="166" height="39" />
-<rect x="2" y="3" width="162" height="32" rx="15" ry="15" fill="#eef" opacity=".4" stroke="#26b" stroke-width="3" id="test" />
- <a href="31Medit-2.html">
-<text x="14" y="25" style="font-size:15px" fill="#b26" >進一步聆聽其它的 ▶︎</text></a>               
-                   </svg>
-                   <!-- 加入 Media Player-->   
-            <span><div class="mediPlayer"><audio class="listen" preload="none" data-size="100" src="https://dl.dropbox.com/s/hhugae99qxqa18b/med01.m4a"></audio>         </div>                
-                </span>
-            <!--end Media Player-->
-  
-                   <div class="texts">
-                         <div id="t-description" class="tab" style="display: block;">
-   <p/>                          
-   身心的發源                          
- <p/>                      
-各位賢友，利用這個時間來練習禪修四念處，體會我們自己生命是非常吉祥的事情。<p/>
-有的人看到出家人過著清淡的生活，他會說：師父我好心酸 !
-眼睛接觸外面看見東西心就在那裡反應，這種感受傳到心懷裡，起了自我憶念的想像分別，再發出去電子訊號給頭腦產生化學變化酸酸的物質給內心，才會酸酸的！
-所以我們的感動、感受、感覺是心裡面在感覺。你想要做任何事也是心裡在想，而頭腦只是身體的傳遞有機物質。<p/>
-我們一定是先了解自己的身心現象，才有辦法知道生命是怎麼產生的，不了解我們就被拉著走，心沒辦法做主人。所以才由四個段落來了解身心現象，就是四念處基礎禪修方法。
-大致來說四念處是指，身體/感受/心識/心識所分別的一切法，叫做身念處/受念處/心念處/法念處，也就是身、受、心、法，這四念處。<p/>
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+<br>          
+<br>
+<br>          
+<br>
+（1999年台灣9月21日大地震的故事）9.2.1大地震的時候……
+(A story from the 1999,9,21 Earthquake in Taiwan) During the Earthquake...
+
+<br>
+淨心長老來到了一個精舍，他聽說這是個持戒的道場，在大地震最嚴重的地區。
+Elder Master Jing-Xin arrived at a monastery. He had heard this was a place of strict monastic discipline, located in the hardest-hit area of the earthquake.
+<br>
+
+他進去之後，看到裡面的出家人還有知客法師，不像大修道場那樣穿得很莊嚴。
+After entering, he saw the resident monastics and the guest prefect. They weren't dressed in grand robes like those in large temples.
+
+<br>
+他們穿的袈裟還有漢服是縫縫補補的，看起來很寒酸，生活過得很清淡！
+Their cassocks and traditional robes were heavily patched and mended. They looked quite impoverished, living a very simple life.
+
+<br>
+所以，淨心長老走進去一看，他只說了一句話，他說：「我很慚愧！」
+Thus, as Elder Master Jing-Xin looked around, he uttered only one sentence: "I feel deeply ashamed."
+
+<br>
+有許多人看到出家人過著清淡的生活，他會說：「師父看您這個樣子，我心裡頭好心酸啊！」
+Some people, seeing monastics live a simple life, might say: "Master, seeing how poor you are, I feel so heartbroken!"
+
+<br>
+當我們的眼睛接觸外面環境看見的東西，您的心就在那裡反應。
+When the eyes make contact with external objects, the mind reacts right there.
+
+<br>
+這種感受傳到心裡頭，起了自我憶念的想像分別。
+This feeling is then transmitted into the heart, giving rise to self-referential memories, imaginations, and discriminations.
+
+<br>
+再發出去電子訊號給頭腦，產生化學變化，分泌酸酸的物質給內心，才會感覺「心酸酸的」！
+Then it sends electronic signals to the brain to produce chemical changes, releasing "acidic" substances to the inner being, which then creates that "sour" feeling.
+
+<br>
+所以我們的感動、感受、感覺，是心裡面在感覺。
+Therefore, our emotions, feelings, and sensations are felt within the mind.
+
+<br>
+你想要做任何事也是心裡在想，而頭腦只是身體傳遞有機物質的工具。
+Whatever you wish to do is also thought in the mind, while the brain is merely an organic messenger for the body.
+
+<br>
+我們一定是先了解自己的身心現象，才有辦法知道生命是怎麼產生的。
+We must first understand our own mind-body phenomena; only then can we understand how life comes into being.
+
+<br>
+不了解的話，我們就被拉著走，心就沒辦法做自己的主人。
+Without understanding, we are simply dragged along, and the mind cannot be its own master.
+
+<br>
+所以才由四個段落來了解身心現象，就是「四念處」基礎禪修方法。
+That is why we use four sections to understand mind-body phenomena, which are the fundamental meditation methods of the Four Foundations of Mindfulness.
+
+<br>
+大致來說，四念處是指：身體、感受、心識、以及心識所分別的一切法。
+Broadly speaking, the Four Foundations of Mindfulness refer to: the body, feelings, the mind, and all mental phenomena discerned by the mind.
+
+<br>
+叫做身念處、受念處、心念處、法念處。也就是「身、受、心、法」這四念處。
+Known as mindfulness of the body, mindfulness of feelings, mindfulness of the mind, and mindfulness of mental phenomena – that is, body, feelings, mind, and Dharma.
+
+<br>
 我們的生命現象是由物質界的身體，和精神界的心識，相互運作所組合成的。
-會感受的、會記憶的和判斷、思考的其實是我們的心不是頭腦。心的過去習慣行為依附在心臟血管中有一個透明的地方叫 ，心所依處的「意門」。「意門」就像鏡子一樣是物質體，心從左邊穿過意門右邊就產生心識（認知）的改變。這原理有點像是電腦虛擬主機的映像檔。這個映像檔會決定我們的未來，在死亡時會發出訊號給雲端硬碟，再傳給或直接給另外一台適合的電腦。而這個雲端可以譬喻就是宇宙的真理 「無我的空間」。當你有智慧離開或決定不再起分別對立的時候就可以保持在雲端，不會有生與死的顛倒世界。<p/>
+Our life phenomena are composed of the physical body from the material world and the consciousness from the mental realm, operating in mutual interaction.
 
-怎麼來了解身心現象的四念處呢？當我們心裏面透過眼晴、鼻子、耳朵、舌頭、身體的皮膚接觸，也是有一個透明的地方可以接收和外面環境接觸到的訊息，當這個訊息傳回來內心的是「感受」「感覺」。<p/>
+<br>
+會感受的、會記憶的和判斷、思考的，其實是我們的心，不是只有頭腦。
+What perceives, remembers, judges, and thinks is actually our mind, not just the brain.
 
-而從感受到了的訊息，在內心裏面經過記憶中的邏輯思考和判斷，產生有分別對立的概念法則，和我們認知的世界所有的一切現象法則，就叫做「法」。
-也就是心裏面接收身體外面，回來的是「感受」。<p/>
-而心從裡面的憶念產生出來的概念，都是「法」。例如你內心對於世間的看法、想法、認知都不太一樣，所以每個人的世界不同，才需要發很多時間去溝通的。
-一個是由外往內看是「感受」，一個是由內往外看是「法」。
+<br>
+心的過去習慣行為，依附在心臟血管中一個透明的地方，叫做心所依處的「意門」。
+The mind's past habitual actions are associated with a transparent place within the heart's blood vessels, called the "mind-door," the seat of the mind.
+
+<br>
+「意門」就像鏡子一樣是物質體；心從左邊穿過意門，右邊就產生心識（認知）的改變。
+The "mind-door" is a physical entity, like a mirror; when the mind passes through the mind-door from the left, a change in consciousness (cognition) arises on the right.
+
+<br>
+這原理有點像是電腦虛擬主機的映像檔（Image file）。
+This principle is somewhat like a virtual host image file on a computer.
+
+<br>
+這個映像檔會決定我們的未來。
+This image file determines our future.
+
+<br>
+在死亡時，它會發出訊號給「雲端硬碟」，再傳給或直接給另外一台適合的電腦。
+At the time of death, it sends signals to a "cloud drive," which then transmits them to, or directly gives them to, another suitable computer.
+
+<br>
+而這個「雲端」可以譬喻為宇宙的真理——「無我的空間」。
+This cloud can be likened to the ultimate truth of the universe—the "space of non-self."
+
+<br>
+當你有智慧離開，或決定不再起分別對立的時候，就可以保持在雲端。
+When you possess the wisdom to depart, or decide no longer to create distinctions and oppositions, you can remain in the cloud.
+
+<br>
+不會再有生與死的顛倒世界。
+And will no longer experience the inverted world of birth and death.
+
+<br>
+怎麼來了解身心現象的四念處呢？
+How do we come to understand the Four Foundations of Mindfulness regarding the phenomena of body and mind?
+
+<br>
+當我們心裡面透過眼睛、鼻子、耳朵、舌頭、身體皮膚的接觸，
+When our mind, through contact with eyes, nose, ears, tongue, and the skin of our body,
+
+<br>
+也有一個透明的地方，可以接收和外面環境接觸到的訊息。
+Also possesses a transparent space that receives messages from its contact with the external environment.
+
+<br>
+當這個訊息傳回內心的是「感受」、「感覺」。
+What returns to our inner self from these messages are "sensations" and "feelings."
+
+<br>
+而從感受到的訊息，在內心裡面經過記憶中的邏輯思考和判斷，
+From these received sensations, after logical thought and judgment within our memory,
+
+<br>
+產生有分別對立的概念法則，和我們認知的世界所有一切現象法則，
+Principles of differentiation and opposition, along with all the phenomena we perceive in the world, are generated.
+
+<br>
+就叫做「法」。
+This is what we call "Dharma" or "mental formations."
+
+<br>
+也就是我們心裡面接收身體外面傳回來的，是「感受」。
+In other words, what the mind receives from outside the body is "sensation."
+
+<br>
+而心從裡面的憶念產生出來的概念，都是「法」。
+And the concepts generated by the mind from its internal recollections are all "Dharma."
+
+<br>
+例如你內心對於世間的看法、想法、認知都不太一樣，
+For instance, your inner views, thoughts, and perceptions of the world differ greatly.
+
+<br>
+所以每個人的世界不同，才需要花很多時間去溝通。
+This is why everyone perceives a different world, necessitating a significant amount of time for communication.
+
+<br>
+一個是由外往內看，是「感受」；
+One perspective is looking from outside inwards, which is "sensation."
+
+<br>
+一個是由內往外看，是「法」。
+The other is looking from inside outwards, which is "Dharma."
+
+<br>
 那麼，內和外之間執著的就是這個「身體」和「心」。
+So, what clings between the inner and the outer is this "body" and "mind."
+
+<br>
 「心」就是連接和反應這個內外身心現象的橋樑。
+The "mind" is the bridge that connects and reacts to these inner and outer phenomena of body and mind.
+
+<br>
 「身體」是物質，由地、水、火、風的改變組合而成。
-「心」就像「鏡子和光」一樣，反映來反映去的。所以又叫做魔術師。<p/>
-例如外太空某個銀河系爆炸，它的光經過幾萬光年傳到我們的眼睛，在牆壁反應來反應去，所以我們心中看到這個空間，這個影像。但是光在很久以前就消失了！所以我們在反應的心是不實在、不真實的魔術師！
-從這反應到那，再從那反應到這兒，這個中間我們叫做「自我」。我感覺的身體、自我感覺的型態、影像、聲音、時間和空間等等。<p/>
-「自我」是不能控制的，如何說呢？例如，反應來反應去的心就像(流水)不斷的流動，你不能用手抓取它、改變它、控制它！否則你就會白忙一場。<p/>
-就像我們吃的米粒一樣，假如我的手上抓了一把米從上往下的一粒接著一粒的掉下來，結果你會看到什麼？你會看到了一條白色的線，從我的手連接到地上。但是有沒有這條線呢？並沒有的！所以這一條白色的線，是我們記憶所產生的錯覺。或是每秒60赫日頻率運動的燈光下顯現的環境也都是一個錯覺。因為仔細的看它一下子就消失了。<p/>
-燈光從左邊的牆反映到右邊，再從右邊反映在左邊，它反應來反應去的，您才可能看得到這裡的空間，對不對？但是你的眼睛假如更銳利一點，你是不是就能看得到燈光下是忽暗忽明的景象！這樣你就看不清楚這裡的空間的一切，你也不會認為這裡的影象是真實的或是一直存在的，對不對？<p/>
-也因為我們的心遲鈍的關係產生了錯覺和記憶，才使我們認知的影像、空間感一直存在。所以我們是生活在錯覺裡面的，由這個道理我們可以清楚的了解。地球和萬事萬物為什麼要旋轉？地球旋轉是為了保持平衡，也是有對立所以才會兩邊跑來跑去。但是您ㄧ直這樣跑來跑去是沒有用的！要調整的這個產生對立的錯覺才對。所以當我們可以清楚的了解，我們是生活在錯覺裡面的這個道理和仔細的觀查之後，我們就會解開脫離這個夢境、虛妄對立的和有生死輪迴的世界。這就是我們要修行智慧禪定的目的。<p/>
+The "body" is matter, formed by the changing combinations of earth, water, fire, and wind.
 
+<br>
+「心」就像「鏡子和光」一樣反映來反映去，所以又叫做「魔術師」。
+The "mind" is like "a mirror and light," reflecting back and forth. That is why it is also called the "magician."
 
-諸位賢友，利用這個時間來練習禪修四念處，體會我們自己生命是非常吉祥的事情。
-我們的生命是身體跟心在運作的。身體是物質組成的，它有味道、有香氣和有營養成份，也有地、水、火、風的四大特性，這是身體。外面環境也都有這四大特性，例如骨頭、頭髮有柔軟、堅硬的特性是地大。水大有黏著跟濕潤的特性，身體的皮膚和山上的泥土才可以黏在一起不會垮下來。火大就是身體的溫度，可以改變和產生新物質的現象，幫助身體的運轉。身體的呼吸和氣血循環就是風大，有推動跟制止的能力。地水火風四大和營養、味道、香氣的暫時特性組成了身體主要的改變現象，不是永久不變的。它們一起同時間一下子出現又消失，來回連續的變化。波動的速度一彈指之間有九十個生滅。<p/>
-身體和外面環境的植物等等的物質，同樣有地水火風變化的自然現象。但是跟物質不同的是你的身體因為有「心」在反應才能有記憶、思想、感受、行為習慣的生命現象。<p/>
+<br>
+例如外太空某個銀河系爆炸，
+For example, when a galaxy explodes in outer space,
 
+<br>
+它的光經過幾萬光年傳到我們的眼睛，
+Its light travels for tens of thousands of light-years to reach our eyes.
 
-那麼我們的「心」是什麼？又從哪裡來的呢？<p/>
-我們死亡時命根斷的最後那一念心，會像無線電腦一樣發出一個訊號去給雲端硬碟或是另外一個新的電腦記錄起來，而且只能記錄一次。那最後一念心的想法跟習慣會決定下輩子投生的路徑。「心」是一種有方向性的行為反應，過去世的心，也就是你的習慣、你的個性和行為模式依附在心臟裡面有一個透明的地方，叫做心意門。過去的習慣在那裡記錄下來產生了心意識，就像電腦的映象檔案一樣，再經過眼意門、耳意門、鼻意門、舌意門、身意門作出來回連續的反應，產生新的感受、記憶、想法和行為，成為有了靈性、精神、思想的生命體。<p/>
-各種意門是身體的物質就像透明的鏡子，對於過去和現在的記憶、想法、認知敏感。眼、耳、鼻、舌、身、意，可以接受色、聲、香、味、觸、法而有明顯的反應。同時也可以讓心通過去產生了新的經驗，不同的經驗會改變心意門記憶中的映象檔案，讓你有新的想法、思維模式和認知。<p/>
-眼根、耳根、鼻根、舌根、身根等是否具足或是特殊，跟過去世的業力、行為習慣和這一輩子的福報有關係。<p/>
+<br>
+在牆壁反映來反映去，所以我們心中看到這個空間、這個影像。
+It reflects back and forth on the wall, and thus we see this space, this image, in our minds.
 
-我們的心在這一輩子的身體裡面跑來跑去，心的反應生滅無常的速度比四大的身體，生滅的速度快上十七倍，一下子就有幾億萬個生滅以上。因為心比物質的身體速度快，所以「心」才能夠感覺到身體的存在，依附投靠在身體那裡。<p/>
+<br>
+但是光在很久以前就消失了！
+However, the light itself vanished a very long time ago!
 
+<br>
+所以我們在反應的心是不實在、不真實的「魔術師」！
+Therefore, our reacting mind is an unreal, untruthful magician!
 
-「心」又叫做「心行」是行為的「行」，你可以想像「心」就像電子訊號的光波一樣。
-像太陽光或燈光反映照射出這個空間，它在左右的牆面上，相互的照來照去，你才能看到知道這個空間。我們的心也是一樣，在身體裡面和心意識裡面，跑來跑去，你才感覺真的好像有這個身體和有這個能夠思想的心。如果你的心更仔細的看，你會知道這燈光是60Hz是每妙60下的明暗過程。<p/>
-所以你的心如果快速一點，你只會看到忽明忽暗一閃一閃的過程，根本不會感覺明亮的空間是一直存在的。
-例如，有一把白米在我手上，我現在讓它一粒一粒連續的掉下來，結果你是看到了一條白色的線，從我的手上連接到地板上面，對不對？所以這是我們的心遲鈍一直記憶前一個影像所產生的幻覺，不是真的有這條線存在。<p/>
-好比宇宙中某個遙遠的太陽系爆炸了,為什麼我們會看到? 
-因有亮光,對不對? 心有反應分別,對不對? 但是當我們看到的時候,實際上那個太陽系已經在幾萬光年前就消失了,對不對? 有沒有這種感覺? <p/>
-就像那個光一樣,我們的心也有反應分別,
-但是如同鏡中幻影一樣，它們都需要有足夠的時間空間來讓它反應,
-它才有可能一直延續下去,有沒有這樣?  
-但是它們老早就消失了,對不對? <p/>
-我們的心識在我們的身體裏面,眼丶耳丶鼻丶舌丶身丶意, 還有我們很多很複雜的神經系統
-和無數的腦細胞之間跑來跑去丶反應來反應去的。
-但是那個心丶那個光它們老早就消失了,對不對? <p/>
-所以我們是迷失在分別心識的不停止的反應,在這個過程我們認定為自我，
-才會不斷地受困在這個身體丶這個心的(受丶想丶行、識)上面的，
-誤認為真的有這個身體丶有這個反應的心。 <p/>
-了解這樣子生命緣起的道理。
-了解這個道理，當你感覺「有什麽」的時候，那一定是前一念的錯覺。<p/>
+<br>
+從這反應到那，再從那反應到這兒，
+From this reaction to that, and then from that reaction back here,
 
+<br>
+這個中間我們叫做「自我」。
+This intermediate process is what we call the "self."
 
-當你有錯覺的時候，感覺「有什麽」的時候，另一個相互對應、相互對立或相對待的物件，也一定會出現。這個時候會發生什麽事情？<p/>
-我們的地球要旋轉，腳踏車輪子要轉動，為什麽？
-這是個蹺蹺板原理, 無中生有的 分別 、比較 、對立 、不耐煩 就是天秤的兩端。 
-當你站在一邊時就會有追求和排斥的心同時生起, 驅使你自然的逐向另外一邊, 你只能不斷的在天秤的兩端來回奔走而沒有停止的一天。<p/>
-你在坐著的時候，左邊不舒服就換右邊，右邊不舒服又換左邊，你換來換並沒有用，最後你還是要調您的心平等，對不對？<p/>
-所以我們的地球是個傻瓜，跑來跑去沒有用！是要去除我們有分別、對立的錯覺，對不對？
-當你有錯覺的時候，感覺「有什麽」的時候就一定有一個相對等「沒有」的對立關係。好像你在用兩隻手拉開弓箭，弓弦之間有一個對比。這裡面就有一個能量來保持平衡，保持平衡的這個力量就是「心」的行為。但是你弓箭弓弦怎麼方向來拉它一直都是在弓弦圓圈的平衡當中。我們因為沒有看到這相對待已經是平衡的這一點關係，所以就迷失在對比之下的行為裡面跑來跑去的。<p/>
+<br>
+我感覺的身體、自我感覺的型態、影像、聲音、時間和空間等等。
+My perceived body, self-perceived forms, images, sounds, time, and space, and so on.
 
+<br>
+「自我」是不能控制的。
+The "self" cannot be controlled.
 
- 除了離開對立的心可以讓您的心安定下來之外。另外你有沒有發現，提供這個讓你有對立的心在那邊跑來跑去，是不是有一個空間？<p/>
-這個空間非常大沒有限制！這沒有任何執取的空間是個無我、無限的空間。無限是有還是沒有，沒有什麼有或沒有，才叫做無限、無我的空間。「無我」有沒有，對立的事實？沒有！所以只要你心中有什麼出現，就一定是有對立的一種錯覺。因為那是你的心遲鈍記憶所產生的錯覺，過沒多久就要改變了。所以一切事物包括你的心在內，一定都會改變消失，這就是身心「無常」現象。因為它本來就不存在，一直存在的就只有「無我」的真理事實。這個「無我、無限」才是我們原本的心，有對立的是虛妄不實在的心，它是個錯覺。好比我們眼睛花了，一個月亮看久了變成兩個月亮、三個月亮、四個月亮，心裡就起種種分別、妄想。理論上有了解，但是還是放不下執著的身心怎麼辦？那麼我們就要來練習了！<p/>
+<br>
+如何說呢？
+How can this be explained?
 
+<br>
+例如，反映來反映去的心就像流水不斷地流動，
+For instance, the mind, reflecting back and forth, is like continuously flowing water.
 
-前面我們提到過「無我」無限的空間。因不明白「實相」，也就是我們所面對現況的事實就是「無我」。一時之間有了因為判斷錯誤、對立分別和記憶，所產生的暫時現象。這些暫時現象的組合就構成我們的生命現象。再加上物質的「地、水、火、風」自然現象，那就構成「地、水、火、風」組成的有這個身體的覺受、感覺和意識型態。因為是錯誤判斷所產生的暫時現象，所以也可以說，我們的生命現象就是一種「幻覺」。<p/>
-首先我們得先承認面前就是一個「幻覺」，接下來您才有可能走向解脫「幻覺」的修行道路。解脫「幻覺」的第一步是「明白事實」。不參雜「胡思亂想」就叫做「明白」。「事實」是在哪裡？當然是最容易感受清楚的這個面前自己的身心現象。「明白事實」的第一步就是清楚自己的身心現象的事實，這在禪修術語叫做「認識自我」。如何認識自我呢？以後我們一步一步的介紹。<p/>
-      
-                             
+<br>
+你不能用手抓取它、改變它、控制它！
+You cannot grasp it with your hands, change it, or control it!
+
+<br>
+否則你就會白忙一場。
+Otherwise, your efforts will be in vain.
+
+<br>
+就像我們吃的米粒一樣，
+Just like the grains of rice we eat,
+
+<br>
+假如我的手上抓了一把米，從上往下地一粒接著一粒掉下來，
+If I hold a handful of rice and let the grains fall one by one from my hand downwards,
+
+<br>
+結果你會看到什麼？
+What will you see?
+
+<br>
+你會看到了一條白色的線，從我的手連接到地上。
+You will see a white line connecting my hand to the ground.
+
+<br>
+但是有沒有這條線呢？
+But does this line truly exist?
+
+<br>
+並沒有的！
+No, it does not!
            
-                             <p></p>
-                             <p></p>
-                        </div> 
-                   </div>
-                   <div class="comments">
-                      <div class="fb-comments" data-href="index.html" data-colorscheme="light" data-numposts="10" data-width="585">
-                          <h4>分享歡喜給我的朋友們:</h4> 
-                      <!--分享按鈕 --> <script>document.write(unescape("%3Cdiv%20id%3D%27rndShareBtn%27%3E%0A%09%3C%21--%20fb%20--%3E%0A%09%3Ca%20class%3D%27rs_fb%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20FB%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-facebook%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20g+%20--%3E%0A%09%3Ca%20class%3D%27rs_gplus%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20Telegram%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-telegram%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20line%20--%3E%0A%09%3Ca%20class%3D%27rs_line%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20LINE%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-commenting%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20plurk%20--%3E%0A%09%3Ca%20class%3D%27rs_plurk%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20PLURK%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-plurk%20fa-stack-1x%27%3EP%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20weibo%20--%3E%0A%09%3Ca%20class%3D%27rs_weibo%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20%u5FAE%u535A%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-weibo%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20twitter%20--%3E%0A%09%3Ca%20class%3D%27rs_twitter%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20TWITTER%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-twitter%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20tumblr%20--%3E%0A%09%3Ca%20class%3D%27rs_tumblr%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20TUMBLR%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-tumblr%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20pinterest%20--%3E%0A%09%3Ca%20class%3D%27rs_pinterest%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20PINTEREST%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-pinterest-p%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%09%3C%21--%20email%20--%3E%0A%09%3Ca%20class%3D%27rs_email%27%20href%3D%27%27%20onclick%3D%27window.open%28this.href%2C%20%22_blank%22%2C%20%22height%3D500%2Cwidth%3D800%22%29%3B%20return%20false%3B%27%20title%3D%27%u5206%u4EAB%u5230%20EMAIL%27%20target%3D%27_blank%27%3E%0A%09%09%3Cspan%20class%3D%27fa-stack%20fa-lg%27%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-circle%20fa-stack-2x%27%3E%3C/i%3E%0A%09%09%3Ci%20class%3D%27fa%20fa-envelope%20fa-stack-1x%27%3E%3C/i%3E%0A%09%3C/span%3E%0A%09%3C/a%3E%0A%3C/div%3E"));</script>
-           <!-- end 分享按鈕 -->   
-                       
-                       
-                       
-                       
-                       </div>
-                   </div>
-               </div>
-     
-    
-               <div id="more-like-this">
-  <h4 class="minititle"></h4>
-                   <div class="holiday-list">
+<br>
+所以這一條白色的線，是我們記憶所產生的錯覺。
+Therefore, this white line is an illusion generated by our memory.
 
-              </div>
-             </div>                        
-                       
-</div></div>
-       
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('.comlove')
-      .on('submit', function(e) {
-        e.preventDefault();
-        
-        var $node = $(this).closest('.comlove'),
-            $form = $node,
-            loveCount = parseInt($node.data('love-count'), 10) + 1;
-        
-        $node
-          .data('love-count', loveCount)
-          .find('.love-count')
-            .text(loveCount)
-          .end()
-          .find('.loves .love-icon')
-            .removeClass('no-love')
-          .end()
-          .find('.love-button .love-icon')
-            .addClass('has-love')
-          .end()
-          .find('.love-button')
-            .prop('disabled', true)
-          .end();
-          
-          $.post($form.attr('action'), $form.serialize());
-      });
-  });
-</script>
+<br>
+或是每秒 60 赫茲（Hz）頻率運動的燈光下顯現的環境，也都是一個錯覺。
+Or, the environment appearing under a light flickering at 60 Hz is also an illusion.
 
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('#more-like-this')
-      .on('click', '.quick-info-label', function(e) {
-        e.preventDefault();
-      })
-      .on('mouseenter', '.quick-info-label', function(e) {
-        $(this).closest('.holiday').addClass('expanded');
-      })
-      .on('mouseleave', '.holiday', function(e) {
-        $(this).removeClass('expanded');
-      });
-  });
-</script>
+<br>
+因為仔細地看，它一下子就消失了。
+Because if you observe it closely, it disappears in an instant.
 
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('#holiday-info')
-      .on('mouseenter', '.info-icon', function(e) {
-        $('#best-price-popover').addClass('open');
-      })
-      .on('mouseleave', '.info-icon', function(e) {
-        $('#best-price-popover').removeClass('open');
-      });
-  });
-</script>
+<br>
+燈光從左邊的牆反映到右邊，再從右邊反映到左邊，
+Light reflects from the left wall to the right, and then from the right back to the left.
 
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    var width = 650,
-        height = 430;
-    
-    $('.popup').on('click', 'a', function(e) {
-      e.preventDefault();
-      window.open(
-        $(this).attr('href'),
-        '_blank',
-        'width=' + width + ', ' +
-        'height=' + height + ', ' +
-        'scrollbars=yes');
-    });
-  });
-</script>
+<br>
+它反應來反應去的，您才可能看得到這裡的空間，對不對？
+It reflects back and forth, and only then can you perceive the space here, isn't that right?
 
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    var $currentImageContainer = $('.gallery .current-image');
-    $('.gallery').imagesLoaded(function() {
-      $('.gallery')
-        .removeClass('loading')
-        .pager({
-          cycle: true,
-          items: '.images li'
-        })
-        .pagernav({
-          node: '.navigation'
-        })
-        .on('pagerchange', function(e, ui) {
-          $currentImageContainer.html(ui.page + 1);
-          ui.previousPageItems.removeClass('current');
-          ui.pageItems.addClass('current');
-          // ui.previousPageItems.stop(true, true).fadeOut();
-          // ui.pageItems.stop(true, true).fadeIn();
-        })
-        .find('.images li:first-child').addClass('current');
-        // .find('.images li').not(':first-child').hide();
-    });
-  });
-</script>
+<br>
+但是你的眼睛假如更銳利一點，
+But if your eyes were a little sharper,
 
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $('.tabbar').tabbar();
-  });
-</script>
+<br>
+你是不是就能看得到燈光下是忽暗忽明的景象！
+Wouldn't you be able to see the flickering bright and dim scenes under the light?
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  jQuery(document).ready(function($) {
-    
-    var $mainModal = $('#main-modal').modal();
-    $('.more-info-button').on('click', 'a', function(e) {
-      e.preventDefault();
-      $mainModal.modal('load', $(this).attr('href'), 'ajax');
-    });
-    
-    var _xhr = null;
-    
-    $mainModal
-      .on('submit', 'form', function(e) {
-        if (_xhr) return;
-        
-        e.preventDefault();
-        
-        var $self = $(this),
-            href = $(this).addClass('loading').attr('action');
-        
-        _xhr = $.ajax({
-            url: href,
-            type: 'POST',
-            dataType: 'html',
-            cache: false,
-            data: $(this).serialize()
-          })
-          .done(function(data) {
-            $mainModal.find('.modal-content').html(data);
-            _xhr = null;
-            if ($mainModal.find('.modal-content').find('.thank-you').length > 0) {
-              _gaq.push(['_trackPageview', '/request-holiday-information/161/thanks/']);
-            }
-          })
-          .fail(function() {
-            _xhr = null;
-          });
-          
-        $(this).find('input, textarea, button').attr('disabled', 'disabled');
-      })
-      .on('click', '.close-button', function(e) {
-        e.preventDefault();
-        $mainModal.modal('close');
-      });
-  });
-</script>
+<br>
+這樣你就看不清楚這裡空間的一切，
+In that case, you wouldn't clearly see everything in this space.
 
-               
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=165546130235965";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<br>
+你也不會認為這裡的影像是真實的或是一直存在的，對不對？
+Nor would you believe that these images are real or perpetually existing, would you?
 
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  $('#list-wrapper')
-    .on('click', '.quick-info-label', function(e) {
-      e.preventDefault();
-    })
-    .on('mouseenter', '.quick-info-label', function(e) {
-      $(this).closest('.holiday').addClass('expanded');
-    })
-    .on('mouseleave', '.holiday', function(e) {
-      $(this).removeClass('expanded');
-    });
-});
-</s<script type="text/javascript">
-jQuery(document).ready(function($) {
-  var $backtop = $('#backtop').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $.scrollTo(0, 600, {easing: 'easeOutCubic'});
-  }).hide();
-  
-  if ($backtop.length == 0) return;
-  
-  var initialBottom = parseInt($backtop.css('bottom').replace(/px/g, ''), 10),
-      startLimit, endLimit;
-  
-  function hasMore() {
-    return !!$('#list-wrapper .load-more').length;
-  }
-  
-  function calculateLimits() {
-    var $node = $('#list-wrapper');
-    startLimit = $node.offset().top;
-    endLimit = $node.offset().top + $node.outerHeight();
-  }
-  
-  function windowDidScroll() {
-    var pos = $(window).scrollTop();
-    if (pos > startLimit && pos < endLimit)
-      $backtop.fadeIn();
-    else
-      $backtop.fadeOut();
-    
-    var max = endLimit - initialBottom - $(window).height() - (hasMore() ? 30 : 70),
-        bottom = initialBottom;
-    if (pos > max)
-      bottom += pos - max;
-    setTimeout(function() {
-      $backtop.css('bottom', bottom);
-    });
-  }
-  
-  calculateLimits();
-  
-  $(window).on('scroll', windowDidScroll);
-  
-  function imagesDidLoad(imgLoad) {
-    for (var i = 0, len = imgLoad.images.length; i < len; i++)
-      $(imgLoad.images[i].img).closest('.holiday.loading').removeClass('loading');
-    calculateLimits();
-    windowDidScroll();
-  }
-  
-  $('#list-wrapper').imagesLoaded(function(instance) {
-    imagesDidLoad(instance);
-  });
-  
-  var _xhr = null;
-  
-  $('#list-wrapper')
-    .on('click', '.load-more a', function(e) {
-      e.preventDefault();
-      
-      if (_xhr) return;
-      
-      var $trigger = $(this).closest('.load-more'),
-          href = $(this).addClass('loading').attr('href');
-      
-      _xhr = $.ajax({
-          url: href,
-          type: 'GET',
-          dataType: 'html',
-          cache: false
-        })
-        .done(function(data) {
-          $('#list-wrapper').append(data).imagesLoaded(function(instance) {
-            $trigger.remove();
-            imagesDidLoad(instance);
-          });
-          _xhr = null;
-        })
-        .fail(function() {
-          _xhr = null;
-        });
-    });
-});  
-</script>
+<br>
+也因為我們的心遲鈍的關係，產生了錯覺和記憶，
+It is also because of the dullness of our mind that illusions and memories are generated.
 
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  var _menu_tid = null,
-      _menu_delay = 250;
-  $('.dropdown')
-    .on('mouseenter', function() {
-      $('.dropdown').not(this).removeClass('hover');
-      clearTimeout(_menu_tid);
-      var self = this;
-      _menu_tid = setTimeout(function() {
-        $(self).addClass('hover');
-      }, _menu_delay);
-    })
-    .on('mouseleave', function() {
-      $('.dropdown').not(this).removeClass('hover');
-      clearTimeout(_menu_tid);
-      var self = this;
-      _menu_tid = setTimeout(function() {
-        $(self).removeClass('hover');
-      }, _menu_delay / 2);
-    });
-});
-</script>
+<br>
+才使我們認知的影像、空間感一直存在。
+This is what makes our perceived images and sense of space seem to exist continuously.
 
-    
- <!-- 加入 Media Player script / -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="static/js/player.js"></script>
-    <script>
-    $(document).ready(function () {
-        $('.mediPlayer').mediaPlayer();
-    });
-    </script>
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-  <!-- end Media Player script / -->    
- 
- <!-- 分享按鈕 -->    
-   <script type="text/javascript">
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener('load',
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent('onload', function(){ object[attribute] = val; });
-      }
-    }
-  </script>  
-   <!-- 分享按鈕 --> 
+<br>
+所以我們是生活在錯覺裡面的，由這個道理我們可以清楚地了解。
+Thus, we live within illusions. From this principle, we can clearly understand.
+
+<br>
+地球和萬事萬物為什麼要旋轉？
+Why do the Earth and all things in the universe rotate?
+
+<br>
+地球旋轉是為了保持平衡；也是因為有對立，所以才會兩邊跑來跑去。
+The Earth rotates to maintain balance; because there is opposition, things constantly move between two sides.
+
+<br>
+為了保持平衡。
+To maintain balance.
+
+<br>
+但是您一直這樣跑來跑去是沒有用的！
+However, continually moving back and forth like this is futile!
+
+<br>
+要調整這個產生對立的錯覺才對。
+What needs to be adjusted is the illusion that creates this opposition.
+
+<br>
+所以當我們可以清楚地了解我們是生活在錯覺裡面的道理，並經過仔細地觀察之後，
+Therefore, when we clearly understand that we live within illusions and after careful observation,
+
+<br>
+我們就會解脫，脫離這個夢境、虛妄對立和有生死輪迴的世界。
+We will unravel and break free from this dreamlike, falsely opposing, and cyclic world of birth and death.
+
+<br>
+這就是我們修行智慧禪定的目的。
+This is the ultimate purpose of our practice of wisdom and meditative absorption.
+
+<br>
+我們的生命，是身體跟心在運作的。
+Our life operates through the body and the mind.
+
+<br>
+身體是物質組成的，它有味道、有香氣和營養成分。
+The body is composed of matter; it possesses taste, fragrance, and nutritional components.
+
+<br>
+它也有地、水、火、風的四大特性，這就是我們的身體。
+And it also exhibits the four great elements: earth, water, fire, and wind. This is our body.
+
+<br>
+外面環境也都有這四大特性。
+The external environment likewise contains these four great elements.
+
+<br>
+例如骨頭、頭髮有柔軟、堅硬的特性，這是「地大」。
+For example, the softness and hardness of bones and hair are characteristics of the Earth element.
+
+<br>
+「水大」有黏著跟濕潤的特性。
+The Water element has adhesive and moist characteristics.
+
+<br>
+使身體的皮膚和山上的泥土才可以黏在一起，不會垮下來。
+Allowing the body's skin and the earth on the mountains to cling together without collapsing.
+
+<br>
+「火大」就是身體的溫度，可以改變和產生新物質的現象，幫助身體的運轉。
+The Fire element is the body's temperature, capable of changing and generating new substances, thus aiding the body's functioning.
+
+<br>
+身體的呼吸和氣血循環就是「風大」，有推動跟制止的能力。
+The body's respiration and blood circulation represent the Wind element, possessing the power to propel and to restrain.
+
+<br>
+地水火風四大，和營養、味道、香氣的暫時特性，組成了身體主要的改變現象。
+The four great elements—earth, water, fire, and wind—along with the temporary characteristics of nutrition, taste, and fragrance, constitute the main phenomena of change within the body.
+
+<br>
+它不是永久不變的。
+They are not permanently unchanging.
+
+<br>
+它們一起同時一下子出現又消失，來回連續地變化。
+They simultaneously appear and vanish in an ongoing, continuous cycle of change.
+
+<br>
+波動的速度，一彈指之間有九十個生滅。
+The speed of these fluctuations is such that within a single snap of the fingers, there are ninety instances of arising and passing away.
+
+<br>
+身體和外面環境的植物等物質，同樣有地水火風變化的自然現象。
+The body, along with external substances like plants, similarly exhibits the natural phenomena of change involving earth, water, fire, and wind.
+
+<br>
+但是跟物質不同的是，你的身體因為有「心」在反應，才能有記憶、思想、感受、行為習慣的生命現象。
+However, unlike inert matter, your body, precisely because it has a "mind" that reacts, is capable of experiencing life phenomena such as memory, thought, sensation, and habitual behavior.
+
+<br>
+在我們死亡的那一刻，命根斷的那一念心，它會像無線電一樣……
+At the moment of death, the very last thought-moment when the life faculty ceases, it will be like a radio signal...
+
+<br>
+發出一個訊號。例如您的電腦，發出一個最後的訊號給「雲端硬碟」。
+It emits a signal, much like your computer sending a final signal to a cloud drive.
+
+<br>
+下載給另一部新的電腦記錄起來。而且它只能記錄一次。
+To be downloaded and recorded by another new computer. And it can only be recorded once.
+
+<br>
+那最後一念心的您的想法跟習慣呢？它會決定您下一輩子投生的路徑。
+The thoughts and habits of that final thought-moment will determine the path of rebirth in the next life.
+
+<br>
+所以，心它是一個有方向性的行為反應。
+The "mind" is, in essence, a directional behavioral response.
+
+<br>
+過去的心，也就是您的習慣、個性、行為模式，依附在心所依處，叫做「意門」。
+The mind of the past—meaning your habits, personality, and behavioral patterns—resides within the seat of the mind, called the "mind-door."
+
+<br>
+過去您的習慣在那裡記錄下來，產生了心意識，就像電腦的映像檔一樣。
+Past habits are recorded there, giving rise to mind-consciousness, much like a computer image file.
+
+<br>
+再經過眼門、耳門、鼻門、舌門、身門，來做出連續來回的反應。
+Then, through the eye-door, ear-door, nose-door, tongue-door, and body-door, it performs continuous back-and-forth reactions.
+
+<br>
+產生新的感受、記憶、想法、行為，成為有了靈性、精神思想的生命體。
+Generating new sensations, memories, thoughts, and behaviors, ultimately becoming a living entity endowed with spirituality, consciousness, and thought.
+
+<br>
+各種意門呢？眼、耳、鼻、舌、身門，是身體的物質部分。
+The various sense-doors—eyes, ears, nose, tongue, and body—are the material aspects of the body.
+
+<br>
+它們同樣是透明的物質體，就像一面鏡子。
+They are also transparent material entities, like a mirror.
+
+<br>
+對於過去和現在的記憶、想法、認知，敏感的是您的「意門」。
+What is sensitive to memories, thoughts, and perceptions of both past and present is your "mind-door."
+
+<br>
+由眼、耳、鼻、舌、身、意六門，來接收色、聲、香、味、觸、法，而有明顯的反應。
+Through the eyes, ears, nose, tongue, body, and mind, the six doors receive forms, sounds, odors, tastes, tactile sensations, and mental objects, generating clear responses.
+
+<br>
+同時，這可以讓心通過去這個意門，而產生新的經驗。
+At the same time, they allow the mind to pass through these doors and generate new experiences.
+
+<br>
+不同的經驗它會改變「意門」中的映像檔案，讓您有新的想法、思維模式和認知。
+These various experiences alter the image files in the mind-door, allowing you to develop new ideas, thought patterns, and cognitions.
+
+<br>
+我們的眼根、耳根、鼻根、舌根、身根等，是具足完整還是有其特殊之處，
+Whether our eye, ear, nose, tongue, and body faculties are complete or possess unique characteristics,
+
+<br>
+都與過去世的業力、行為習慣，以及這一輩子的福報，有著深刻的關係。
+Is profoundly related to the karma and behavioral habits of past lives, and the merits of this present lifetime.
+
+<br>
+我們的心，在這一輩子的身體裡面，不停地「跑來跑去」。心的反應其生滅無常的速度，
+Our mind, within this body, constantly "moves about." The speed of the mind's arising and ceasing,
+
+<br>
+比四大組成的身體生滅的速度快上十七倍。
+Is seventeen times faster than that of the physical body composed of the four elements.
+
+<br>
+一念之間，就有幾億萬個生滅以上。
+In a single thought-moment, there are hundreds of millions of such arising and ceasing events.
+
+<br>
+正是因為心比物質的身體速度快，
+It is precisely because the mind is faster than the material body,
+
+<br>
+所以「心」才能夠感覺到身體的存在，
+That the "mind" is able to perceive the body's existence,
+
+<br>
+並依附、投靠在身體之上。
+And to depend upon and rely on the body.
+
+<br>
+例如：鬼道眾生祂也能依附在樹上面，這就是心靈和物質反應速度不一樣的原因。
+For example, beings in the ghost realm can attach themselves to trees; this is due to the different reaction speeds of mind and matter.
+
+<br>
+「心」又叫做「心行」（意指行為），你可以想像「心」就像電子訊號的光波一樣。
+The "mind" is also called "mental formation" (action); you can imagine the "mind" as being like light waves or electronic signals.
+
+<br>
+像太陽光或燈光反映照射出這個空間，它在左右的牆面上相互照來照去，你才能看到並知道這個空間。
+Just like sunlight or lamplight reflects and illuminates this space, bouncing between walls, allowing you to see and know the environment.
+
+<br>
+我們的心也是一樣，在身體和心意識裡面跑來跑去，你才感覺真的好像有這個身體和能思想的心。
+Our mind is similar; it runs within our body and consciousness, making you feel as if you truly have a physical form and a thinking mind.
+
+<br>
+如果你的心更仔細地看，你會知道這燈光是 60Hz，是每秒 60 次的明暗過程。
+If your mind observes more carefully, you would know that this light is 60Hz, a process of brightening and dimming 60 times per second.
+
+<br>
+所以，如果你的心（觀察）快速一點，你只會看到一閃一閃的明暗過程，根本不會感覺空間是一直明亮存在的。
+So, if your observation were faster, you would only see a flickering process, and wouldn't perceive the lit space as continuously existing.
+
+<br>
+例如，有一把白米在我手上，我讓它一粒一粒連續掉下來，結果你會看到一條白線從我手心連接到地板，對不對？
+For example, if I let grains of rice fall continuously, you would see a white line connecting my hand to the floor, wouldn't you?
+
+<br>
+這是因為我們的心遲鈍、一直記憶前一個影像所產生的幻覺，不是真的有這條線存在。
+This is an illusion created by the mind's slowness in remembering the previous image; there isn't actually a real line.
+
+<br>
+好比宇宙中某個遙遠的太陽系爆炸了，為什麼我們會看到？因為有亮光，對不對？
+Just like a distant solar system explosion; we see it because of the light, right?
+
+<br>
+心有反應分別，對不對？
+The mind reacts and distinguishes, right?
+
+<br>
+但是當我們看到的時候，實際上那個太陽系在幾萬光年前就消失了，對不對？
+But by the time we see it, that solar system had actually disappeared tens of thousands of light-years ago, right?
+
+<br>
+有沒有這種感覺？
+Do you have this feeling?
+<br>
+<br>
+就像那個光一樣，我們的心也有反應分別，
+Just like that light, our mind also reacts and distinguishes.
+
+<br>
+但是如同鏡中幻影一樣，它們需要足夠的時間空間來反應，才可能延續，但它們老早就消失了，對不對？
+But like reflections, they need time and space to appear to continue, though they disappeared long ago, didn't they?
+
+<br>
+我們的心識在身體（眼耳鼻舌身意）、神經系統與腦細胞間跑來跑去，但那個心、那個光老早就消失了。
+Our consciousness moves between sense organs and brain cells, but that mind—that light—vanished long ago.
+
+<br>
+所以我們是迷失在分別心識的不停反應中，並將此過程認定為「自我」，才會不斷受困於身心的「受、想、行、識」。
+Thus, we are lost in the incessant reactions of consciousness, identifying them as "self," and becoming trapped in the five aggregates.
+
+<br>
+誤認為真的有這個身體、有這個反應的心。
+Mistakenly believing there is truly this body and this reacting mind.
+
+<br>
+了解這樣子生命緣起的道理。
+Understand this principle of the dependent origination of life.
+
+<br>
+了解這個道理，當你感覺「有什麼」的時候，那一定是前一念的錯覺了。
+When you understand this, whenever you feel "there is something," it is certainly an illusion from the previous thought.
+
+<br>
+當你體驗到錯覺、感覺「有什麼」存在時，一個相對應、相對立的對象，也必然會同時出現。
+When you feel "something" exists, an opposing or corresponding object will inevitably appear at the same time.
+
+<br>
+這個時候會發生什麼呢？
+What happens then?
+
+<br>
+我們的地球需要旋轉，腳踏車的輪子也需要轉動，為什麼呢？
+The Earth rotates, and bicycle wheels spin. Why?
+
+<br>
+這就像一個蹺蹺板的原理。
+This is like the principle of a seesaw.
+
+<br>
+從無中生有的分別、比較、對立和不耐煩，就是這天平的兩端。
+Distinctions, comparisons, and oppositions are the two ends of this scale.
+
+<br>
+當你站在一邊時，追求和排斥的心就會同時生起。
+When you stand on one side, the desire to pursue and the impulse to reject arise simultaneously.
+
+<br>
+這會驅使你傾向另一邊，讓你只能不斷在天平兩端來回奔走，沒有停止的一天。
+This propels you towards the other side, causing you to move back and forth between extremes without end.
+
+<br>
+當你坐著的時候，左邊不舒服就換到右邊，右邊不舒服又換回左邊。
+If your left side feels uncomfortable, you shift right; if the right feels uncomfortable, you shift left.
+
+<br>
+這樣來回地轉換並沒有真正幫助。
+This constant shifting doesn't truly help.
+
+<br>
+最終，你還是要調整你的心，讓它達到平等（捨），不是嗎？
+Ultimately, you still need to adjust your mind to achieve equanimity, don't you?
+
+<br>
+所以我們的地球就像個傻瓜！跑來跑去並沒有用！
+So our Earth is like a fool; running around is pointless!
+
+<br>
+是需要去除那些帶有分別、對立的錯覺，不是嗎？
+We need to eliminate these delusions of distinction and opposition, don't we?
+
+<br>
+當你有錯覺感覺「有什麼」的時候，就一定有一個相對應「沒有什麼」的對立關係。
+When you feel "something" exists, there is inevitably a corresponding "nothing" in opposition.
+
+<br>
+這就像你用兩隻手拉開弓箭，弓與弦之間有一個對比。
+It's as if you are drawing a bow, where there is a contrast between the bow and the string.
+
+<br>
+在這當中，存在著一股保持平衡的能量。
+Within this, there is an energy that maintains balance.
+
+<br>
+而保持平衡的這個力量，正是「心」的行為。
+And this power that maintains balance is precisely the activity of the "mind."
+
+<br>
+然而無論你從哪個方向拉動弓弦，它始終都在弓弦所形成的圓圈平衡當中。
+Yet, no matter which way you pull, it remains in the equilibrium of the circle formed by the string.
+
+<br>
+我們因為沒有看清這相互對待的關係本已是平衡的，
+Because we fail to see that this interdependent relationship is already in balance,
+
+<br>
+所以就迷失在對比之下的行為中，不斷地跑來跑去。
+We become lost in actions driven by comparison, constantly moving back and forth.
+
+<br>
+除了離開對立的心可以讓您的心安定下來之外，
+Beyond detaching from the mind of opposition to settle your mind,
+
+<br>
+另外你有沒有發現，提供這個對立的心在那邊跑來跑去，是不是有一個空間？
+Have you noticed there is a space that allows this mind of opposition to arise and move about?
+
+<br>
+這個空間非常大，沒有限制！
+This space is vast and limitless!
+
+<br>
+這沒有任何執取的空間，是個無我、無限的空間。
+This space, free from attachment, is a space of non-self, infinite.
+<br>
+<br>
+無限是「有」還是「沒有」？
+Is infinity "existence" or "non-existence"?
+
+<br>
+沒有什麼有或沒有，才叫做無限、無我的空間。
+When there is neither "existence" nor "non-existence," it is truly an infinite, non-self space.
+
+<br>
+「無我」有沒有對立的事實？
+Does "non-self" entail a reality of opposition?
+
+<br>
+沒有！
+No!
+<br>
+<br>
+所以只要你心中有什麼出現，就一定是有對立的一種錯覺。
+Whenever something appears in your mind, it is always a form of dualistic illusion.
+
+<br>
+因為那是你的心遲鈍記憶所產生的錯覺，過沒多久就要改變了。
+Because it is an illusion produced by sluggish memory, and it will change very soon.
+
+<br>
+所以一切事物，包括你的心在內，一定都會改變消失。
+Thus, all things—including your mind—will certainly change and disappear.
+
+<br>
+這就是身心「無常」現象。
+This is the phenomenon of "impermanence" (Anicca) of body and mind.
+
+<br>
+因為它本來就不具有存在的條件；一直存在的就只有「無我」的真理事實。
+Because it lacks the conditions for inherent existence; what always exists is the ultimate truth of non-self.
+
+<br>
+這個「無我、無限」才是我們原本的心。
+This "non-self, infinite" is our original mind.
+
+<br>
+有對立的是虛妄不實在的心，它是個錯覺。
+The mind with opposition is an illusory, unreal mind; it is a delusion.
+
+<br>
+好比我們眼睛花了，一個月亮看久了變成兩個月亮，心裡就起種種分別、妄想。
+Just as blurred vision makes one moon appear as two, our minds give rise to discriminations and delusive thoughts.
+
+<br>
+理論上有了解，但是還是放不下執著的身心怎麼辦？
+If we understand this theoretically but cannot let go of attachment, what should we do?
+
+<br>
+那麼我們就要來練習了！
+Then, it is time for us to practice!
+
+<br>
+前面我們提到過「無我」無限的空間。
+Earlier, we mentioned the infinite space of "non-self."
+
+<br>
+因為不明白「實相」（即現況的事實就是「無我」），
+Because we do not understand "reality"—that the present moment is naturally "non-self,"
+
+<br>
+一時之間有了因為判斷錯誤、對立分別和記憶所產生的暫時現象。
+Temporary phenomena arise due to mistaken judgments, dualistic distinctions, and memories.
+
+<br>
+這些暫時現象的組合，就構成我們的生命現象。
+The combination of these temporary phenomena constitutes our life experience.
+
+<br>
+再加上物質的地、水、火、風，就構成了有這個身體的覺受、感覺和意識形態。
+Combined with the material elements, these form the sensations and conscious patterns of this physical body.
+
+<br>
+因為是錯誤判斷產生的暫時現象，所以也可以說，我們的生命現象就是一種「幻覺」。
+Since these are temporary results of mistaken judgment, we can say life experience is a kind of "illusion."
+
+<br>
+首先我們得先承認面前就是一個「幻覺」，接下來才有可能走向解脫幻覺的修行道路。
+We must first acknowledge the "illusion" before we can embark on the path to liberation from it.
+
+<br>
+解脫幻覺的第一步是「明白事實」。
+The first step to liberation is "understanding the facts."
+
+<br>
+不摻雜「胡思亂想」就叫做「明白」。「事實」在哪裡？
+To understand means to be free from random thoughts. Where are these "facts"?
+
+<br>
+當然是最容易感受清楚的、面前自己的身心現象。
+Naturally, they are the present psycho-physical phenomena of your own being.
+
+<br>
+清楚自己身心現象的事實，在禪修術語叫做「認識自我」。
+Perceiving the facts of your own phenomena is called "understanding the self" in meditation terminology.
+
+<br>
+如何認識自我呢？以後我們一步一步地介紹。
+How do we understand the self? We will introduce this step by step in the future.           
+            
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="footer-controls">
+        <a href="prev.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="31Medit-2.html" class="nav-link">下一篇</a>
+    </div>
+</div>
+
+<audio id="audio" src="m4a/med01.mp3"></audio>
+
 <script>
-!function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
-</script>    
-<!-- end 分享按鈕 -->
- <!-- 允許點擊手機時自動播放。--> 
-<script>
- var audio = document.getElementById('audio'); 
-window.onload=function(){ 
-audio.play(); 
-}            
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
     
- $('html').one('touchstart',function(){ 
-audio.play(); 
-}); 
- </script>      
-<!-- end允許點擊手機時自動播放。-->        
- </div>
- <p id="ssm">©2014 釋果聞，<a href="disclaimer1.html">保留所有權利。</a> <a href="disclaimer2.html">免責聲明</a></p>   
-</div>  
-    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>
