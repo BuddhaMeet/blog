@@ -1,0 +1,21 @@
+{
+  "short_name": "雨後涼亭",
+  "name": "雨後涼亭 - 佛法分流APP",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#fffaef",
+  "theme_color": "#5E6AD2",
+  "display": "standalone",
+  "orientation": "portrait"
+}
