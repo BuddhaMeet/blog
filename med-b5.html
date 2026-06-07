@@ -1,190 +1,395 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<title>樂行禪</title>
-<meta name="description" content="然而真正的不執著是, 你提起時要放下, 同時放下也要放下">
-<meta name="keywords" content="在家中也能禪修">
-<meta name="author" content="gwens">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
+
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
+
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
+
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
+
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="header">
-    <div class="block_header">
-      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="209" height="57" border="0" alt="logo" /></a></div>
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">首頁.</a></li>
-          <li><a href="Relief.html">煩惱.</a></li>
-          <li><a href="Meditat.html">禪修指引.</a></li>  
-          <li><a href="Activity.html">禪修活動.</a></li>
-          <li><a href="Read.html">閱讀書籍.</a></li>
-          
-          <li><a href="Help.html">護持道場.</a></li>
-          <li><a href="Contact.html">聯絡資訊</a></li>
-          <li><a href="https://ddmgwens.blogspot.tw/">部落格</a></li>
-        </ul>
-      </div>
-      <div class="clr"> </div>
-    </div>
-  </div>
-  <div class="slider2">
-    <div class="slider2_resize">
-      <h2>Meditation</h2>
-      <p>Learn to see that real in you. There is something real in you, there is something beautiful in you. </p>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="bloga_resize2">
-    <div class="bloga_resizee">
-      <div class="menu_sub">
-        <ul>
-          <li><a href="med-a.html">概念</a></li>
-          <li><a href="med-b.html" class="active">線上禪修</a></li>
-          <li><a href="med-c.html">練習 </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="body">
-    <div class="body_resize">
-      <div class="right">
-        <h2>禪修第五天:
 
-<br />
-        </h2><!-- 加入 Media Player--> 
-  <figure>
-    <EMBED SRC="meditation/6-5.mp3" WIDTH=300 HEIGHT=60 
-          AUTOSTART=TRUE LOOP=TURE>  </EMBED>
-</figure>  
-    
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+<br>            
+世間的一切都是無常而沒有任何執著的。
+Everything in the world is impermanent and free from any attachment.
+<br>
+但是經常我們有著錯誤的認知。
+Yet, often we hold mistaken perceptions.
+<br>
+認為有固定不變的事物與形態。
+Believing there are things and forms that are fixed and unchanging.
+<br>
+以這樣的見解為基礎，而產生分別、對立、排斥和追求的心。
+Based on such views, we develop minds that distinguish, oppose, reject, and pursue.
+<br>
+促使你因為執持而產生了身心的不自在。
+This leads to physical and mental unease due to clinging.
+<br>
+這便是苦。
+This is suffering.
+<br>
+苦是世間上普遍的事實。
+Suffering is a universal fact in this world.
+<br>
+但是你若是不理會它，或許苦就不會影響到你。
+However, if you do not acknowledge it, perhaps suffering will not affect you.
+<br>
+可是你若是起了分別，想要去改變它，就會有更多的苦的產生。
+But if you start to differentiate, wanting to change it, then more suffering will arise.
+<br>
+這樣子的苦，便是由於對立與分別所起的。
+This kind of suffering arises from opposition and differentiation.
+<br>
+因為你只看到一邊，卻沒有看到另一邊的對立。
+Because you only see one side, without seeing the opposition of the other side.
+<br>
+其實是相互平衡不能比較的。
+In truth, they are mutually balanced and cannot be compared.
+<br>
+因而起了分別、執著與排斥。
+Thus, differentiation, clinging, and rejection arise.
+<br>
+因此當你發覺一有「苦」的生起的時候，就應該同時去除對立兩邊的分別心。
+Therefore, when you perceive the arising of 'suffering', you should simultaneously eliminate the discriminative mind towards opposing sides.
+<br>
+不執取任何一邊。
+Do not cling to either side.
+<br>
+這也就是第一天所說的蹺蹺板原理。
+This is also the seesaw principle mentioned on the first day.
+<br>
+只要有念頭生起。
+Whenever a thought arises.
+<br>
+你就要知道它都是一體兩面的。
+You should know that it has two sides, it is a duality.
+<br>
+因此只要念頭一起，馬上捨離兩面。
+Therefore, as soon as a thought arises, immediately let go of both sides.
+<br>
+一有念起馬上捨。
+As soon as a thought arises, immediately let go.
+<br>
+捨，捨到連知道念頭的心，也是對立的，也要一併捨離。
+Let go, let go until even the mind that knows the thought, which is also a duality, must also be let go of.
+<br>
+捨離就是放下。
+Letting go is releasing.
+<br>
+放下所有的執著。
+Release all attachments.
+<br>
+也就是心中無事。
+That is, a mind free from all concerns.
+<br>
+其實一切都在自然放下，無常本身就是不斷的提起與放下。
+In fact, everything is naturally letting go; impermanence itself is a continuous process of arising and ceasing.
+<br>
+提起的時候，同時另外一邊就得放下。
+When something arises, the other side must simultaneously cease.
+<br>
+而放下的同時又是另一邊的提起。
+And as one ceases, the other side simultaneously arises.
+<br>
+然而真正的不執著是，你提起時要放下，同時放下也要放下。
+However, true non-attachment means that when something arises, you must let go, and simultaneously, when you let go, you must also let go.
 
-           <!--end Player---->
-        <p class="grey"> 
-
-世間的一切都是無常而沒有任何執著的 。 
-
-但是經常我們有著錯誤的認知。 認為有固定不變的事物與形態。
-以這樣的見解為基礎, 而產生分別、 對立、 排斥和追求的心 。 
-
-促使你因為執持而產生了身心的不自在 。這便是苦 。<br /> 
-</p>
-        <img src="images/med_img.jpg" alt="picture" width="239" height="240" class="work" />
-        <p class="grey">
-苦是世間上普遍的事實 。但是你若是不理會它 ,
-或許苦就不會影響到你。 
-
-可是你若是起了分別 ,想要去改變它。 就會有更多的苦的產生。<br /> 
-
-這樣子的苦。 便是由於對立與分別所起的。 
-因為你只看到一邊 ,卻沒有看到另一邊的對立。 
-
-其實是相互平衡不能比較的。 因而起了分別、 執著與排斥。<br /> 
-
-因此當你發覺一有「苦」的生起的時候 ,
-就應該同時去除對立兩邊的分別心。 不執取任何一邊。 <br />
-
-這也就是第一天所說的蹺蹺板原理 。
-只要有念頭生起。 你就要知道它都是一體兩面的。
-因此只要念頭一起 ,馬上捨離兩面。<br /> 
-
-一有念起馬上捨。捨, 捨到連知道念頭的心 ,
-也是對立的 ,也要一併捨離 。 
-
-捨離就是放下。 放下所有的執著。 也就是心中無事。<br /> 
-
-其實一切都在自然放下 ,無常本身就是不斷的提起與放下。 
-
-提起的時候, 同時另外一邊就得放下。 而放下的同時又是另一邊的提起 。 
-
-然而真正的不執著是, 你提起時要放下, 同時放下也要放下。 <br />
-
-另外「自我中心」也是分別對立的主要來源 ,
-而每個人都有跟 佛一樣的自我本性 。 
-
-當我們去尋找自我的時候, 這個「我」有時候在分別對立的這一邊 ,
-有時候又在分別對立的另外一邊。 
-
-而事實上它不在這一邊, 也不在那一邊, 它兩邊都不在 。 
-
-它無所依住 。 同時捨離了任何的分別與執著。 
-這才是真正「無我」的清淨自性。 <br />
-
-在煩惱的對治上。 比如說, 或許你的心有時出現了些許疲累的感受。 
-
+<br>
+另外「自我中心」也是分別對立的主要來源，而每個人都有跟佛一樣的自我本性。
+Furthermore, 'self-centeredness' is also a main source of differentiation and opposition, yet everyone possesses the same inherent self-nature as the Buddha.
+<br>
+當我們去尋找自我的時候，這個「我」有時候在分別對立的這一邊，有時候又在分別對立的另外一邊。
+When we search for the self, this 'self' is sometimes on one side of differentiation and opposition, and sometimes on the other side.
+<br>
+而事實上它不在這一邊，也不在那一邊，它兩邊都不在。
+But in reality, it is neither on this side nor on that side; it is not on either side.
+<br>
+它無所依住。
+It has no abiding place.
+<br>
+同時捨離了任何的分別與執著。
+Simultaneously letting go of all differentiation and attachment.
+<br>
+這才是真正「無我」的清淨自性。
+This is the true pure self-nature of 'non-self'.
+<br>
+在煩惱的對治上。
+In dealing with afflictions.
+<br>
+比如說，或許你的心有時出現了些許疲累的感受。
+For example, perhaps your mind sometimes experiences a feeling of tiredness.
+<br>
 那麼你要另起一個「聖妙境界」的念頭。
-來讓你的心力提起, 而保持內心的平衡 。
-這是對制的方法。 也是共世間的方法 。 <br />
+Then you should bring forth a thought of a 'sacred and wondrous realm'.
+<br>
+來讓你的心力提起，而保持內心的平衡。
+To uplift your mental energy and maintain inner balance.
+<br>
+這是對制的方法。
+This is a method of counteraction.
+<br>
+也是共世間的方法。
+It is also a method common to the world.
+<br>
+但是更微細、準確、徹底的方法是。
+But a more subtle, precise, and thorough method is.
+<br>
+捨離對立的兩邊。
+To let go of both opposing sides.
+<br>
+也就是不執持疲累的一邊，也同時不執持「聖妙境界」的一邊。
+That is, not clinging to the side of tiredness, and simultaneously not clinging to the side of the 'sacred and wondrous realm'.
+<br>
+超越於任何分別之中。
+Transcending any differentiation.
+<br>
+遠離兩邊。
+Moving beyond both sides.
+<br>
+內心不住於任何一邊。
+The mind not dwelling on any side.
+<br>
+但是內心非常的清楚。
+Yet the inner mind is perfectly clear.
+<br>
+清楚什麼?
+Clear about what?
+<br>
+清楚互相對立，相互對應的兩邊所觀境的情況。
+Clear about the conditions of the observed realms on the two opposing and corresponding sides.
+<br>
+也清楚不住任何一邊，無所執取的能觀的心。
+Also clear about the observing mind that does not dwell on any side, with no clinging.
+<br>
+然後這能觀的心以及所觀的境，這種對待關係，也要同時捨離。
+And then, this relationship between the observing mind and the observed realm, this dualistic relationship, must also be simultaneously released.
+<br>
+有無俱遣。
+Both existence and non-existence are cast aside.
+<br>
+能所雙忘。
+Both observer and observed are forgotten.
+<br>
+無我的境地自然現前。
+The state of non-self naturally manifests itself.
 
-但是更微細 、準確、 徹底的方法是。 捨離對立的兩邊。 
-
-也就是不執持疲累的一邊, 也同時不執持「聖妙境界」的一邊。 
-
-超越於任何分別之中。 遠離兩邊。 內心不住於任何一邊 。 <br />
-
-但是內心非常的清楚 。清楚什麼? 清楚互相對立 ,
-相互對應的兩邊所觀境的情況。 
-
-也清楚不住任何一邊 ,無所執取的能觀的心。
-然後這能觀的心 與及所觀的境 ,這種對待關係。 也要同時捨離。 
-
-有無俱遣 。能所雙忘。 無我的境地自然現前 。<br /> 
-
-這才是最有效﹑最徹底的不共世間的對治任何境界﹑煩惱的方法。
-這是「中觀」的方法 。這與「無常」的現象完全吻合。 
-
-這種吻合的思想, 經常在日常生活中 ,不斷的觀照與實踐 。 
-
-將來內心善根成熟時, 就會悟境自然現前。
-
- </p>             
-         
-      
-       
-       
-        
-        
-        <p class="grey">&nbsp;(請依每日的順序在表格中點選&nbsp;!) </p>
-      </div>
-      <div class="left">
-        <h2>初級禪修\六日禪修</h2>
-        
-<p class="grey1">
-<em>  <a href="med-b1.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第一日
-<br />含文字及聲音<br />
-  <a href="med-b2.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第二日
-<br />含文字及聲音<br />
-  <a href="med-b3.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第三日
-<br />含文字及聲音<br />
-  <a href="med-b4.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第四日
-<br />含文字及聲音<br />
-  <a href="med-b5.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第五日
-<br />含文字及聲音<br />
-  <a href="med-b6.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第六日
-<br />含文字及聲音<br />
-
-<br />
-</em></p>
-        <p><strong><em>--- 果聞法師  提供</em></strong></p>
-        <div class="bg"></div>
-        
-        <p><strong><em></em></strong></p>
-      </div>
-      <div class="clr"></div>
+<br>
+這才是最有效、最徹底的不共世間的對治任何境界、煩惱的方法。
+This is the most effective, most thorough, and uncommon worldly method for dealing with any state or affliction.
+<br>
+這是「中觀」的方法。
+This is the 'Madhyamaka' (Middle Way) method.
+<br>
+這與「無常」的現象完全吻合。
+This completely aligns with the phenomenon of 'impermanence'.
+<br>
+這種吻合的思想，經常在日常生活中，不斷的觀照與實踐。
+This congruent thought, practiced through constant contemplation and implementation in daily life.
+<br>
+將來內心善根成熟時，就會悟境自然現前。
+When the seeds of goodness within your mind ripen in the future, the state of enlightenment will naturally manifest.           
+            
+            
+            
+            
+        </div>
     </div>
-  </div> </div>
 
-<div class="footer">
-  <div class="footer_resize">
-    <p class="leftt">Copyright © Siemting.com. All Rights Reserved</p>
-    <p class="rightt">&nbsp;</p>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
+    <div class="footer-controls">
+        <a href="med-b4.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="med-b6.html" class="nav-link">下一篇</a>
+    </div>
 </div>
+
+<audio id="audio" src="m4a/6-5.mp3"></audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

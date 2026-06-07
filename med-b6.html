@@ -1,238 +1,460 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<title>修行運用於平時之中</title>
-<meta name="description" content="只要改變觀念和想法, 放下立刻就完成">
-<meta name="keywords" content="紮實的修行">
-<meta name="author" content="gwens">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
+
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
+
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
+
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
+
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="header">
-    <div class="block_header">
-      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="209" height="57" border="0" alt="logo" /></a></div>
-      <div class="menu">
-        <ul>
-         <li><a href="index.html">首頁.</a></li>
-          <li><a href="Relief.html">煩惱.</a></li>
-          <li><a href="Meditat.html">禪修指引.</a></li>  
-          <li><a href="Activity.html">禪修活動.</a></li>
-          <li><a href="Read.html">閱讀書籍.</a></li>
-          
-          <li><a href="Help.html">護持道場.</a></li>
-          <li><a href="Contact.html">聯絡資訊</a></li>
-          <li><a href="https://ddmgwens.blogspot.tw/">部落格</a></li>
-        </ul>
-      </div>
-      <div class="clr"> </div>
+
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+<br> 
+智慧的觀照，能夠引生內心的穩定與平衡。
+The contemplation of wisdom can foster inner stability and balance.
+
+<br>
+而心平靜的時候，同時也會知道覺觀的正確性與否。
+And when the mind is calm, one will also know the correctness of one's awareness and observation.
+
+
+<br>
+「止」與「觀」兩者是不能分開的。
+"Samatha" (calming) and "Vipassana" (insight) cannot be separated.
+
+<br>
+當「止」與「觀」兩者更加密實的時候，修行的信念就會更加的持續與確定。
+When "Samatha" and "Vipassana" become more integrated, the conviction in one's practice will become more enduring and certain.
+
+<br>
+內心保持明覺與安定的力量就會越來越紮實。
+The power to maintain inner clarity and stability will become increasingly firm.
+
+<br>
+時間和範圍也會越來越長及深遠。 
+Its duration and scope will also become longer and more profound. 
+
+
+<br>
+大自然的現象總是很微妙的，時常的觀照更有益於我們對真實法的瞭解。
+The phenomena of nature are always subtle, and frequent contemplation is more beneficial for our understanding of true Dharma.
+
+<br>
+就像是樹木的成長過程，我們不容易看到。
+Just like the growth process of trees, we don't easily see it.
+
+<br>
+但是樹葉的散落卻很容易察覺。
+But the falling of leaves is very easy to perceive.
+
+<br>
+水氣凝結成雲的過程也不易發覺，但是下雨時是快速而且明顯的。
+The process of water vapor condensing into clouds is also not easily noticed, but rainfall is rapid and obvious.
+
+<br>
+生命的長成必須靜靜的等待，而生命的消失總是在一瞬間。
+The growth of life requires quiet waiting, while the disappearance of life is always in an instant.
+
+<br>
+這些現象教導我們要很有耐心和慎重的看視生命，並且時常提醒你要放下執取是很容易的。
+These phenomena teach us to view life with great patience and prudence, and constantly remind us that letting go of attachment is very easy.
+
+<br>
+只要改變觀念和想法，放下立刻就完成。
+As long as you change your perceptions and thoughts, letting go is immediately accomplished.
+
+
+<br>
+在於平常我們的修行是先去妄再歸真。
+In our usual practice, we first eliminate delusion and then return to truth.
+
+<br>
+先觀照內心所生起的妄想執著，然後利用智慧與禪定來放下執取。
+First, observe the deluded thoughts and attachments arising in the mind, then use wisdom and meditation to let go of attachment.
+
+<br>
+最後回到不生不滅的平等自性。
+Finally, return to the unborn, undying, equal true nature.
+
+<br>
+也就是回歸一實法的真理。 
+This means returning to the truth of the One Reality. 
+
+
+<br>
+但是在生活中與許多複雜的人事物互動的時候。
+However, when interacting with many complex people, events, and things in life.
+
+<br>
+就必需訓練成，從中能夠直接的觀照到「法」的存在。
+One must train oneself to directly observe the existence of "Dharma" within them.
+
+<br>
+比如說：站在車水馬龍雜音四起的地方時。
+For example: when standing in a bustling place filled with noise from traffic.
+
+<br>
+應該感恩人們的努力，在你面前展示無常法的無住不居。
+One should be grateful for people's efforts, displaying the impermanence and non-abiding nature of Dharma before you.
+
+<br>
+讓你學習不要執著。遠離幻境。超越分別，而心中無事。
+Allowing you to learn not to cling. To distance yourself from illusions. To transcend distinctions, and have nothing troubling your mind.
+
+<br>
+當你看到不如意的人與物時。
+When you see people or things that are not to your liking.
+
+<br>
+應該看到一切意象無非是明暗對立的假象，離開對立與分別，更無實體。
+You should see that all phenomena are merely illusory appearances of light and shadow, opposition and contrast, devoid of inherent reality, transcending duality and distinctions.
+
+<br>
+當你遇到時間的壓迫時。
+When you encounter the pressure of time.
+
+<br>
+應該知道時間只是過去和未來的產物。
+You should know that time is merely a product of the past and the future.
+
+<br>
+當下承擔卻無事可做。沒有擔心也不用害怕。
+You bear it in the present moment, yet there is nothing to be done. No worries and no need to be afraid.
+
+<br>
+當你在開會的時候，何必充耳不聞。
+When you are in a meeting, why turn a deaf ear?
+
+<br>
+應該聽聽和感受。無常妙法所帶來的驚喜與寧靜。
+You should listen and feel. The surprise and tranquility brought by the wonderful Dharma of impermanence.
+
+<br>
+當你遇到惡口相罵時。
+When you encounter harsh words and insults.
+
+<br>
+應該知道這也是恰恰相應，有因必有果，無來亦無去。
+You should know that this too is a perfect correspondence, there is cause, there must be effect, no coming and no going.
+
+<br>
+當你同時要扮演許多不同的角色時。
+When you have to play many different roles at the same time.
+
+<br>
+應該知道沒有一個我可以永遠代表真正的我，真正的我不住在任何地方。
+You should know that no single "I" can forever represent the true self, the true self does not reside anywhere.
+
+
+<br>
+無論何時何處，「法」一直在你身邊。
+Wherever and whenever, "Dharma" is always by your side.
+
+<br>
+「法」的價值永遠是值得肯定的。
+The value of "Dharma" is always worthy of affirmation.
+
+<br>
+成功的值得贊賞他人的智慧，失敗的也能肯定他人的努力。
+Successes are worthy of commending the wisdom of others, and failures can also affirm the efforts of others.
+
+<br>
+只要你能夠用心，就可以聽到「法」所帶來的消息。
+As long as you are mindful, you can hear the message brought by "Dharma."
+
+
+<br>
+「法」藉由「無常」，不斷的提醒你回到老家，不要追逐幻境。
+"Dharma," through "impermanence," constantly reminds you to return home, not to chase illusions.
+
+<br>
+也藉由「因果」指示你正確的道路。
+And through "karma," it points you to the correct path.
+
+<br>
+「法」具足無限的可能性，可以讓我們信賴。
+"Dharma" possesses infinite possibilities that we can trust.
+
+<br>
+只要努力以赴，任何人都將畢竟成佛。 
+As long as you make every effort, anyone will ultimately attain Buddhahood. 
+
+
+<br>
+時時用心，爾後您將能夠時時，看到那遠離紛雜、分別的清淨顏色。
+Be mindful at all times, and thereafter you will be able to constantly see the pure colors free from confusion and distinctions.
+
+<br>
+聽到那最寂靜以外的淨音。
+Hear the pure sound beyond the deepest silence.
+
+<br>
+感受到那超越寒熱的平衡溫煦。
+Feel the balanced warmth transcending cold and heat.
+
+<br>
+嚐到那勝過味覺的唯一法味。
+Taste the unique flavor of Dharma that surpasses all other tastes.
+
+<br>
+與及嗅到那逆風之戒定真香。
+And smell the true fragrance of precept and concentration that blows against the wind.
+
+<br>
+和體驗到那平衡唯美和無諍的清淨世界。
+And experience the balanced, beautiful, and conflict-free pure world.
+
+
+<br>
+最後說明，在這次的禪修裡所使用的教理。
+Finally, let me explain that the teachings used in this meditation retreat.
+
+<br>
+主要是依照佛所說，阿含經中的「四念住」。
+Are primarily based on the "Four Foundations of Mindfulness" from the Agamas, as taught by the Buddha.
+
+<br>
+與及「瑜伽師地論」和「中觀論」。
+As well as the "Yogācārabhūmi Śāstra" and "Mūlamadhyamakakārikā."
+
+<br>
+加上個人的一點修行技巧加以整合而成。
+Plus a little personal practice technique integrated to form this.
+
+<br>
+而第三天修行「止」的部分是用數息的方法。
+And for the "Samatha" (calming) practice on the third day, the method of breath counting was used.
+
+<br>
+假如說，你已經習慣用其他方法，而且也用得很好。
+If you are already accustomed to using other methods, and also use them very well.
+
+<br>
+譬如：不淨觀、持咒、念佛、觀想、只管打坐、參禪等。
+For example: contemplation of impurity, chanting mantras, reciting Buddha's name, visualization, just sitting, Zen koan practice, etc.
+
+<br>
+不論是修持南傳佛教還是藏傳、漢傳或是其他宗教正當的法門。
+Whether practicing Theravada Buddhism, Tibetan, Chinese Mahayana, or other proper religious Dharma gates.
+
+<br>
+只要觀念正確，都可以運用自己的善巧套用上去。
+As long as the concepts are correct, you can skillfully apply your own methods.
+
+
+<br>
+希望這樣的說明，對你們的修行能夠有點幫助。
+I hope this explanation can be of some help to your practice.
+
+<br>
+願你們吉祥如意。
+May you be auspicious and wish everything goes well.
+
+<br>
+也祝福一切眾生都能夠完成覺悟的道路。 
+And I also wish all sentient beings can complete the path to enlightenment.           
+            
+            
+            
+            
+        </div>
     </div>
-  </div>
-  <div class="slider2">
-    <div class="slider2_resize">
-      <h2>Meditation</h2>
-      <p>Learn to see that real in you. There is something real in you, there is something beautiful in you. </p>
+
+    <div class="footer-controls">
+        <a href="med-b5.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="index.html" class="nav-link">下一篇</a>
     </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="bloga_resize2">
-    <div class="bloga_resizee">
-      <div class="menu_sub">
-        <ul>
-          <li><a href="med-a.html">概念</a></li>
-          <li><a href="med-b.html" class="active">線上禪修</a></li>
-          <li><a href="med-c.html">練習 </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="body">
-    <div class="body_resize">
-      <div class="right">
-        <h2>禪修第六天:
-
-<br />
-        </h2><!-- 加入 Media Player--> 
-  <figure>
-   <EMBED SRC="meditation/6-6.mp3" WIDTH=300 HEIGHT=60 
-          AUTOSTART=TRUE LOOP=TURE>  </EMBED>
-</figure>  
-    
-
-           <!--end Player---->
-        <p class="grey"> 
-
-智慧的觀照, 能夠引生內心的穩定與平衡 。 
-
-而心平靜的時候, 同時也會知道覺觀的正確性與否。<br /> 
-
-「止」與「觀」兩者是不能分開的 。 
-</p>
-        <img src="images/med_img.jpg" alt="picture" width="239" height="240" class="work" />
-        <p class="grey">
-當「止」與「觀」兩者更加密實的時候 ,
-修行的信念就會更加的持續與確定。 
-
-內心保持明覺與安定的力量就會越來越紮實 。 
-
-時間和範圍也會越來越長及深遠。 <br />
-
-大自然的現象總是很微妙的, 
-時常的觀照更有益於我們對真實法的瞭解。 
-
-就像是樹木的成長過程, 我們不容易看到。 
-
-但是樹葉的散落卻很容易察覺 。 
-
-水氣凝結成雲的過程也不易發覺, 
-但是下雨時是快速而且明顯的。 
-
-生命的長成必須靜靜的等待 ,
-而生命的消失總是在一瞬間。 
-
-這些現象教導我們要很有耐心和慎重的看視生命,
-並且時常提醒你要放下執取是很容易的。 
-
-只要改變觀念和想法, 放下立刻就完成。<br /> 
-
-在於平常我們的修行是先去妄再歸真 。 
-
-先觀照內心所生起的妄想執著, 
-然後利用智慧與禪定來放下執取。 
-
-最後回到不生不滅的平等自性 。
-也就是回歸一實法的真理。<br /> 
-
-但是在生活中與許多複雜的人事物互動的時候。 
-
-就必需訓練成 ,從中能夠直接的觀照到「法」的存在。<br /> 
-
-比如說: 站在車水馬龍雜音四起的地方時。 
-
-應該感恩人們的努力, 在你面前展示無常法的無住不居。 
-
-讓你學習不要執著 。遠離幻境 。超越分別 ,而心中無事。 
-
-當你看到不如意的人與物時 。 
-
-應該看到一切意象無非是明暗對立的假象, 
-離開對立與分別, 更無實體。 
-
-當你遇到時間的壓迫時 。 
-
-應該知道時間只是過去和未來的產物 。
-當下承擔卻無事可做。 沒有擔心也不用害怕。 
-
-當你在開會的時候, 何必充耳不聞。 
-
-應該聽聽和感受 。無常妙法所帶來的驚喜與寧靜。 
-
-當你遇到惡口相罵時。 
-
-應該知道這也是恰恰相應 ,有因必有果, 無來亦無去。 
-
-當你同時要扮演許多不同的角色時 。 
-
-應該知道沒有一個我可以永遠代表真正的我,
-真正的我不住在任何地方。<br /> 
-
-無論何時何處 ,「法」一直在你身邊。 
-
-「法」的價值永遠是值得肯定的 。 
-
-成功的值得贊賞他人的智慧 ,失敗的也能肯定他人的努力。 
-
-只要你能夠用心,就可以聽到「法」所帶來的消息 。<br /> 
-
-「法」藉由「無常」, 不斷的提醒你回到老家,不要追逐幻境。 
-
-也藉由「因果」指示你正確的道路。 
-
-「法」具足無限的可能性,可以讓我們信賴。 
-
-只要努力以赴 ,任何人都將畢竟成佛。<br /> 
-
-時時用心, 爾後您將能夠時時 ,看到那遠離紛雜、分別的清淨顏色。 
-
-聽到那最寂靜以外的淨音。 
-
-感受到那超越寒熱的平衡溫煦。 
-
-嚐到那勝過味覺的唯一法味。 
-
-與及嗅到那逆風之戒定真香。 
-
-和體驗到那平衡唯美和無諍的清淨世界。<br /> 
-
-最後說明, 在這次的禪修裡所使用的教理 。 
-
-主要是依照佛所說 ,阿含經中的 「四念住」。
-與及「瑜伽師地論」和「中觀論」 。 
-
-加上個人的一點修行技巧加以整合而成 。<br /> 
-
-而第三天修行「止」的部分是用數息的方法。 
-
-假如說 ,你已經習慣用其他方法 。而且也用得很好 。 
-
-譬如:不淨觀、 持咒、 念佛、 觀想 、只管打坐 、參禪等 。 
-
-不論是修持南傳佛教 還是藏傳、漢傳或是其他宗教正當的法門 。 
-
-只要觀念正確, 都可以運用自己的善巧套用上去。<br /> 
-
-希望這樣的說明, 對你們的修行能夠有點幫助 。 
-
-願你們吉祥如意。 也祝福一切眾生都能夠完成覺悟的道路。 
-
- </p>             
-         
-      
-       
-       
-        
-        
-        <p class="grey">&nbsp;(請依每日的順序在表格中點選&nbsp;!) </p>
-      </div>
-      <div class="left">
-        <h2>初級禪修\六日禪修</h2>
-        
-<p class="grey1">
-<em>  <a href="med-b1.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第一日
-<br />含文字及聲音<br />
-  <a href="med-b2.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第二日
-<br />含文字及聲音<br />
-  <a href="med-b3.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第三日
-<br />含文字及聲音<br />
-  <a href="med-b4.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第四日
-<br />含文字及聲音<br />
-  <a href="med-b5.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第五日
-<br />含文字及聲音<br />
-  <a href="med-b6.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第六日
-<br />含文字及聲音<br />
-
-<br />
-</em></p>
-        <p><strong><em>--- 果聞法師  提供</em></strong></p>
-        <div class="bg"></div>
-        
-        <p><strong><em></em></strong></p>
-      </div>
-      <div class="clr"></div>
-    </div>
-  </div> </div>
-
-<div class="footer">
-  <div class="footer_resize">
-    <p class="leftt">Copyright © Siemting.com. All Rights Reserved</p>
-    <p class="rightt">&nbsp;</p>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
 </div>
+
+<audio id="audio" src="m4a/6-6.mp3"></audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

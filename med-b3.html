@@ -1,189 +1,354 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<title>數息法</title>
-<meta name="description" content="心能夠安止於一境時 。再轉為觀照瞭解你的心和呼吸的關係 。">
-<meta name="keywords" content="放鬆整個身心">
-<meta name="author" content="gwens">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
+
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
+
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
+
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
+
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="header">
-    <div class="block_header">
-      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="209" height="57" border="0" alt="logo" /></a></div>
-      <div class="menu">
-        <ul>
-         <li><a href="index.html">首頁.</a></li>
-          <li><a href="Relief.html">煩惱.</a></li>
-          <li><a href="Meditat.html">禪修指引.</a></li>  
-          <li><a href="Activity.html">禪修活動.</a></li>
-          <li><a href="Read.html">閱讀書籍.</a></li>
-          
-          <li><a href="Help.html">護持道場.</a></li>
-          <li><a href="Contact.html">聯絡資訊</a></li>
-          <li><a href="https://ddmgwens.blogspot.tw/">部落格</a></li>
-        </ul>
-      </div>
-      <div class="clr"> </div>
+
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+ 
+<br> 昨天所教的是觀照出入息的方法，如果內心的雜念還是太多...
+     Yesterday, we learned the method of observing the in-and-out breath. If you still find your mind filled with too many distracting thoughts...
+
+<br> 那麼，請你們從數息開始。 
+     Then, please begin with breath counting. 
+
+<br> 數息的時候，剛開始還是一樣，從放鬆整個身心開始。
+     When counting your breath, we will begin, as always, by relaxing your entire body and mind.
+
+<br> 從頭到腳，一個部分一個部分的放鬆。 
+     From head to toe, release tension one part at a time. 
+
+<br> 先從頭腦放鬆。讓頭腦，無需思考。 
+     First, relax your mind. Allow your mind to cease all thinking. 
+
+<br> 然後，眼球神經放鬆。
+     Then, relax your eye nerves.
+
+<br> 臉部的肌肉放鬆。
+     Relax the muscles in your face.
+
+<br> 肩膀放鬆。
+     Relax your shoulders.
+
+<br> 手臂放鬆。
+     Relax your arms.
+
+<br> 背和腰放鬆。
+     Relax your back and waist.
+
+<br> 還有，小腹。 
+     And also, your lower abdomen. 
+
+<br> 然後再從頭到腳，不斷地放鬆。
+     Then, continue to relax from head to toe, repeatedly.
+
+<br> 放鬆到，頭腦和身體負擔的感覺減少，呼吸也覺得很順暢的時候。 
+     Relax until the feeling of mental and physical burden diminishes, and your breathing feels smooth and unhindered. 
+
+<br> 你知道空氣，從鼻孔中，自然的進出。
+     Be aware of the air naturally flowing in and out through your nostrils.
+
+<br> 從入息，和中間入息，到出息，和中間出息，整個過程都能夠清楚。
+     From the inhalation and its middle phase, to the exhalation and its middle phase, the entire process should be clear.
+
+<br> 呼吸，不要用力。只是自然而充分的呼吸。 
+     Do not force your breath. Just breathe naturally and fully. 
+
+<br> 入息的時候，知道是入息。
+     When you inhale, be aware that it is an inhalation.
+
+<br> 出息的時候，知道是出息。 
+     When you exhale, be aware that it is an exhalation. 
+
+<br> 入息的時候，經過中間入息。
+     When you inhale, passing through the middle of the inhalation.
+
+<br> 出息的時候，緊跟著心中數一個數目字 '一'。
+     When you exhale, immediately count the number 'one' in your mind.
+
+<br> 經過入息，第二次出息的時候，緊跟著數一個數目字 '二'。
+     After the next inhalation, upon the second exhalation, immediately count the number 'two'.
+
+<br> 然後第三次數 '三'。再來數 '四'...'五'...'六'...'七'...'八'...'九'...'十'。
+     Then, for the third time, count 'three'. And then count 'four'...'five'...'six'...'seven'...'eight'...'nine'...'ten'.
+
+<br> 再回過頭來，從 '一' 數到 '十'。  
+     Then, return to 'one' and count up to 'ten' again.  
+
+<br> 反覆不斷地，重複數數。
+     Repeat this counting process continuously.
+
+<br> 中間，若有雜念升起，或是有昏沉，忘了數目字...
+     If distracting thoughts arise, or if drowsiness sets in, or if you forget the number...
+
+<br> 那麼，再重新由 '一' 開始數下去。
+     Then, simply restart counting from 'one'.
+
+<br> 不斷地反覆，很有耐心地數下去。數下去。 
+     Keep repeating this with great patience. Keep counting. 
+
+<br> 數數到，你的雜念少了。
+     Continue counting until your distracting thoughts diminish.
+
+<br> 心，和呼吸，和數目字，合為一體了。  
+     Until your mind, breath, and the numbers become one.  
+
+<br> 那麼，你可以從一次的呼吸，為一個數目字。
+     Then, you can progress to counting one number for one breath cycle.
+
+<br> 逐次增加為兩次的呼吸，為一個數目字。
+     Gradually increase to two breath cycles for one number.
+
+<br> 然後三次的呼吸，四次，五次，六次...
+     Then three breath cycles, four, five, six...
+
+<br> 一直到十次的呼吸，為一個數目字數。乃至更多次。
+     All the way up to ten breath cycles for one number. Or even more.
+
+<br> 一樣，由 '一' 數到 '十'。 
+     Still, count from 'one' to 'ten'. 
+
+<br> 現在，請你們練習看看！ 
+     Now, please try to practice this! 
+
+<br> 首先，一吸一數：'一'... '二'... '三'... 
+     First, one breath cycle for one count: 'One'... 'Two'... 'Three'... 
+
+<br> 然後，兩吸一數：'出出...一'... '出出...二'... 
+     Then, two breath cycles for one count: 'Exhale, Exhale... One'... 'Exhale, Exhale... Two'... 
+
+<br> 以此類推，直到十次的呼吸，數一個數目字。 
+     And so on, until ten breath cycles for one count. 
+
+<br> 中間，若有雜念升起，忘記了數目字...
+     If distracting thoughts arise in between, or if you forget the number...
+
+<br> 那麼一樣，再從 '一' 開始數到 '十'。 
+     Then, similarly, restart counting from 'one' up to 'ten'. 
+
+<br> 數息完成之後，那麼你的心，就會更貼近於你的呼吸。
+     After completing the breath counting, your mind will become more attuned to your breath.
+
+<br> 最後，當你的心已經安定了以後，再將數息，轉變為觀照出入息。
+     Finally, once your mind has settled, transition from breath counting to observing the in-and-out breath.
+
+<br> 同上次一樣，從入息，和中間入息，到出息，和中間出息，整個過程都清清楚楚。
+     Just like last time, from the inhalation and its middle phase, to the exhalation and its middle phase, the entire process should be clear and distinct.
+
+<br> 清楚空氣進出的每一個過程，一直到你的雜念沒有了，或是減少了。
+     Clearly perceive every stage of the air flowing in and out, until your distracting thoughts cease, or are greatly reduced.
+
+<br> 心，能夠安止於一境時，再轉為觀照，瞭解你的心和呼吸的關係。  
+     When your mind can rest calmly on a single point, then shift to observing and understanding the relationship between your mind and your breath.  
+
+<br> 好！請你們，練習看看。
+     Alright! Please, give it a try.           
+            
+            
+            
+            
+        </div>
     </div>
-  </div>
-  <div class="slider2">
-    <div class="slider2_resize">
-      <h2>Meditation</h2>
-      <p>Learn to see that real in you. There is something real in you, there is something beautiful in you. </p>
+
+    <div class="footer-controls">
+        <a href="med-b2.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="med-b4.html" class="nav-link">下一篇</a>
     </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="bloga_resize2">
-    <div class="bloga_resizee">
-      <div class="menu_sub">
-        <ul>
-          <li><a href="med-a.html">概念</a></li>
-          <li><a href="med-b.html" class="active">線上禪修</a></li>
-          <li><a href="med-c.html">練習 </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="body">
-    <div class="body_resize">
-      <div class="right">
-        <h2>禪修第三天:
-
-<br />
-        </h2><!-- 加入 Media Player--> 
-  <figure>
-   <EMBED SRC="meditation/6-3.mp3" WIDTH=300 HEIGHT=60 
-          AUTOSTART=TRUE LOOP=TURE>  </EMBED>
-</figure>  
-    
-
-           <!--end Player---->
-        <p class="grey"> 
-
-昨天所教的是觀照出入息的方法,如果內心的雜念還是太多。
-那麼請你們從數息開始。 <br />
-
-數息的時候, 剛開始還是一樣從放鬆整個身心開始。
-從頭到腳一個部份一個部份的放鬆 。 
-</p>
-        <img src="images/med_img.jpg" alt="picture" width="239" height="240" class="work" />
-        <p class="grey">
-先從頭腦放鬆 ,頭腦不用思考 。然後眼球神經放鬆 。臉部的肌肉放鬆 。 
-
-肩膀放鬆 。手臂放鬆。 背和腰放鬆。 還有小腹 。 
-
-然後再從頭到腳不斷的放鬆。 放鬆到頭腦和身體負擔的感覺減少,
-呼吸也覺得很順暢的時候。<br />
-
-知道空氣從鼻孔中自然的進出。 從入息和中間入息 ,
-到出息和中間出息, 整個過程都能夠清楚。 
-
-呼吸不要用力 。只是自然而充分的呼吸 。入息的時候 ,知道是入息。
-出息的時候, 知道是出息 。<br /> 
-
-入息的時候 ,經過中間入息 。出息的時候, 緊跟著心中數一個數目字”1” 。 
-
-經過入息, 第二次出息的時候。 緊跟著數一個數目字”2” 。 
-
-然後第三次數”3” 。再來數”4” …”5”…”6”…”7”…”8”…”9”…”10”. 。 
-
-再回過頭來 從”1”數到”10” 。<br /> 
-
-反複不斷的重複數數。 中間若有雜念起或是有昏沈, 忘了數目字。
-那麼再重新由”1”開始數下去 。 
-
-不斷的反複很有耐心的數下去 。數下去。 數數到你的雜念少了。
-心和呼吸和數目字合為一體了。<br /> 
-
-那麼你可以從一次的呼吸為一個數目字。
-逐次增加為兩次的呼吸為一個數目字 ,
-然後三次 的呼吸, 四次 ,五次,六次… ,一直到十次的呼吸為一個數目字數 。 
-
-乃至更多次 。一樣由”1”數到”10” 。<br /> 
-
-現在請你們練習看看! <br />
-
-”1” …”2”…”3”…”4”…”5”…”6”…”7”…”8”…”9”…”10”. 。 <br />
-
-出息 ”1”..出”2”..出”3”…出”4”…出”5”…出”6”…出”7”…… 出”10”. <br />
-
-出出”1” …出出”2”… 出出”3”… 出出”4”…….…..出出”10”.<br /> 
-
-出出出”1” …出出出”2”… 出出出”3”……….….. 出出出”10”. 
-<br />
-| 
-<br />
-| 
-<br />
-| 
-<br />
-出出出出出出 出出出出”1” …出出出出出出 出出出出”2”… 
-
-出出出出出出 出出出出”3”……….….. 出出出出出出 出出出出”10”. <br />
-
-中間若有雜念起,忘記了數目字。 那麼一樣再從”1”開始數到”10” 。<br /> 
-
-數息完成之後, 那麼你的心就會更貼近於你的呼吸。 
-
-最後你的心已經安定了以後,再將數息轉變為觀照出入息。
-同上次一樣 , 從入息和中間入息 到出息和中間出息 ,整個過程都清清楚楚。 
-
-清楚空氣進出的每一個過程, 一直到你的雜念沒有了, 或是減少了 。 
-
-心能夠安止於一境時 。再轉為觀照瞭解你的心和呼吸的關係 。 <br />
-
-好! 請你們練習看看。 
-      
- </p>             
-         
-      
-       
-       
-        </h2>
-        
-        <p class="grey">&nbsp;(請依每日的順序在表格中點選&nbsp;!) </p>
-      </div>
-      <div class="left">
-        <h2>初級禪修\六日禪修</h2>
-        
-<p class="grey1">
-<em>  <a href="med-b1.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第一日
-<br />含文字及聲音<br />
-  <a href="med-b2.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第二日
-<br />含文字及聲音<br />
-  <a href="med-b3.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第三日
-<br />含文字及聲音<br />
-  <a href="med-b4.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第四日
-<br />含文字及聲音<br />
-  <a href="med-b5.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第五日
-<br />含文字及聲音<br />
-  <a href="med-b6.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第六日
-<br />含文字及聲音<br />
-
-<br />
-</em></p>
-        <p><strong><em>--- 果聞法師  提供</em></strong></p>
-        <div class="bg"></div>
-        
-        <p><strong><em></em></strong></p>
-      </div>
-      <div class="clr"></div>
-    </div>
-  </div> 
-
-<div class="footer">
-  <div class="footer_resize">
-    <p class="leftt">Copyright © Siemting.com. All Rights Reserved</p>
-    <p class="rightt">&nbsp;</p>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
 </div>
+
+<audio id="audio" src="m4a/6-3.mp3"></audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

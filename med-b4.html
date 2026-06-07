@@ -1,233 +1,308 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<title>これを見-平衡身心練習 - 四念住觀</title>
-<meta name="description" content="保持這樣明朗安定的心。 讓他自然進入甚深禪定 。">
-<meta name="keywords" content="訓練你的心">
-<meta name="author" content="gwens">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
+
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
+
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
+
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
+
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="header">
-    <div class="block_header">
-      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="209" height="57" border="0" alt="logo" /></a></div>
-      <div class="menu">
-        <ul>
-         <li><a href="index.html">首頁.</a></li>
-          <li><a href="Relief.html">煩惱.</a></li>
-          <li><a href="Meditat.html">禪修指引.</a></li>  
-          <li><a href="Activity.html">禪修活動.</a></li>
-          <li><a href="Read.html">閱讀書籍.</a></li>
-          
-          <li><a href="Help.html">護持道場.</a></li>
-          <li><a href="Contact.html">聯絡資訊</a></li>
-          <li><a href="https://ddmgwens.blogspot.tw/">部落格</a></li>
-        </ul>
-      </div>
-      <div class="clr"> </div>
+
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+<br> 當你的心能夠安住於你的呼吸上的時候, 雖然你很清楚呼吸的進出在不斷的變化。
+     When your mind is able to settle on your breath, even though you are very aware that the in and out breath is constantly changing.
+
+<br> 但是由於你不在意它的變化, 因此你能夠隨順呼吸進出無常的特性。
+     However, because you are not concerned with its changes, you are able to accord with the impermanent nature of the breath's in and out movement.
+
+<br> 而不會執取身心內外的任何感受。 所以你的心能夠非常平穩的安住在一境上。
+     And you will not cling to any sensations, whether internal or external. Therefore, your mind can very steadily abide on a single object. 
+
+<br> 這時候請你轉為觀照你的心和呼吸的關係上。
+     At this point, please shift your awareness to the relationship between your mind and your breath.
+
+<br> 去瞭解空氣進出你的鼻孔與皮膚相接觸時, 身體的感受為何? 起了什麼變化?
+     To understand what the body's sensations are when air enters and exits your nostrils and touches your skin? What changes arise?
+
+<br> 而有感受以後, 去接受感受這個動機的念頭為何? 有何相狀?
+     And after having a sensation, what is the thought, the motivation, to accept this sensation? What is its characteristic?
+
+<br> 然後去分別感受的念頭為何? 有什麼相狀?
+     Then, what is the thought that distinguishes the sensation? What are its characteristics?
+
+<br> 還有！想要保持平衡呼吸這樣思維的念頭又是如何? 有何相狀?
+     Furthermore! How about the thought that wishes to maintain balanced breathing? What are its characteristics?
+
+<br> 然後！認識念頭的心意識 又起了那些變化? 
+     Then! What changes arise in the mental consciousness that recognizes these thoughts? 
+
+<br> 這些能觀的心, 包括受、想、行、識, 還有所觀境的身體, 都應該非常的清楚明瞭。
+     These minds that observe, including sensation (vedana), perception (samjna), volitional formations (samskara), and consciousness (vijnana), as well as the observed object of the body, should all be very clear and lucid.
+
+<br> 已經能夠清楚的分辨了以後, 接著去觀察, 當食物和空氣, 進入身體時, 身體的機能就能夠維持增長。 而當食物和空氣離開身體時, 身體的機能便會漸漸消失。
+     After being able to clearly differentiate, then observe: when food and air enter the body, the body's functions can be maintained and grow. And when food and air leave the body, the body's functions will gradually disappear.
+
+<br> 然後試著去嘗試觀察, 當身體增長時, 是不是能夠維持不變。 而當身體消失時, 也觀察是不是能夠維持不變。 和觀察身體增長跟消失兩者之間, 是不是也能夠維持不變。
+     Then try to observe: when the body grows, can it remain unchanged? And when the body disappears, also observe if it can remain unchanged. And observe if the state between the body's growth and disappearance can also remain unchanged.
+
+<br> 然後你會結論到, 身體它不會常住依靠於任何一種狀態。 在世界上任何一個角落也沒有任何的執取。
+     Then you will conclude that the body does not permanently rely on any single state. There is no clinging to it in any corner of the world. 
+
+<br> 再來！當身體和空氣接觸的時候, 內心的感受就會產生。 而當空氣離開身體的時候, 內心的感受就會跟著消失。
+     Next! When the body and air come into contact, inner sensations will arise. And when the air leaves the body, these inner sensations will disappear with it.
+
+<br> 然後試著去嘗試觀察, 當你的感受產生時, 是不是能夠維持不變。 而當感受消失時, 也觀察是不是能夠維持不變。 和觀察感受生起與消失兩者之間, 是不是也能夠維持不變。
+     Then try to observe: when your sensations arise, can they remain unchanged? And when sensations disappear, also observe if they can remain unchanged. And observe if the state between the arising and disappearing of sensations can also remain unchanged.
+
+<br> 然後你會結論到, 任何的感受它不會常住依靠於任何一種狀態。 在世間之中都沒有任何的執取。
+     Then you will conclude that no sensation permanently relies on any single state. There is no clinging to it within the world. 
+
+<br> 還有！當接受這些名色的訊息時, 攀緣分別與覺知的心就會生起。 而當名色的訊息離開時, 攀緣分別與覺知的心就隨著消失。
+     Furthermore! When receiving these nama-rupa (name-and-form) messages, the mind that discriminates and is aware will arise. And when the nama-rupa messages depart, the mind that discriminates and is aware will disappear with them.
+
+<br> 然後去觀察心生起的時候, 是不是能夠維持常住不變。 而當心離去的時候, 是不是也能夠維持常住不變。 和觀察心生起與消失兩者之間, 是不是也能夠維持常住不變。
+     Then observe: when the mind arises, can it remain permanently unchanged? And when the mind departs, can it also remain permanently unchanged? And observe if the state between the arising and disappearing of the mind can also remain permanently unchanged.
+
+<br> 然後你會結論到, 心它不會常住依靠於任何一種狀態。 在世間之中都沒有任何的執取。 它捨離兩邊, 依正道而行。
+     Then you will conclude that the mind does not permanently rely on any single state. There is no clinging to it within the world. It abandons both extremes and follows the right path. 
+
+<br> 最後！當你有所憶念的時候, 內心就產生許多的看法。 而當你不再憶念的時候, 這些看法也就消失。
+     Finally! When you have recollections, many views arise in your mind. And when you no longer recollect, these views also disappear.
+
+<br> 然後去觀察你的看法生起的時候, 能不能一直保持常住。 而當這些看法消失的時候, 是不是也能夠保持常住不變。 和觀察這些看法生起與消失兩者之間, 是不是也能夠維持常住不變。
+     Then observe: when your views arise, can they always remain permanent? And when these views disappear, can they also remain permanently unchanged? And observe if the state between the arising and disappearing of these views can also remain permanently unchanged.
+
+<br> 然後你會結論到, 法它不會常住依靠於任何一種狀態。 在世間之中都沒有任何的執取。 它捨離兩邊, 依正道而行。
+     Then you will conclude that phenomena (dharma) do not permanently rely on any single state. There is no clinging to them within the world. They abandon both extremes and follow the right path. 
+
+<br> 這些方法只要由內而外, 從己身到他身的時常觀察。 就能夠覺察到 我們所觀的環境和身體, 還有能觀的心, 包括受、想、行、識, 都是無常的, 並且不可執著的。
+     By regularly observing these methods, from within to without, from one's own body to others' bodies, you will realize that the environments and bodies we observe, as well as the minds that observe—including sensation, perception, volitional formations, and consciousness—are all impermanent and not to be clung to.
+
+<br> 當我們能夠順應與及學習這樣沒有任何執取的原則時, 也就是學習著不逐向任何一邊的偏執, 而同時捨離了分別與對立的兩邊。這就是中觀的思想。
+     When we are able to accord with and learn this principle of non-clinging, which means learning not to pursue bias towards any extreme, and simultaneously abandoning the two extremes of discrimination and opposition, this is the thought of the Middle Way.
+
+<br> 如果你能夠持續這樣的觀照, 那麼在你的每一個念頭持續生起的時候, 立即看到對立的兩端, 而將其同時捨離, 就能夠直接照見本自空寂的唯一實相。
+     If you can continuously maintain such observation, then as each thought continually arises, you will immediately see the two opposing ends and simultaneously abandon them. This will allow you to directly perceive the inherently empty and tranquil sole reality.
+
+<br> 爾後你也會看到和瞭解到, 不論過去、現在、未來的時間和空間裡, 都只有唯一的實相法。 此外並無有其他事發生, 心中也無有事可做。
+     Thereafter, you will also see and understand that, regardless of past, present, or future time and space, there is only the one ultimate reality (dharma). Besides this, nothing else is happening, and there is nothing to do in your mind. 
+
+<br> 那麼你的心就會非常的安定, 安定到什麼念頭也沒有。 而且內心也非常的明朗。
+     Then your mind will become extremely stable, so stable that there are no thoughts. And your inner being will also be very clear and bright.
+
+<br> 也許有些微細善念的習氣種子偶然會現起, 但是完全與你安定、覺知的心隔離, 而不受任何影響。
+     Perhaps some subtle habitual tendencies of wholesome thoughts may occasionally arise, but they will be completely separated from your stable, aware mind and remain unaffected.
+
+<br> 但是你若是起心觀照, 才剛要起心, 還沒成熟時, 念頭就能自照, 而消融於空性當中, 不再生起。
+     However, if you initiate the mind to observe, just as the intention to observe begins, before it fully matures, the thought can self-illuminate and dissolve into emptiness, no longer arising.
+
+<br> 保持這樣明朗安定的心。 讓他自然進入甚深禪定。 讓它可深可廣。 訓練你的心。 隨時、隨處、隨意的能深、能廣, 能速、能緩, 能長、能短。
+     Maintain such a clear and stable mind. Allow it to naturally enter profound meditation. Let it be deep and vast. Train your mind. At any time, in any place, at will, it can be deep, it can be vast, it can be swift, it can be slow, it can be long, it can be short.
+
+<br> 在各種時空裡, 練達你的心。 那麼你將會是個偉大的修行者。
+     In all times and spaces, refine and master your mind. Then you will be a great practitioner.           
+            
+            
+            
+            
+        </div>
     </div>
-  </div>
-  <div class="slider2">
-    <div class="slider2_resize">
-      <h2>Meditation</h2>
-      <p>Learn to see that real in you. There is something real in you, there is something beautiful in you. </p>
+
+    <div class="footer-controls">
+        <a href="med-b3.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="med-b5.html" class="nav-link">下一篇</a>
     </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="bloga_resize2">
-    <div class="bloga_resizee">
-      <div class="menu_sub">
-        <ul>
-          <li><a href="med-a.html">概念</a></li>
-          <li><a href="med-b.html" class="active">線上禪修</a></li>
-          <li><a href="med-c.html">練習 </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="body">
-    <div class="body_resize">
-      <div class="right">
-        <h2>禪修第四天:
-
-<br />
-        </h2><!-- 加入 Media Player--> 
-  <figure>
-    <EMBED SRC="meditation/6-4.mp3" WIDTH=300 HEIGHT=60 
-          AUTOSTART=TRUE LOOP=TURE>  </EMBED>
-</figure>  
-    
-
-           <!--end Player---->
-        <p class="grey">  
-
-當你的心能夠安住於妳的呼吸上的時候,
-雖然你很清楚呼吸的進出在不斷的變化。 
-
-但是由於你不在意它的變化 ,
-因此你能夠隨順呼吸進出無常的特性 。 
-
-而不會執取身心內外的任何感受。
-所以你的心能夠非常平穩的安住在一境上 。<br /> 
-</p>
-        <img src="images/med_img.jpg" alt="picture" width="239" height="240" class="work" />
-        <p class="grey">
-這時候請你轉為觀照你的心和呼吸的關係上。 
-
-去瞭解空氣進出你的鼻孔與皮膚相接觸時, 
-身體的感受為何? 起了什麼變化? 
-
-而有感受以後 ,去接受感受這個動機的念頭為何? 
-有何相狀? 
-
-然後去分別感受的念頭為何?有什麼相狀? 
-
-還有!想要保持平衡呼吸這樣思維的念頭又是如何? 有何相狀? 
-
-然後!認識念頭的心意識 又起了那些變化? <br />
-
-這些能觀的心 ,包括受 、想 、行 、識 , 
-
-還有所觀境的身體, 都應該非常的清楚明瞭。 <br />
-
-已經能夠清楚的分辨了以後, 接著去觀察,當食物和空氣,
-進入身體時, 身體的機能就能夠維持增長 。 
-
-而當食物和空氣離開身體時, 身體的機能便會漸漸消失。<br /> 
-
-然後試?去嘗試觀察 ,當身體增長時, 是不是能夠維持不變。
-而當身體消失時 ,也觀察是不是能夠維持不變。 
-
-和觀察身體增長跟消失兩者之間, 是不是也能夠維持不變 。<br /> 
-
-然後你會結論到, 身體它不會常住依靠於任何一種狀態。 
-
-在世界上任何一個角落也沒有任何的執取 。 <br />
-
-再來! 當身體和空氣接觸的時候, 內心的感受就會產生。 
-
-而當空氣離開身體的時候 ,內心的感受就會跟著消失 。<br /> 
-
-然後試?去嘗試觀察 ,當你的感受產生時 ,是不是能夠維持不變。 
-
-而當感受消失時 ,也觀察是不是能夠維持不變。 
-
-和觀察感受生起與消失兩者之間,是不是也能夠維持不變 。 <br />
-
-然後你會結論到, 任何的感受它不會常住依靠於任何一種狀態 。 
-
-在世間之中都沒有任何的執取。 <br />
-
-還有!當接受這些名色的訊息時 ,攀緣分別與覺知的心就會生起 。 
-
-而當名色的訊息離開時, 攀緣分別與覺知的心就隨著消失。<br /> 
-
-然後去觀察心生起的時候, 是不是能夠維持常住不變。
-而當心離去的時候 ,也是不是能夠維持常住不變。 
-
-和觀察心生起與消失兩者之間, 是不是也能夠維持常住不變。<br /> 
-
-然後你會結論到, 心它不會常住依靠於任何一種狀態。 
-
-在世間之中都沒有任何的執取 。它捨離兩邊, 依正道而行。 <br />
-
-最後!當你有所憶念的時候 ,內心就產生許多的看法 。 
-
-而當你不再憶念的時候 ,這些看法也就消失 。 <br />
-
-然後去觀察你的看法生起的時候, 能不能一直保持常住。 
-
-而當這些看法消失的時候 ,也是不是能夠保持常住不變 。 
-
-和觀察這些看法生起與消失兩者之間, 是不是也能夠維持常住不變。<br /> 
-
-然後你會結論到 ,法它不會常住依靠於任何一種狀態 。 
-
-在世間之中都沒有任何的執取 。它捨離兩邊, 依正道而行。 <br />
-
-這些方法只要由內而外, 從己身到他身的時常觀察 。 
-
-就能夠覺察到 我們所觀的環境和身體。 
-
-還有能觀的心, 包括受 、想、 行、識 都是無常的。 並且不可執著的 。<br /> 
-
-當我們能夠順應與及學習這樣沒有任何執取的原則時, 
-
-也就是學習著不逐向任何一邊的偏執 ,
-而同時捨離了分別與對立的兩邊 。這就是中觀的思想。 <br />
-
-如果你能夠持續這樣的觀照 ,那麼在你的每一個念頭持續生起的時候, 
-
-立即看到對立的兩端,而將其同時捨離。就能夠直接照見本自空寂的唯一實相 。 <br />
-
-爾後你也會看到和瞭解到 ，不論過去 現在 未來的時間和空間裡,都只有唯一的實相法。 
-
-此外並無有其他事發生,心中也無有事可做。<br />
-那麼你的心就會非常的安定, 安定到什麼念頭也沒有。
-
-而且內心也非常的明朗 。也許有些微細善念的習氣種子偶然會現起, 
-
-但是完全與你安定、覺知的心隔離 。而不受任何影響。<br /> 
-
-但是你若是起心觀照, 才剛要起心, 還沒成熟時 ,
-念頭就能自照 ,而消融於空性當中 。不再生起。 <br />
-
-保持這樣明朗安定的心。 讓他自然進入甚深禪定 。
-讓它可深可廣。 訓練你的心。 隨時、隨處、
-隨意的能深、能廣, 能速、能緩 ,能長、能短 。<br /> 
-
-在各種時空裡, 練達你的心。 那麼你將會是個偉大的修行者 。 
- 
-
- </p>             
-         
-      
-       
-       
-        
-        
-        <p class="grey">&nbsp;(請依每日的順序在表格中點選&nbsp;!) </p>
-      </div>
-      <div class="left">
-        <h2>初級禪修\六日禪修</h2>
-        
-<p class="grey1">
-<em>  <a href="med-b1.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第一日
-<br />含文字及聲音<br />
-  <a href="med-b2.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第二日
-<br />含文字及聲音<br />
-  <a href="med-b3.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第三日
-<br />含文字及聲音<br />
-  <a href="med-b4.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第四日
-<br />含文字及聲音<br />
-  <a href="med-b5.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第五日
-<br />含文字及聲音<br />
-  <a href="med-b6.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第六日
-<br />含文字及聲音<br />
-
-<br />
-</em></p>
-        <p><strong><em>--- 果聞法師  提供</em></strong></p>
-        <div class="bg"></div>
-        
-        <p><strong><em></em></strong></p>
-      </div>
-      <div class="clr"></div>
-    
- </div></div> </div>
-
-<div class="footer">
-  <div class="footer_resize">
-    <p class="leftt">Copyright © Siemting.com. All Rights Reserved</p>
-    <p class="rightt">&nbsp;</p>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
 </div>
+
+<audio id="audio" src="m4a/6-4.mp3"></audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

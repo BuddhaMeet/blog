@@ -1,258 +1,308 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<title>線上禪修</title>
-<meta name="description" content="那麼心中自然無事 ,任何時刻都能夠安然處之, 而沒有任何執著。">
-<meta name="keywords" content="回歸自然的真理">
-<meta name="author" content="gwens">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
+
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
+
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
+
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
+
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="header">
-    <div class="block_header">
-      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="209" height="57" border="0" alt="logo" /></a></div>
-      <div class="menu">
-        <ul>
-         <li><a href="index.html">首頁.</a></li>
-          <li><a href="Relief.html">煩惱.</a></li>
-          <li><a href="Meditat.html">禪修指引.</a></li>  
-          <li><a href="Activity.html">禪修活動.</a></li>
-          <li><a href="Read.html">閱讀書籍.</a></li>
-          
-          <li><a href="Help.html">護持道場.</a></li>
-          <li><a href="Contact.html">聯絡資訊</a></li>
-          <li><a href="https://ddmgwens.blogspot.tw/">部落格</a></li>
-        </ul>
-        
-      </div>
-      <div class="clr"> </div>
+
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+<br> 自然界的現象總是很微妙的, 時常的觀照和思惟, 能夠帶給我們對於生命, 有更深一層的認識與瞭解。
+     The phenomena of nature are always subtle. Through constant observation and contemplation, we can gain a deeper understanding and awareness of life.
+
+<br> 許多人有這樣的疑問, 生命的意義何在？目的又是什麼?
+     Many people have this question: What is the meaning of life? What is its purpose?
+
+<br> 宇宙萬物與生命的無常變化, 這是個事實 。
+     The impermanence and change of all things in the universe and life itself, this is a fact.
+
+<br> 隨時變化沒有不變的事物, 無常的自然現象是「真理」帶給我們最珍貴的提示 。
+     Everything is constantly changing; there is nothing that remains constant. The impermanent phenomena of nature are the most precious insights that "truth" brings to us.
+
+<br> 這樣無常的事實 , 這本身也正是「真理」傳遞給予我們的消息,
+     This very fact of impermanence is precisely the message that "truth" conveys to us.
+
+<br> 「無常」正是「真理」的使者。
+     "Impermanence" is indeed the messenger of "truth."
+
+<br> 不斷的追求永遠找不到生命的價值, 捨離分別執著 ,才能回歸自然的真理。
+     Constantly pursuing will never lead to finding the value of life. Only by letting go of discrimination and attachment can we return to the truth of nature.
+
+<br> 我們藉由不斷的錯誤的認知、 判斷 和分別來維持輪迴「苦」的假象, 從此生到來生 ,不想出離也不願意出離。
+     We maintain the illusion of the "suffering" of samsara through continuous erroneous perceptions, judgments, and differentiations, from this life to the next, unwilling and reluctant to break free.
+
+<br> 以此為樂 ,但這不是穩定的快樂。 內心深處仍然隱藏著隨時會消失的不安。
+     We find joy in this, but it is not a stable happiness. Deep within, there still hides an unrest that can disappear at any moment.
+
+<br> 地球旋轉 ,生命無常, 內心不安定, 改變是共同的特性。
+     The Earth rotates, life is impermanent, the mind is restless; change is a common characteristic.
+
+<br> 從地球旋轉的理論和實際經驗我們知道 , 改變和轉動是為了要保持平衡, 這是共通的特性。
+     From the theory of Earth's rotation and practical experience, we know that change and movement are for the purpose of maintaining balance; this is a universal characteristic.
+
+<br> 從這裡我們得到一個結論 , 因為不平衡所以造就了無常的生命。
+     From this, we draw a conclusion: it is imbalance that creates impermanent life.
+
+<br> 但是為何產生不平衡? 這才是個大問題 !這是個蹺蹺板原理, 無中生有的 分別 、比較 、對立 、不耐煩 就是蹺蹺板的兩端。
+     But why does imbalance arise? This is the big question! It's like a seesaw principle: discrimination, comparison, opposition, and impatience, which arise from nothing, are the two ends of the seesaw.
+
+<br> 當你站在一邊時就會有追求和排斥的心同時生起, 驅使你自然的逐向另外一邊, 你只能不斷的在天平的兩端來回奔走而沒有停止的一天。 佛說這是「苦」！
+     When you stand on one side, a mind of pursuit and aversion simultaneously arises, naturally driving you towards the other side. You can only constantly run back and forth between the two ends of the scale, without a day of stopping. Buddha called this "suffering"!
+
+<br> 即便你利用禪修對治的方法來讓內心分別、 對立減少了。 甚至達到禪定與平衡了 ,天平維持中立平衡了, 心似乎是平靜了, 但是問題是天平本身還在 ,天平以外的環境也在, 環境影響天平的可能性依然存在 。
+     Even if you use meditation methods to reduce inner discrimination and opposition, even reaching meditative concentration and balance, where the scale maintains neutral balance and the mind seems peaceful, the problem is that the scale itself is still there, and the environment outside the scale is also present. The possibility of the environment influencing the scale still exists.
+
+<br> 唯有同時捨離天平對立的兩端與分別, 中間的立場消失, 天平自然就不存在, 環境也找不到對象了。 天平就是執持自我存在的分別心 ,環境就是無始劫的善惡業。
+     Only by simultaneously letting go of the opposing ends of the scale and discrimination, when the middle ground disappears, the scale naturally ceases to exist, and the environment finds no object to interact with. The scale represents the discriminating mind that clings to self-existence, and the environment represents the good and bad karma accumulated since beginningless time.
+
+<br> 為何對立的兩端同時捨離, 可以真的有效去除分別心, 而讓你沒有任何執取的清淨無我自性 ,能夠自然顯現?
+     Why can simultaneously letting go of the opposing ends truly and effectively remove the discriminating mind, allowing your pure, non-self nature, free from any attachment, to naturally manifest?
+
+<br> 比如說, 現在你的面前有一張白紙 ,但是白紙上面有一個黑點。 我只要白色不要黑色 ,就用橡皮擦擦掉這個黑點, 而只剩下白色 ,也沒什麼煩惱了。 但是這個黑色的麻煩還在 ,它並沒有被擦掉。 因為白色的背景正是黑色, 黑色的背景又是白色, 兩者互為主客相互依靠而存在於這個世間。
+     For example, imagine a white paper in front of you, but there's a black dot on it. If you only want the white and not the black, you might try to erase the black dot, leaving only white, feeling that your troubles are gone. However, the black trouble is still there; it hasn't truly been erased. This is because the background of white is precisely black, and the background of black is white. They exist in this world as mutually dependent counterparts.
+
+<br> 因此你要去掉這個黑色的麻煩時, 就得必須將白色,同時一併去掉。 最後才能得到你想要的, 唯一清淨沒有煩惱的顏色。
+     Therefore, when you want to remove this black trouble, you must simultaneously remove the white as well. Only then can you achieve the one pure, trouble-free color that you desire.
+
+<br> 又比如說黑點代表壞心腸, 而白點是好心腸。 那我們都會說, 我是好人只有好心腸沒有壞心腸。 但是你的內心還是會去判定, 這是好人那是壞人的時候 , 那你還算是個真正的好人嗎?
+     Or for another example, suppose the black dot represents a bad heart, and the white dot represents a good heart. We would all say, "I am a good person with only a good heart, not a bad one." But when your inner self still judges, "this is a good person, that is a bad person," can you still be considered a truly good person?
+
+<br> 啊!這個世間沒有永遠不變的事物 , 也沒有實質的我的存在呀!因此不要去分別。
+     Ah! In this world, there is nothing that remains eternally unchanged, and there is no substantial "self" that truly exists! Therefore, do not discriminate.
+
+<br> 而當你無分別的智慧顯現時候 。就會發覺到 , 其實內心所起的分別對立。 由於是對立的, 因此是彼此相互對應而恰到好處的。 也是剛好平衡的 ,並不需要向外追求。 而外面的環境也是一樣, 不論你有分別、 無分別, 永遠都是平衡的 。 一切只有唯一的平等法 。
+     And when the wisdom of non-discrimination manifests, you will discover that the distinctions and oppositions that arise within your mind, because they are opposing, are in fact perfectly corresponding and just right for each other. They are precisely balanced, and there is no need to seek outside yourself. The external environment is also the same; whether you discriminate or not, it is always balanced. There is only one singular principle of equality.
+
+<br> 反過來說 ,也就是平等法裡早已具足你所要追求或是要完成的一切功德 。 既然一法具足一切功德 ,本自具足本自平等 。
+     Conversely, this means that the principle of equality already contains all the merits you seek or wish to achieve. Since one Dharma encompasses all merits, it is inherently complete and inherently equal.
+
+<br> 那麼心中自然無事 ,任何時刻都能夠安然處之, 而沒有任何執著。 沒有任何執著, 也就是空性, 這是我們對於解釋真理的一種形容。
+     Then naturally, there is nothing to be done in your mind; you can handle any moment with peace, without any attachment. No attachment means emptiness (Sunyata), which is one way we describe truth.
+
+<br> 但是沒有執著, 並不是意味著可以為所欲為而不顧因果 。 而是心中沒有任何偏見 ,不會受到任何錯誤的見解和煩惱的影響 , 而能夠隨順自然恰到好處的原則, 清楚的扮演好自己的角色 ,並且能夠隨遇而安而且心中無事。
+     However, being without attachment does not mean you can do whatever you want without regard for cause and effect. Rather, it means having no prejudice in your heart, not being influenced by any erroneous views or afflictions, and being able to align with the natural, perfectly appropriate principles, clearly playing your role, finding peace wherever you are, and having nothing troubling your mind.
+
+<br> 譬如一棵樹。小鳥可以築巢，貓兒用來磨爪，老人家做為避蔭的地方， 有時我們砍下它，做成桌子椅子， 甚至生火 ,作成肥料、 食物、 製造空氣 。 樹之所以有無限的功能，甚至是整個世界的縮影, 是因為這棵樹它本身並不執著使然。
+     For instance, consider a tree. Birds can build nests in it, cats use it to sharpen their claws, and elders find shade beneath it. Sometimes we cut it down to make tables and chairs, or even to start a fire, turn it into fertilizer, food, or oxygen. The tree has infinite functions, even acting as a microcosm of the entire world, precisely because the tree itself is not attached.
+
+<br> 因為樹並沒有說 ,我只能做什麼或不能做什麼, 如果樹說我只能有一種的功能， 那這樣就失去了樹的功能。 那麼這個世界就將永遠沒有辦法變化！
+     Because the tree does not say, "I can only do this or I cannot do that." If a tree were to say, "I can only have one function," then it would lose its very purpose as a tree. In that case, this world would forever be unable to change!
+
+<br> 沒有生命！死寂一片！黑暗的，就永遠的黑。 白亮的就永遠是白，永遠沒有無常？ 也永遠沒有輪迴？也沒有生命？什麼都沒有？
+     No life! Utter silence! If it's dark, it stays dark forever. If it's bright, it stays white forever. No impermanence ever? No samsara ever? No life? Nothing at all?
+
+<br> 這是不可能 ,也違背了真理！ 因此空性 ,不是什麼都沒有 。
+     This is impossible and contradicts the truth! Therefore, emptiness (Sunyata) does not mean nothingness.
+
+<br> 它可以是有也可以是沒有 ,它不住在有也不住在沒有。 只是很清楚 ,很清楚什麼? 很清楚沒有事, 這是空性觀。
+     It can be both existent and non-existent; it doesn't dwell in existence nor non-existence. It's just very clear, clear about what? Clear that there are no problems, this is the view of emptiness.
+
+<br> 這次的禪修先說明理論部份, 主要是為了減少你們許多的疑慮和太多不必要的摸索。
+     This meditation session first explains the theoretical part, primarily to reduce many of your doubts and too much unnecessary searching.           
+            
+            
+            
+            
+        </div>
     </div>
-  </div>
-  <div class="slider2">
-    <div class="slider2_resize">
-      <h2>Meditation</h2>
-      <p>Learn to see that real in you. There is something real in you, there is something beautiful in you. </p>
+
+    <div class="footer-controls">
+        <a href="32Medit-9.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="med-b2.html" class="nav-link">下一篇</a>
     </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="bloga_resize2">
-    <div class="bloga_resizee">
-      <div class="menu_sub">
-        <ul>
-          <li><a href="med-a.html">概念</a></li>
-          <li><a href="med-b.html" class="active">線上禪修</a></li>
-          <li><a href="med-c.html">練習 </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="body">
-    <div class="body_resize">
-      <div class="right">
-        <h2>禪修第一天:
-
-<br />
-        </h2><!-- 加入 Media Player--> 
-  <figure>
-    
-      
-   <EMBED SRC="meditation/6-1.mp3" WIDTH=300 HEIGHT=60 
-          AUTOSTART=TRUE LOOP=TURE>  </EMBED>
-      
-</figure>  
-    
-
-           <!--end Player---->
-        <p class="grey">自然界的現象總是很微妙的,
-時常的觀照和思惟, 能夠帶給我們對於生命,
-有更深一層的認識與瞭解。 <br />
-許多人有這樣的疑問, 
-生命的意義何在？目的又是什麼? <br />
-</p>
-        <img src="images/med_img.jpg" alt="picture" width="239" height="240" class="work" />
-        <p class="grey">
-宇宙萬物與生命的無常變化,
-這是個事實 。<br /> 
-
-隨時變化沒有不變的事物,
-無常的自然現象是「真理」帶給我們最珍貴的提示 。 <br />
-
-這樣無常的事實 ,
-這本身也正是「真理」傳遞給予我們的消息,  <br />
-
-「無常」正是「真理」的使者。 <br /> 
-
-不斷的追求永遠找不到生命的價值,
-捨離分別執著 ,才能回歸自然的真理。  <br />
-
-我們藉由不斷的錯誤的認知、 判斷 
-和分別來維持輪迴「苦」的假象, 
-
-從此生到來生 ,不想出離也不願意出離。 <br /> 
-
-以此為樂 ,但這不是穩定的快樂。
-內心深處仍然隱藏著隨時會消失的不安。  <br />
-
-地球旋轉 ,生命無常, 內心不安定,
-改變是共同的特性。  <br />
-
-從地球旋轉的理論和實際經驗我們知道 ,
-改變和轉動是為了要保持平衡,
-這是共通的特性。 <br /> 
-
-從這裡我們得到一個結論 ,
-因為不平衡所以造就了無常的生命。 <br /> 
-
-但是為何產生不平衡? 這才是個大問題 !這是個蹺蹺板原理, 
-
-無中生有的 分別 、比較 、對立 、不耐煩 就是蹺蹺板的兩端。 <br /> 
-
-當你站在一邊時就會有追求和排斥的心同時生起,
-驅使你自然的逐向另外一邊, 
-你只能不斷的在天平的兩端來回奔走而沒有停止的一天。
-佛說這是「苦」！<br />
-即便你利用禪修對治的方法來讓內心分別、 對立減少了。 
-
-甚至達到禪定與平衡了 ,天平維持中立平衡了, 心似乎是平靜了, 
-但是問題是天平本身還在 ,天平以外的環境也在,
-環境影響天平的可能性依然存在 。 <br /> 
-
-唯有同時捨離天平對立的兩端與分別, 中間的立場消失, 
-天平自然就不存在, 環境也找不到對象了。 
-
-天平就是執持自我存在的分別心 ,環境就是無始劫的善惡業。 <br /> 
-
-為何對立的兩端同時捨離, 可以真的有效去除分別心, 
-而讓你沒有任何執取的清淨無我自性 ,能夠自然顯現?  <br />
-
-比如說, 現在你的面前有一張白紙 ,但是白紙上面有一個黑點。 
-
-我只要白色不要黑色 ,就用橡皮擦擦掉這個黑點,
-而只剩下白色 ,也沒什麼煩惱了。 
-
-但是這個黑色的麻煩還在 ,它並沒有被擦掉。 
-
-因為白色的背景正是黑色, 黑色的背景又是白色,
-兩者互為主客相互依靠而存在於這個世間。 <br /> 
-
-因此你要去掉這個黑色的麻煩時, 就得必須將白色,同時一併去掉。 
-
-最後才能得到你想要的, 唯一清淨沒有煩惱的顏色。 <br /> 
-
-又比如說黑點代表壞心腸, 而白點是好心腸。 
-
-那我們都會說, 我是好人只有好心腸沒有壞心腸。 
-
-但是你的內心還是會去判定, 這是好人那是壞人的時候 ,
-那你還算是個真正的好人嗎?  <br />
-
-啊!這個世間沒有永遠不變的事物 ,
-也沒有實質的我的存在呀!因此不要去分別。  <br />
-
-而當你無分別的智慧顯現時候 。就會發覺到 ,
-其實內心所起的分別對立。 
-
-由於是對立的, 因此是彼此相互對應而恰到好處的。 
-
-也是剛好平衡的 ,並不需要向外追求。 
-
-而外面的環境也是一樣, 不論你有分別、 無分別, 永遠都是平衡的 。
-一切只有唯一的平等法 。  <br />
-
-反過來說 ,也就是平等法裡早已具足你所要追求或是要完成的一切功德 。 
-
-既然一法具足一切功德 ,本自具足本自平等 。 <br /> 
-
-那麼心中自然無事 ,任何時刻都能夠安然處之, 而沒有任何執著。 
-
-沒有任何執著, 也就是空性, 這是我們對於解釋真理的一種形容。  <br />
-
-但是沒有執著, 並不是意味著可以為所欲為而不顧因果 。 
-
-而是心中沒有任何偏見 ,不會受到任何錯誤的見解和煩惱的影響 ,
-而能夠隨順自然恰到好處的原則, 
-
-清楚的扮演好自己的角色 ,並且能夠隨遇而安而且心中無事。 <br /> 
-
-譬如一棵樹。小鳥可以築巢，貓兒用來磨爪，老人家做為避蔭的地方，
-有時我們砍下它，做成桌子椅子，
-甚至生火 ,作成肥料、 食物、 製造空氣 。 
-
-樹之所以有無限的功能，甚至是整個世界的縮影, 
-是因為這棵樹它本身並不執著使然。  <br />
-
-因為樹並沒有說 ,我只能做什麼或不能做什麼, 
-如果樹說我只能有一種的功能， 那這樣就失去了樹的功能。 
-
-那麼這個世界就將永遠沒有辦法變化！ <br />
-沒有生命！死寂一片！黑暗的，就永遠的黑。 
-
-白亮的就永遠是白，永遠沒有無常？
-也永遠沒有輪迴？也沒有生命？什麼都沒有？  <br />
-
-這是不可能 ,也違背了真理！ 
-
-因此空性 ,不是什麼都沒有 。 <br /> 
-
-它可以是有也可以是沒有 ,它不住在有也不住在沒有。 
-
-只是很清楚 ,很清楚什麼? 
-很清楚沒有事, 這是空性觀。 <br /> 
-
-這次的禪修先說明理論部份, 
-主要是為了減少你們許多的疑慮和太多不必要的摸索。
-
- </p>             
-         
-      
-       
-       
-        
-        
-        <p class="grey">&nbsp;(請依每日的順序在表格中點選&nbsp;!) </p>
-      </div>
-      <div class="left">
-        <h2>初級禪修\六日禪修</h2>
-        
-<p class="grey1">
-<em>  <a href="med-b1.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第一日
-<br />含文字及聲音<br />
-  <a href="med-b2.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第二日
-<br />含文字及聲音<br />
-  <a href="med-b3.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第三日
-<br />含文字及聲音<br />
-  <a href="med-b4.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第四日
-<br />含文字及聲音<br />
-  <a href="med-b5.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第五日
-<br />含文字及聲音<br />
-  <a href="med-b6.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第六日
-<br />含文字及聲音<br />
-    
- 
-<br />
-</em></p>
-        <p><strong><em>--- 果聞法師  提供</em></strong></p>
-        <div class="bg"></div>
-        
-        <p><strong><em></em></strong></p>
-      </div>
-      <div class="clr"></div>
-    </div>
-  </div> </div>
-
-<div class="footer">
-  <div class="footer_resize">
-    <p class="leftt">Copyright © Siemting.com. All Rights Reserved</p>
-    <p class="rightt">&nbsp;</p>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
 </div>
+
+<audio id="audio" src="m4a/6-1.mp3"></audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>

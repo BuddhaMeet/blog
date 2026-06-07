@@ -1,206 +1,396 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-<title>心靈禪修開示(二) - 果聞法師</title>
-<meta name="description" content="運用空性觀來維持中道, 實踐八正道, 而圓滿修行 ">
-<meta name="keywords" content="減少身心的負擔">
-<meta name="author" content="gwens">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨後涼亭 - 簡約閱讀器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; 
+            background-color: #f2f0e9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 20px; 
+            height: 100vh; 
+        }
+
+        .book-container { 
+            background-color: #f7e7cb; 
+            max-width: 650px; 
+            width: 100%; 
+            height: 85vh; 
+            border-radius: 24px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            border: 1px solid #e8e4d8; 
+        }
+
+        /* 閱讀區塊 */
+        .reading-area { 
+            flex: 1; 
+            padding: 40px 40px 0 40px; 
+            overflow-y: auto; 
+            scrollbar-width: none; 
+            /* 平滑滾動讓流水幕更自然 */
+            scroll-behavior: smooth;
+        }
+        .reading-area::-webkit-scrollbar { display: none; }
+
+        .text-content { 
+            font-size: 1.8em; /* 微調字體大小，更平衡 */
+            line-height: 2.2; 
+            color: #614a3d; 
+            text-align: justify;
+            font-weight: 400;
+            /* 底部預留空間，確保最後一段能浮上來，但不至於留白過多 */
+            padding-bottom: 300px; 
+        }
+
+        /* 底部綜合控制列 */
+        .footer-controls { 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #ba896c; 
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-link { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+            padding: 10px 18px; 
+            border-radius: 30px; 
+            background: rgba(255,255,255,0.15); 
+            transition: 0.3s; 
+            min-width: 90px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.3); }
+
+        /* 環狀播放鈕 */
+        .play-wrapper { 
+            position: relative; 
+            width: 56px; 
+            height: 56px; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-ring { transform: rotate(-90deg); position: absolute; }
+        .progress-ring__circle { 
+            transition: stroke-dashoffset 0.3s linear; 
+            stroke: #fff; /* 改為白色進度，更簡約 */
+        }
+        .play-btn-inner { 
+            width: 40px; 
+            height: 40px; 
+            background: white; 
+            border-radius: 50%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon { width: 18px; fill: #ba896c; }
+
+        @media (max-width: 600px) {
+            .reading-area { padding: 30px 25px 0 25px; }
+            .text-content { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="header">
-    <div class="block_header">
-      <div class="logo"><a href="index.html"><img src="images/logo.gif" width="209" height="57" border="0" alt="logo" /></a></div>
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">首頁.</a></li>
-          <li><a href="Relief.html">煩惱.</a></li>
-          <li><a href="Meditat.html">禪修指引.</a></li>  
-          <li><a href="Activity.html">禪修活動.</a></li>
-          <li><a href="Read.html">閱讀書籍.</a></li>
-          
-          <li><a href="Help.html">護持道場.</a></li>
-          <li><a href="Contact.html">聯絡資訊</a></li>
-          <li><a href="https://ddmgwens.blogspot.tw/">部落格</a></li>
-        
-        </ul>
-      </div>
-      <div class="clr"> </div>
+
+<div class="book-container">
+    <div class="reading-area" id="scroll-container">
+        <div class="text-content" id="book-text">
+            <!-- 在此處</div>前貼上主文字 -->
+<br>
+這次禪修主要的內容，第一步是先要你們，暫時放下工作，利用放鬆的方式，來減少身心的負擔和苦的衝擊，而讓心情緩和。 
+The main content of this meditation, the first step, is for you to temporarily set aside work, using methods of relaxation to reduce the burdens and impacts of suffering on your body and mind, allowing your mood to soften.
+<br>
+接著運用禪定的方法，來認識我執的生起和巢穴，這是對集諦的認識。
+Next, we will use the method of samadhi (meditative absorption) to recognize the arising and dwelling of self-grasping, which is an understanding of the Truth of the Origin of Suffering.
+<br>
+再來從我執生起之處，利用中觀的方式來去除分別的我執，實證滅諦。
+Then, from where self-grasping arises, we will use the Madhyamaka (Middle Way) approach to eliminate conceptual self-grasping, thereby realizing the Truth of Cessation.
+<br>
+最後運用空性觀來維持中道，實踐八正道，而圓滿修行。 
+Finally, we will use the contemplation of emptiness to maintain the Middle Way, practice the Noble Eightfold Path, and perfect our spiritual practice.
+<br>
+開始禪修之前，首先先確定身處的環境是安全的。
+Before beginning meditation, first ensure that your surroundings are safe.
+<br>
+也不會有其他事來干擾到你。
+And that nothing else will disturb you.
+<br>
+現在請你們一邊聽一邊練習看看! 
+Now, please listen and try to practice along!
+<br>
+剛開始先讓身心內外的一切，都隨其自然的運作，並沒有任何事需要你去改變。
+To begin, allow everything within and without your body and mind to operate naturally; there is nothing you need to change.
+<br>
+也沒有任何事需要你來耽心的，心中保持無事和平穩。 
+Nor is there anything for you to worry about; keep your mind empty and steady.
+<br>
+確定心中無事之後，接下來讓身體自然的保持平衡，安穩的坐在座墊上，蓋上保暖的毛巾，以比較輕鬆、平穩，而且能夠保持持久的坐姿，盤坐在位置上。
+After confirming that your mind is at ease, next, allow your body to naturally maintain balance, sitting steadily on your cushion, covered with a warm towel, in a comfortable, stable, and sustainable posture, cross-legged in your spot.
+<br>
+身體的脊椎如同站立時一樣，自然的保持端正。
+Your spine should be naturally upright, just as if you were standing.
+<br>
+全身自然的保持著平衡。
+Your entire body naturally maintains its balance.
+<br>
+兩手手掌重疊，自然平放在小腿上。
+Your two palms are overlapped, resting naturally on your lower legs.
+<br>
+拇指指尖輕輕的相接觸。
+The tips of your thumbs gently touch each other.
+<br>
+腰部稍微的往前挺。
+Your lower back is slightly arched forward.
+<br>
+胸部自然的保持平正。
+Your chest naturally remains flat and even.
+<br>
+下巴微微的往內縮。
+Your chin is slightly tucked in.
+<br>
+牙齒輕輕的扣上。
+Your teeth are gently closed.
+<br>
+舌頭輕輕的抵住上門牙與牙肉之間。
+Your tongue gently rests against the space between your upper front teeth and gums.
+<br>
+眼睛放鬆自然的下垂。
+Your eyes are relaxed and naturally cast downwards.
+<br>
+頭部及身體適當的保持正直與平衡。 
+Your head and body appropriately maintain uprightness and balance.
+<br>
+確定身體保持平衡與鬆弛之後，首先開始從頭到腳的放鬆整個身體。
+After ensuring your body is balanced and relaxed, first begin to relax your entire body from head to toe.
+<br>
+第一步先將眼球的肌肉神經放鬆。
+The first step is to relax the muscles and nerves of your eyeballs.
+<br>
+所謂的放鬆，就是不用力。
+What is meant by relaxation is not to exert any effort.
+<br>
+不用眼睛觀看任何事，眼球就自然放鬆，眉頭也不會緊繃。
+Without using your eyes to look at anything, your eyeballs will naturally relax, and your eyebrows will not be tensed.
+<br>
+然後將你的頭腦放鬆。
+Then, relax your mind.
+<br>
+不用頭腦去思前想後的，頭腦裡面沒有其他事。
+Don't use your mind to overthink; there is nothing else in your mind.
+<br>
+心中無事，頭腦就輕鬆。
+With nothing on your mind, your head feels light and at ease.
+<br>
+然後把你臉部的肌肉神經放鬆。
+Then, relax the muscles and nerves of your face.
+<br>
+鬆弛臉面神經之後，將你的肩膀放鬆。
+After relaxing the facial nerves, relax your shoulders.
+<br>
+肩膀自然下垂不用力。
+Your shoulders naturally drop without effort.
+<br>
+兩隻手臂也不用力。
+Neither of your arms exert any force.
+<br>
+兩手手掌，手指頭，都不用力。
+Both palms and fingers are without effort.
+<br>
+當你確定你的手已經放鬆了以後，就不用繼續管你的手了。
+Once you are certain your hands are relaxed, you no longer need to pay attention to them.
+<br>
+接下來放鬆你的背部與及你的後腰。
+Next, relax your back and your lower back.
+<br>
+放鬆的同時還是一樣保持平衡。
+While relaxing, continue to maintain balance.
+<br>
+然後將你的小腹的肌肉放鬆。
+Then, relax the muscles of your lower abdomen.
+<br>
+小腹的肌肉放鬆了以後，你的後腰也會跟著放鬆。
+Once the muscles of your lower abdomen are relaxed, your lower back will also relax.
+<br>
+上半身感到平衡與鬆弛，心裡的壓力和負擔也減少了許多。 
+Your upper body feels balanced and relaxed, and the mental pressure and burdens have significantly decreased.
+<br>
+如果還有負擔，再從頭到腳的放鬆。
+If there are still burdens, relax again from head to toe.
+<br>
+先從頭腦放鬆，眼球神經放鬆，臉部的肌肉放鬆，肩膀放鬆，手臂放鬆，背和腰放鬆，還有小腹。
+First, relax your mind, relax your eyeball nerves, relax your facial muscles, relax your shoulders, relax your arms, relax your back and waist, and your lower abdomen.
+<br>
+甚至更細膩的從頭到腳，從頭腦放鬆，眼球神經放鬆，眉頭放鬆，臉部的肌肉不用力，頸部放鬆，肩頭放鬆，手、背和腰，小腹，乃至於你的腿部。 
+Even more subtly, from head to toe, relax your mind, relax your eyeball nerves, relax your eyebrows, release effort from your facial muscles, relax your neck, relax your shoulders, your hands, back, and waist, your lower abdomen, and even your legs.
+<br>
+這時候只剩下跟墊子接觸的肌肉有一點重量的感覺之外，其他的地方應該是沒有負擔的感覺。
+At this point, apart from the slight sensation of weight from the muscles in contact with the cushion, other parts should feel free of burden.
+<br>
+身體的壓力沒有了，頭腦也感到明朗而輕鬆，外面環境對身體的衝擊力也減小了。 
+The body's pressure is gone, the mind feels clear and light, and the impact of the external environment on the body has also diminished.
+<br>
+只有空氣經由鼻孔自然的進出你的身體。
+Only air naturally enters and exits your body through your nostrils.
+<br>
+鼻孔上空氣自然的進入時，知道是入息。
+When air naturally enters your nostrils, know that it is an in-breath.
+<br>
+然後中間有個停頓轉折的地方，是中間入息。
+Then, there is a pause or turning point in the middle; this is the mid-in-breath.
+<br>
+身體中空氣經由鼻孔上出來時，知道是出息。
+When air exits your body through your nostrils, know that it is an out-breath.
+<br>
+然後中間有個迴轉的地方，是中間出息。
+Then, there is a turning point in the middle; this is the mid-out-breath.
+<br>
+你只是知道空氣在你的鼻孔上最明顯的地方自然的進和出，進和出。
+You simply know that air is naturally entering and exiting, entering and exiting, at the most distinct point in your nostrils.
+<br>
+從入息和中間入息，到出息和中間出息。整個過程都清清楚楚。
+From the in-breath and mid-in-breath, to the out-breath and mid-out-breath. The entire process is clear and distinct.
+<br>
+你所要曉得的是在你的鼻孔感受最明顯的一點上的空氣。 
+What you need to be aware of is the air at the most noticeable point in your nostrils.
+<br>
+清楚空氣進出的每一個過程。
+Be clearly aware of every process of air entering and exiting.
+<br>
+如果你是太專注於入息，那麼你的出息就會模糊。
+If you focus too much on the in-breath, then your out-breath will become vague.
+<br>
+反過來你若是太專注於出息，那麼你的入息就會模糊。
+Conversely, if you focus too much on the out-breath, then your in-breath will become vague.
+<br>
+因此是整個呼吸的全身都清楚，一直到你的雜念沒有了，或是減少了。
+Therefore, be clearly aware of the entire breath from beginning to end, until your distracting thoughts disappear or diminish.
+<br>
+心能夠安止於一境時，再轉為觀照瞭解你的心和呼吸的關係。 
+When your mind can settle on a single object, then shift to observing and understanding the relationship between your mind and your breath.
+<br>
+現在請你們練習看看!
+Now, please try to practice!
+<br>
+如果內心還是無法安定。雜念還是太多。
+If your mind is still unsettled, and distracting thoughts are still too numerous.
+<br>
+那麼請你們從數息開始。 
+Then, please begin by counting your breaths.            
+            
+            
+            
+            
+        </div>
     </div>
-  </div>
-  <div class="slider2">
-    <div class="slider2_resize">
-      <h2>Meditation</h2>
-      <p>Learn to see that real in you. There is something real in you, there is something beautiful in you. </p>
+
+    <div class="footer-controls">
+        <a href="med-b1.html" class="nav-link">上一篇</a>
+        <div class="play-wrapper" id="play-btn">
+            <svg class="progress-ring" width="56" height="56">
+                <circle stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="transparent" r="26" cx="28" cy="28" />
+                <circle id="progress-bar" class="progress-ring__circle" stroke-width="3" stroke-dasharray="163.36" stroke-dashoffset="163.36" fill="transparent" r="26" cx="28" cy="28" />
+            </svg>
+            <div class="play-btn-inner">
+                <svg id="icon-play" class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                <svg id="icon-pause" class="icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+            </div>
+        </div>
+        <a href="med-b3.html" class="nav-link">下一篇</a>
     </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="bloga_resize2">
-    <div class="bloga_resizee">
-      <div class="menu_sub">
-        <ul>
-          <li><a href="med-a.html">概念</a></li>
-          <li><a href="med-b.html" class="active">線上禪修</a></li>
-          <li><a href="med-c.html">練習 </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
-  <div class="body">
-    <div class="body_resize">
-      <div class="right">
-        <h2>禪修第二天:
-
-<br />
-        </h2><!-- 加入 Media Player--> 
-  <figure>
-    <EMBED SRC="meditation/6-2.mp3" WIDTH=300 HEIGHT=60 
-          AUTOSTART=TRUE LOOP=TURE>  </EMBED>
-</figure>  
-    
-
-           <!--end Player---->
-        <p class="grey"> 
-
-這次禪修主要的內容, 第一步是先要你們, 暫時放下工作 ,利用放鬆的方式,
-來減少身心的負擔和苦的衝擊 ,而讓心情緩和。 <br />
-</p>
-        <img src="images/med_img.jpg" alt="picture" width="239" height="240" class="work" />
-        <p class="grey">
-接著運用禪定的方法 ,來認識我執的生起和巢穴 ,這是對集諦的認識 。 
-
-再來從我執生起之處, 利用中觀的方式來去除分別的我執, 實證滅諦。 
-
-最後運用空性觀來維持中道, 實踐八正道, 而圓滿修行 。 <br />
-
-開始禪修之前 ,首先先確定身處的環境是安全的 。 
-
-也不會有其他事來干擾到你 。 現在請你們一邊聽一邊練習看看! <br />
-
-剛開始先讓身心內外的一切, 都隨其自然的運作,並沒有任何事需要你去改變。 
-
-也沒有任何事需要你來耽心的 ,心中保持無事和平穩。 <br />
-
-確定心中無事之後, 接下來讓身體自然的保持平衡, 
-
-安穩的坐在做座墊上,蓋上保暖的毛巾 , 
-
-以比較輕鬆﹑平穩,而且能夠保持持久的坐姿, 盤坐在位置上。 
-
-身體的脊椎如同站立時一樣, 自然的保持端正 。 <br />
-
-全身自然的保持著平衡。兩手手掌重疊, 自然平放在小腿上。 
-
-母指指尖輕輕的相接觸 。 腰部稍微的往前挺 。胸部自然的保持平正。下巴微微的往內縮 。 
-
-牙齒輕輕的扣上。舌頭輕輕的抵住上門牙與牙肉之間。 
-
-眼睛放鬆自然的下垂。頭部及身體適當的保持正直與平衡。 <br />
-
-確定身體保持平衡與鬆弛之後, 首先開始從頭到腳的放鬆整個身體。 
-
-第一步先將眼球的肌肉神經放鬆。<br /> 
-
-所謂的放鬆 ,就是不用力。 不用眼睛觀看任何事, 眼球就自然放鬆, 眉頭也不會緊繃。 
-
-然後將你的頭腦放鬆。不用頭腦去思前想後的 ,頭腦裡面沒有其他事。 
-
-心中無事, 頭腦就輕鬆。 然後把你臉部的肌肉神經放鬆 。
-鬆弛臉面神經之後, 將你的肩膀放鬆。 肩膀自然下垂不用力 。 
-
-兩隻手臂也不用力。 兩手手掌, 手指頭 ,都不用力 。 
-
-當你確定你的手已經放鬆了以後, 就不用繼續管你的手了。 
-
-接下來放鬆你的背部與及你的後腰。 放鬆的同時還是一樣保持平衡。
-
-然後將你的小腹的肌肉放鬆 。小腹的肌肉放鬆了以後, 你的後腰也會跟著放鬆。
-上半身感到平衡與鬆弛 ,心裡的壓力和負擔也減少了許多。<br />  
-
-如果還有負擔, 再從頭到腳的放鬆 。 
-
-先從頭腦放鬆 ,眼球神經放鬆, 臉部的肌肉放鬆, 肩膀放鬆 ,手臂放鬆 ,背和腰放鬆 ,還有小腹。 
-
-甚至更細膩的從頭到腳 ,從頭腦放鬆, 眼球神經放鬆 ,眉頭放鬆 ,臉部的肌肉不用力, 頸部放鬆 
-
-,肩頭放鬆, 手 背 和腰 ,小腹 ,乃至於你的腿部 。<br /> 
-
-這時候只剩下跟墊子接觸的肌肉 有一點重量的感覺之外, 其他的地方應該是沒有負擔的感覺。 
-
-身體的壓力沒有了, 頭腦也感到明朗而輕鬆 ,外面環境對身體的衝擊力也減小了。<br /> 
-只有空氣經由鼻孔自然的進出你的身體 。 
-
-鼻孔上空氣自然的進入時 ,知道是入息 。然後中間有個停頓轉折的地方, 是中間入息。 
-
-身體中空氣經由鼻孔上出來時, 知道是出息 。然後中間有個迴轉的地方 ,是中間出息 。 
-
-你只是知道空氣在你的鼻孔上最明顯的地方自然的進和出, 進和出 。 
-
-從入息和中間入息, 到出息和中間出息。 整個過程都清清楚楚 。 
-
-你所要曉得的是在你的鼻孔感受最明顯的一點上的空氣。 <br /> 
-
-清楚空氣進出的每一個過程 。如果你是太專注於入息 那麼你的出息就會模糊 。 
-
-反過來你若是太專注於出息, 那麼你的入息就會模糊。
-因此是整個呼吸的全身都清楚, 一直到你的雜念沒有了, 或是減少了。 
-
-心能夠安止於一境時, 再轉為觀照瞭解你的心和呼吸的關係。 <br /> 
-
-現在請你們練習看看! 
-
-如果內心還是無法安定。雜念還是太多。 那麼請你們從數息開始。 
- 
-  
- </p>             
-         
-      
-       
-       
-        </h2>
-        
-        <p class="grey">&nbsp;(請依每日的順序在表格中點選&nbsp;!) </p>
-      </div>
-      <div class="left">
-        <h2>初級禪修\六日禪修</h2>
-        
-<p class="grey1">
-<em>  <a href="med-b1.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第一日
-<br />含文字及聲音<br />
-  <a href="med-b2.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第二日
-<br />含文字及聲音<br />
-  <a href="med-b3.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第三日
-<br />含文字及聲音<br />
-  <a href="med-b4.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第四日
-<br />含文字及聲音<br />
-  <a href="med-b5.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第五日
-<br />含文字及聲音<br />
-  <a href="med-b6.html"><img src="images/launch_site.gif" alt="picture" width="89" height="25" border="0" /></a>禪修第六日
-<br />含文字及聲音<br />
-
-<br />
-</em></p>
-        <p><strong><em>--- 果聞法師  提供</em></strong></p>
-        <div class="bg"></div>
-        
-        <p><strong><em></em></strong></p>
-      </div>
-      <div class="clr"></div>
-    </div>
-  </div> 
-
-<div class="footer">
-  <div class="footer_resize">
-    <p class="leftt">Copyright © Siemting.com. All Rights Reserved</p>
-    <p class="rightt">&nbsp;</p>
-    <div class="clr"></div>
-  </div>
-  <div class="clr"></div>
 </div>
+
+<audio id="audio" src="m4a/6-2.mp3"></audio>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const scrollContainer = document.getElementById('scroll-container');
+    const bookText = document.getElementById('book-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    // 圓周率計算：2 * PI * r (r=26)
+    const circumference = 163.36; 
+    let isUserScrolling = false;
+    let scrollTimeout;
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        } else {
+            audio.pause();
+            iconPlay.style.display = 'block';
+            iconPause.style.display = 'none';
+        }
+    });
+
+    // 監測使用者手動滾動，暫停自動滾動 3 秒
+    scrollContainer.addEventListener('scroll', () => {
+        if (!audio.paused) {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 3000);
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isNaN(audio.duration)) return;
+        
+        const percent = audio.currentTime / audio.duration;
+        
+        // 更新圓環進度
+        progressBar.style.strokeDashoffset = circumference - (percent * circumference);
+
+        // 改進的自動捲動邏輯
+        if (!isUserScrolling) {
+            /* 核心修正：
+               原本計算是用整塊文字的高度，但我們希望最後一行出現時就停止，
+               所以計算【文字總高度】減去【顯示區域高度】。
+            */
+            const textRealHeight = bookText.offsetHeight;
+            const containerHeight = scrollContainer.clientHeight;
+            
+            // 計算真正的可滾動範圍（扣除底部 padding 後的文字尾端）
+            // 如果希望音訊結束時文字剛好在中間，這裡的 300px padding 就發揮作用了
+            const maxScroll = textRealHeight - containerHeight;
+            
+            scrollContainer.scrollTo({
+                top: percent * (maxScroll - 150), // 稍微減去一點偏移量，讓文字不要頂死到最上面
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+        isUserScrolling = false;
+    });
+</script>
+
 </body>
 </html>
