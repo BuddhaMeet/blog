@@ -1,26 +1,20 @@
 {
   "name": "雨後涼亭",
   "short_name": "雨後涼亭",
-  "description": "心靈與禪修平台",
-
-  "start_url": "./",
-  "scope": "./",
-
+  "start_url": "./index2.html",
   "display": "standalone",
-
-  "background_color": "#fffaef",
   "theme_color": "#fffaef",
-
+  "background_color": "#fffaef",
   "icons": [
     {
       "src": "./icon-192.png",
       "sizes": "192x192",
-      "type": "images/png"
+      "type": "image/png"
     },
     {
       "src": "./icon-512.png",
       "sizes": "512x512",
-      "type": "images/png"
+      "type": "image/png"
     }
   ]
 }
