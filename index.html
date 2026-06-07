@@ -3,15 +3,27 @@
   <head>
     <title>身心靈和諧之旅網站一首頁 Online Mindfulness (Free)</title>
     <meta charset="utf-8">
-    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <meta name="apple-mobile-web-app-capable" content="yes" *>  
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="(May you  want to know how to resolve your troubles, how to meditate, how to participate in meditation activities, how to read Buddhist books, and How to grow my soul. and many more!)">
     <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400|Playfair+Display:400,700" rel="stylesheet">
+      
+    <!-- PWA -->
+<link rel="manifest" href="./manifest.json">
+
+<meta name="theme-color" content="#fffaef">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="apple-touch-icon" href="./icon-192.png"> 
+<link rel="apple-touch-icon" sizes="512x512" href="./icon-512.png">     
+      
    <!--Media Player style -->    
     <link rel="stylesheet"
     href="sounds/progres-bar.css">
    <!--end Media Player style -->
-    <link rel="shortcut icon" href="/img/favicon.png" />  
+    <link rel="shortcut icon" href="./img/favicon.png" />  
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -264,7 +276,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 !function(){var a="http://"+location.hostname+location.pathname,b=document.title,c=function(a,b){var e,c=document.querySelectorAll(a),d=c.length;for(e=0;d>e;e++)c[e].href=b};c(".rs_fb","http://www.facebook.com/sharer.php?u="+a),c(".rs_gplus","https://telegram.me/share/url="+a),c(".rs_line","http://line.naver.jp/R/msg/text/?"+b+" "+a),c(".rs_plurk","http://www.plurk.com/?qualifier=shares&status="+b+" "+a),c(".rs_weibo","http://service.weibo.com/share/share.php?title="+b+" "+a+"&url="+a),c(".rs_twitter","http://twitter.com/share?url="+a+"&text="+b),c(".rs_tumblr","http://www.tumblr.com/share/link?name="+b+" "+a+"&url="+a),c(".rs_pinterest","http://pinterest.com/pin/create/button/?url="+a+"&description="+b+" "+a),c(".rs_email","mailto:?subject="+b+"&body="+b+" "+a)}();
 </script>    
 <!-- end 分享按鈕 --> 
-
+<!-- 註冊 Service Worker -->     
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log("PWA 已啟動"))
+      .catch(err => console.log(err));
+  });
+}
+</script>
   
   </body>
 </html>

@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雨後涼亭 - 佛法分流APP</title>
     
-    <!-- 1. PWA 核心設定與 iOS 相容性標籤 -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="雨後涼亭">
-    <link rel="apple-touch-icon" href="/icon-192.png">
-    <meta name="theme-color" content="#fffaef">
+ <!-- PWA 核心設定 -->
+<link rel="manifest" href="./manifest.json">
 
-    <style>
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="./icon-512.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="雨後涼亭">
+<meta name="theme-color" content="#fffaef">
+
+<style>
+/* ===== App Loading（保留但穩定化） ===== */
+#app-loading {
+  position: fixed;
+  inset: 0;
+  background: #fffaef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  text-align: center;
+}
+
+#app-loading .logo {
+  font-size: 26px;
+  color: #5E6AD2;
+  font-weight: bold;
+}
+
+
+
+
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
@@ -122,6 +148,13 @@
     </style>
 </head>
 <body>
+ <div id="install-tip" style="display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#5E6AD2;color:white;padding:10px 16px;border-radius:12px;font-size:14px;">
+  點右上角「加入主畫面」即可安裝雨後涼亭
+</div>  
+<div id="app-loading">
+  <div class="logo">雨後涼亭</div>
+</div>
+    
     <div class="container">
         <header>
             <h1>雨後涼亭</h1>
@@ -129,7 +162,7 @@
         </header>
 
         <div class="options-list">
-            <!-- 1. 禪修 -->
+          
             <a href="https://buddhameet.github.io/blog/diagnosisA.html" class="option-btn">
                 <span class="icon-circle">
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjOERDOTUxIiBkPSJNMTcsOEM4LDEwIDUuOSwxNi4xNyAzLjgyLDIxLjM0TDUuNzEsMjJMNi42NiwxOS43QzcuMTQsMTkuODcgNy42NCwyMCA4LDIwQzE5LDIwIDIyLDMgMjIsM0MyMSw1IDE0LDUuMjUgOSw2LjI1QzQsNy4yNSAyLDExLjUgMiwxMy41QzIsMTUuNSAzLjc1LDE3LjI1IDMuNzUsMTcuMjVDNywxMSAxNyw4IDE3LDhaIi8+PC9zdmc+" width="24">
@@ -137,7 +170,7 @@
                 我有愉快與平靜的生活並且樂意禪修
             </a>
 
-            <!-- 2. 壓力 -->
+            
             <a href="https://buddhameet.github.io/blog/diagnosisB.html" class="option-btn">
                 <span class="icon-circle">
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjRkZBNzI2IiBkPSJNMTYsNlY0LjVDMTYsMy42NyAxNS4zMywzIDE0LjUsM0g5LjVDOC42NywzIDgsMy42NyA4LDQuNVY2SDVDMy44OSw2IDMsNi44OSAzLDhWMTlDMywyMC4xMSAzLjg5LDIxIDUsMjFIMTlDMjAuMTEsMjEgMjEsMjAuMTEgMjEsMTlWOEMyMSw2Ljg5IDIwLjExLDYgMTksNkgxNk0xMCw1SDE0VjZIMTBWNU0xOSwxOUg1VjhIMTlWMTlaIi8+PC9zdmc+" width="24">
@@ -145,7 +178,7 @@
                 正在經歷生命轉折與未來發展的壓力
             </a>
 
-            <!-- 3. 人際 -->
+            
             <a href="https://buddhameet.github.io/blog/diagnosisC.html" class="option-btn">
                 <span class="icon-circle">
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjRjQ4RkIxIiBkPSJNMTIsMjEuMzVMIDEwLjU1LDIwLjAzQzUuNCwxNS4zNiAyLDEyLjI3IDIsOC41QzIsNS40MiA0LjQyLDMgNy41LDNDOS4yNCwzIDEwLjkxLDMuODEgMTIsNS4wOUMxMy4wOSwzLjgxIDE0Ljc2LDMgMTYuNSwzQzE5LjU4LDMgMjIsNS40MiAyMiw4LjVDMjIsMTIuMjcgMTguNiwxNS4zNiAxMy40NSwyMC4wNEwxMiwyMS4zNVoiLz48L3N2Zz4=" width="22">
@@ -153,7 +186,7 @@
                 正在學習人際關係與情感連結的課題
             </a>
 
-            <!-- 4. 失落 -->
+        
             <a href="https://buddhameet.github.io/blog/diagnosisD.html" class="option-btn">
                 <span class="icon-circle">
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjNjRCOTVFIiBkPSJNMTksMTVjMCwyLjIxLTEuNzksNC00LDRjLTEuNiwwLTIuOTctLjk0LTMuNi0yLjMxYy0wLjY2LDAuNzUtMS42MywxLjI0LTIuNzIsMS4yNGMtMS42NSwwLTMuMDctMS4wOC0zLjU0LTIuNTdjLTAuNjktMC4yNi0xLjE0LTAuOTktMS4xNC0xLjg2YzAtMS4xNywwLjg4LTIuMTMsMi0yLjRjMC40NC0yLjMsMi41LTQuMTEsNS00LjExYzIuMDYsMCwzLjg2LDEuMTQsNC42MywyLjg3YzAuNDctMC4xNywwLjk4LTAuMjUsMS41LTAuMjVjMi4xMywwLDMuODcsMS43MywzLjg3LDMuODdjMCwwLjcxLTAuMTksMS4zOC0wLjUzLDEuOTZMMTksMTV6Ii8+PC9zdmc+" width="24">
@@ -171,15 +204,20 @@
         </div>
     </div>
 
-    <!-- 2. 自動註冊 PWA 服務腳本 -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('雨後涼亭 PWA 註冊成功！', reg))
-                    .catch(err => console.log('註冊失敗：', err));
-            });
-        }
-    </script>
+   
+ <script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("app-loading");
+  if (!loader) return;
+
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 0.4s ease";
+
+    setTimeout(() => loader.remove(), 400);
+  }, 600); // 短延遲讓畫面穩定
+});
+</script>
+    
 </body>
 </html>
