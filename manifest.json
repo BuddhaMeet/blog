@@ -1,21 +1,26 @@
 {
+  "name": "雨後涼亭",
   "short_name": "雨後涼亭",
-  "name": "雨後涼亭 - 佛法分流APP",
+  "description": "心靈與禪修平台",
+
+  "start_url": "./",
+  "scope": "./",
+
+  "display": "standalone",
+
+  "background_color": "#fffaef",
+  "theme_color": "#fffaef",
+
   "icons": [
     {
-      "src": "/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "images/png"
     },
     {
-      "src": "/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "images/png"
     }
-  ],
-  "start_url": "/index.html",
-  "background_color": "#fffaef",
-  "theme_color": "#5E6AD2",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
 }
